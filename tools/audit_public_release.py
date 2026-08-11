@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import shutil
 import subprocess
 from pathlib import Path
 
@@ -16,6 +17,7 @@ REQUIRED = (
     "SECURITY.md",
     "CONTRIBUTING.md",
     "requirements.txt",
+    "requirements-ci.txt",
     "requirements-replay.txt",
     "configs/reproduction.example.toml",
     "data/manifest.json",
@@ -49,15 +51,16 @@ def privacy_hits_in_public_surface(root: Path) -> list[str]:
         "notebooks",
         "reproducibility/README.md",
     ]
+    ripgrep = shutil.which("rg")
+    if ripgrep is not None:
+        command = [ripgrep, "-I", "-n", pattern, "--", *targets]
+    else:
+        # Git is already required by tracked_files(), and is available in a
+        # checked-out GitHub Actions workspace. Keep the audit portable to
+        # minimal runners without weakening the privacy scan.
+        command = ["git", "grep", "-I", "-n", "-E", pattern, "--", *targets]
     completed = subprocess.run(
-        [
-            "rg",
-            "-I",
-            "-n",
-            pattern,
-            "--",
-            *targets,
-        ],
+        command,
         cwd=root,
         text=True,
         capture_output=True,
