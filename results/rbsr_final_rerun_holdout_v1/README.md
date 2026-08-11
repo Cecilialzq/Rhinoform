@@ -4,7 +4,9 @@ This directory is the canonical, curated snapshot of the completed Rhinoform
 final rerun. It contains the frozen RB-SR, matched Ridge/CVAE/Hybrid, LAMM and
 classical-baseline results, all 9,900-pair metric tables, validation-selection
 evidence, direct paired statistics, protocol files, test-access receipts,
-checkpoints and provenance.
+checkpoint integrity records and provenance. Large checkpoint payloads are not
+ordinary Git blobs; authorised holders validate them against
+`reproducibility/RELEASE_ASSET_MANIFEST.json`.
 
 ## Permitted claim boundary
 
@@ -43,9 +45,8 @@ not change weights, checkpoints, split, operating point or metric semantics.
 ## Deliberate release exclusions
 
 Regenerable chunk directories, dense gate maps, progress ledgers and `*_last.pt`
-resume checkpoints remain in the read-only `FYP final` archive. Their final
-aggregated pair metrics, selected best checkpoints and provenance are included
-here. This follows `docs/ARTIFACT_SELECTION.md`.
+resume checkpoints remain outside the public Git tree. Their final aggregated
+pair metrics, selected-checkpoint hashes and provenance are included here.
 
 The two LAMM best checkpoints exceed GitHub's ordinary 100 MB file limit. Use
 Git LFS or GitHub Release assets; do not attempt a normal Git blob upload.
