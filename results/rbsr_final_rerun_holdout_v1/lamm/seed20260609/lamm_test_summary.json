@@ -1,0 +1,16 @@
+{
+  "latency_ms_per_pair_model_only_median": 1.379990468763026,
+  "means": {
+    "abs_flip_pct": 1.8201949197783618,
+    "dorsum_rmse": 0.9471887890633707,
+    "edge_strain_p95": 0.3195854848707927,
+    "landmark_rmse": 0.0,
+    "missed_flip_pct": 1.0790566429722899,
+    "normal_flip_pct": 0.8787234490176433,
+    "roi_rmse": 0.9715437016189514,
+    "tip_rmse": 0.7183520550082448
+  },
+  "method": "lamm_cvpr2024_five_semantic_patches",
+  "n_pairs": 9900,
+  "pair_metrics_sha256": "29a072bcbf3b021dbdb95d34f60afeab9be38774b0d6ee472ec8610f1837c13a"
+}

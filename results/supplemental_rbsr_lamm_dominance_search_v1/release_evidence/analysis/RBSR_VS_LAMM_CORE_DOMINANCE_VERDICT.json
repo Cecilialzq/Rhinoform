@@ -1,0 +1,37 @@
+{
+  "base_model_package_sha256": "40df5a429aab3fade800115ea0eab2bd5100144d6b41df3190ccce08c9350b92",
+  "calibration_exact_control_erratum_sha256": "53ab048feff1792ba0879fe253063d4c5ae244ce6bf48a198938060c6979265d",
+  "calibration_freeze_sha256": "be5eb0a5111a58592251c416a5f685e639528eaa9e4675ec497f91ff95c1f26c",
+  "claim_boundary": "supplementary post-hoc matched comparison; not blind confirmatory headline",
+  "lamm_pair_metrics_sha256": "29a072bcbf3b021dbdb95d34f60afeab9be38774b0d6ee472ec8610f1837c13a",
+  "matched_ordered_test_pairs": 9900,
+  "mean_dominance_all_three": true,
+  "metrics": {
+    "edge_strain_p95": {
+      "delta": -0.019951362530131134,
+      "lamm": 0.3195854848707927,
+      "pass": true,
+      "rbsr": 0.29963412234066156
+    },
+    "normal_flip_pct": {
+      "delta": -0.08529318175243716,
+      "lamm": 0.8787234490176433,
+      "pass": true,
+      "rbsr": 0.7934302672652062
+    },
+    "roi_rmse": {
+      "delta": -0.056249204897393046,
+      "lamm": 0.9715437016189514,
+      "pass": true,
+      "rbsr": 0.9152944967215584
+    }
+  },
+  "paired_statistics_csv_sha256": "be1d2a662fd2079eb4fd440616e6984bc34ce37fdaebceec63d7c66813769900",
+  "paired_statistics_json_sha256": "61c7cef5eaa79409e605537b9e70932a1b3600e6e40e1e6f037ae9b0dab592aa",
+  "rbsr_package_sha256": "5ceb2e233bb9d196b6c1b1bff7950d5591e16fab99735712708db25c5d4a266e",
+  "rbsr_pair_metrics_sha256": "31b192c0443b4389056c7e83fbe45da98680287012e154c9e9078c5e4c05eec9",
+  "statistical_dominance_all_three": true,
+  "statistical_status": "ALL_THREE_CORE_METRICS_SIGNIFICANTLY_IMPROVED",
+  "status": "PASS",
+  "strict_scorer_sha256": "f793e5958c8319c5aa605c899b3d8f3b446907844ab960c0dde25ba5f5c816bb"
+}

@@ -1,0 +1,145 @@
+{
+  "all_models_freeze": "ALL_MODELS_FROZEN_BEFORE_TEST.json",
+  "all_models_freeze_sha256": "5787b767ee5138a0dfefe644afc266ff47acb0427b8ec00b792a4ab8355a429b",
+  "artifact_paths_relative_to": "this_report_directory",
+  "base_model_package_sha256": "932db0a879a15ee51d8d6d52fb76d380609ed6ee02f85f8ae78afe9e11e8cfd3",
+  "calibration_freeze": null,
+  "calibration_freeze_sha256": null,
+  "calibration_selected": null,
+  "chunking": {
+    "chunk_pairs": 320,
+    "chunk_root": "test_chunks/991498c696e5fbc0",
+    "chunk_signature": "991498c696e5fbc0055d325cbdcda478d198a3fc53061cdbdd4d848ead3fb69a",
+    "completed_chunks": 31,
+    "completed_pairs": 9900
+  },
+  "clean_base_comparators": {
+    "cvae_clean": {
+      "pair_metrics": "pair_metrics_cvae_clean_test.csv",
+      "pair_metrics_sha256": "3a8501e384b45b01042a0c9b532bf64e0a08ea0c935fc586fd84303d775f3087",
+      "summary": {
+        "abs_flip_pct": 1.9357779829011277,
+        "dorsum_rmse": 1.1923980237846363,
+        "edge_strain_p95": 0.2387763895807031,
+        "landmark_rmse": 0.0,
+        "missed_flip_pct": 1.436658961392104,
+        "normal_flip_pct": 1.3519088305602234,
+        "roi_rmse": 1.3194886957324266,
+        "target_flip_pct": 2.0205281137330084,
+        "tip_rmse": 0.9806160028889519
+      }
+    },
+    "hybrid_validation_selected_clean": {
+      "pair_metrics": "pair_metrics_hybrid_validation_selected_clean_test.csv",
+      "pair_metrics_sha256": "8d5c3448d9713a3aa64834a8b87c038445702b70d7e66f153e050f0c6fc18202",
+      "summary": {
+        "abs_flip_pct": 0.869027426043828,
+        "dorsum_rmse": 1.0047054261030812,
+        "edge_strain_p95": 0.19500876939875902,
+        "landmark_rmse": 0.0,
+        "missed_flip_pct": 1.593895213525518,
+        "normal_flip_pct": 0.44239452583633787,
+        "roi_rmse": 1.0653718864699764,
+        "target_flip_pct": 2.0205281137330084,
+        "tip_rmse": 0.7999953775733197
+      }
+    },
+    "ridge_sourcepca_clean": {
+      "pair_metrics": "pair_metrics_ridge_sourcepca_clean_test.csv",
+      "pair_metrics_sha256": "e464e14733f19b2e6f4a27bcf19c8a6fdeeb26f0a59b1928a8fef9c705e8dac5",
+      "summary": {
+        "abs_flip_pct": 0.7146129348680769,
+        "dorsum_rmse": 1.0183637989118668,
+        "edge_strain_p95": 0.20341028336590333,
+        "landmark_rmse": 0.0,
+        "missed_flip_pct": 1.637578597745221,
+        "normal_flip_pct": 0.33166341888028944,
+        "roi_rmse": 1.0739138908867893,
+        "target_flip_pct": 2.0205281137330084,
+        "tip_rmse": 0.8159477377396833
+      }
+    }
+  },
+  "confirmation_policy": "FINAL_RERUN_HOLDOUT_POLICY_FREEZE.json",
+  "confirmation_policy_sha256": "56df2fc825df572b2896b86022298367ecc37dd79c15638104b4e41331dbb9f3",
+  "dense_predictions": null,
+  "dense_predictions_sha256": null,
+  "gate": {
+    "active_fraction_0p5": 0.1357724422671042,
+    "mean": 0.23740054666996002,
+    "p95": 0.6752582788467407,
+    "validation_selected_checkpoint": {
+      "epoch": 15,
+      "feasible": false,
+      "gate_active_fraction_0p5": 0.1236331667124532,
+      "gate_mean": 0.21527482569217682,
+      "gate_p95": 0.6513504981994629,
+      "lambda_orientation": 0.10388658195734024,
+      "lambda_strain": 0.15037843585014343,
+      "orientation_surrogate": 0.0037033392225370955,
+      "relative_violation": 1.161892942088113,
+      "roi_rmse": 1.1121940612792969,
+      "strain_surrogate": 0.010251590805070371,
+      "train_loss": 0.9588452341912806
+    }
+  },
+  "gate_map": "gate_map_test.npz",
+  "gate_map_sha256": "0d8dc486122db89c2afcd1c8c587309c0f626bcc8784e42bc0687384568d6442",
+  "method": "rbsr_gate_prototype",
+  "n_pairs": 9900,
+  "pair_metrics": "pair_metrics_rbsr_test.csv",
+  "pair_metrics_sha256": "556a385d026a28cac6413d478325d0baf3745545dd930a0fd75c9ac3679b49e9",
+  "projection_certificate": {
+    "certificate_rate": 1.0,
+    "diagnostics": "projection_diagnostics_test.csv",
+    "diagnostics_sha256": "4108288ce162cc25a74b34f37985c1c595f170f24afbf387dc6bd8ce9f6a018f",
+    "mean_iterations": 13.766464646464646,
+    "mean_retention": 0.9921465761581302
+  },
+  "projection_freeze": "RBSR_CERTIFIED_PROJECTION_FREEZE.json",
+  "projection_freeze_sha256": "dbefa7d3529d0c04ae94c42c31f68338ab259d28a38ef7e862f5a07475cab092",
+  "projection_selected": {
+    "abs_flip_pct": 0.5556777344581697,
+    "attenuation": 0.75,
+    "certificate_rate": 1.0,
+    "dorsum_rmse": 1.0987452373846536,
+    "edge_strain_p95": 0.21644458864234653,
+    "hard_certificate_complete": true,
+    "label": "attenuation_0p75",
+    "landmark_rmse": 0.0,
+    "max_iterations": 64,
+    "mean_iterations": 13.379710144927536,
+    "mean_retention": 0.9917427679998795,
+    "missed_flip_pct": 1.7257087229807195,
+    "new_flip_delta_vs_ridge": -0.1027461684785978,
+    "normal_flip_pct": 0.2513229010517986,
+    "pair_metrics": "pair_metrics/pair_metrics_attenuation_0p75_validation.csv",
+    "pair_metrics_sha256": "ea9e43012a0a4b11633e9fc658a8da0185914866f044b40a8913640cb7ce24b7",
+    "projection_diagnostics": "pair_metrics/projection_diagnostics_attenuation_0p75_validation.csv",
+    "projection_diagnostics_sha256": "7602961a9b0dca264999a9095114d8d2107940ac8958c5eea215ac6f077f09cb",
+    "rmse_improvement_vs_ridge": 0.012604328761334216,
+    "roi_rmse": 1.1123204171016405,
+    "smoothing_steps": 0,
+    "status_counts": {
+      "local_fold_subset_certified": 4830
+    },
+    "strictly_beats_ridge": true,
+    "target_flip_pct": 2.030063556387091,
+    "tip_rmse": 0.8282806996647705,
+    "uniform_steps": 1001
+  },
+  "rbsr_package_sha256": "9185d1baac0934b5fdb437ce451296132eba68a83d8f62d1bafe95a1aaa4f972",
+  "selection_status": "one_shot_test_after_frozen_certified_ridge_fold_projection",
+  "split": "test",
+  "summary": {
+    "abs_flip_pct": 0.509588201725666,
+    "dorsum_rmse": 0.997217907953563,
+    "edge_strain_p95": 0.20353047931336007,
+    "landmark_rmse": 0.0,
+    "missed_flip_pct": 1.737833950018277,
+    "normal_flip_pct": 0.22689403801093466,
+    "roi_rmse": 1.05993127878513,
+    "target_flip_pct": 2.0205281137330084,
+    "tip_rmse": 0.7842773022737441
+  }
+}

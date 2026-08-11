@@ -1,0 +1,94 @@
+{
+  "control_vertices_by_patch": {
+    "0": [
+      824
+    ],
+    "1": [
+      812,
+      212
+    ],
+    "2": [
+      197,
+      149
+    ],
+    "3": [
+      530,
+      630
+    ],
+    "4": [
+      139,
+      47
+    ]
+  },
+  "inference_contract": "source dense mesh + nine target-source control displacements only",
+  "patch_order": [
+    "root",
+    "dorsum",
+    "tip",
+    "alar_left",
+    "alar_right"
+  ],
+  "protocol": {
+    "free_vertices": 3925,
+    "lamm_commit": "87354c05dec341c6d8dd319665dd52553fb03084",
+    "landmarks": 9,
+    "patches": 5,
+    "roi_vertices": 3934,
+    "seed": 20260609,
+    "test_identities": 100,
+    "test_pairs": 9900,
+    "train_identities": 576,
+    "validation_identities": 70
+  },
+  "source_hashes": {
+    "manifest": "46a2c28fb48766b4425c04582ac9efaede4ecac3ec83c7a25b91f9c52647d16d",
+    "roi": "020fbe308db6ebde3c650fd9ede962e5c872f1eec54cb4a874be9b40491e9d52",
+    "split": "f976832beae1a5218e2e9567b1bb7032fbf2a63de0416f97bd4ea1cb004b8356",
+    "subunits": "6f4be6f8c7e1a8864127068ebe7e1d1234943c065aefe62064350a7f5f0414ca"
+  },
+  "status": "PASS",
+  "test_pair_head": [
+    [
+      "16",
+      "23"
+    ],
+    [
+      "16",
+      "47"
+    ],
+    [
+      "16",
+      "52"
+    ],
+    [
+      "16",
+      "53"
+    ],
+    [
+      "16",
+      "58"
+    ]
+  ],
+  "test_pair_tail": [
+    [
+      "844",
+      "768"
+    ],
+    [
+      "844",
+      "820"
+    ],
+    [
+      "844",
+      "822"
+    ],
+    [
+      "844",
+      "837"
+    ],
+    [
+      "844",
+      "842"
+    ]
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "claim_boundary": "internal held-out-from-final-retrain evidence; not historically untouched and not external",
+  "development_geometric_selection_sha256": "6af2303c20d93bd65500f3e9a79336662eb51f704015652e435fb7ca13fce1a2",
+  "development_projection_freeze_sha256": "aa026f20e1e3c71ec88c89e079bd0ea130fb24bf0e965f752ddf8694ea345cc2",
+  "failure_policy": "Fail closed; do not replace, tune, or rerun the frozen test operating point.",
+  "frozen_classical_configuration": {
+    "arap": {
+      "arap_iter": 3,
+      "handle_weight": 100000.0,
+      "selection_source": "development-validation-frozen-before-final-rerun",
+      "system_ridge": 1e-08
+    },
+    "bilaplacian": {
+      "arap_iter": null,
+      "handle_weight": 100.0,
+      "selection_source": "development-validation-frozen-before-final-rerun",
+      "system_ridge": 1e-06
+    },
+    "laplacian": {
+      "arap_iter": null,
+      "handle_weight": 100.0,
+      "selection_source": "development-validation-frozen-before-final-rerun",
+      "system_ridge": 0.0001
+    }
+  },
+  "frozen_rbsr_configuration": {
+    "base_epochs": 180,
+    "delta_pca_dim": 16,
+    "gate_epochs": 80,
+    "gate_exact_handle_contract": "target_controls_hard_overwrite_for_all_projection_modes_v1",
+    "gate_orientation_budget_multiplier": 1.0,
+    "gate_projection": "none",
+    "gate_reconstruction_objective": "mean_per_pair_vector_rmse_over_non_landmark_roi_vertices_v1",
+    "gate_strain_budget_multiplier": 0.8,
+    "hard_projection_attenuation": 0.75,
+    "hard_projection_max_iterations": 64,
+    "hard_projection_smoothing_steps": 0,
+    "hard_projection_uniform_steps": 1001,
+    "zero_residual_ridge_identity_audit_required": true,
+    "ridge_lambda": 300.0,
+    "source_pca_dim": 64,
+    "use_subunit_features": false
+  },
+  "historical_exposure": {
+    "identities_previously_used_in_development": true,
+    "independent_external_confirmation": false,
+    "some_pair_outcomes_may_have_been_seen_in_prior_training_or_validation": true
+  },
+  "matched_comparison_contract": {
+    "method_native_training_pairing_documented": true,
+    "rbsr_train_pair_manifest_frozen": true,
+    "reevaluate_classical_baselines": true,
+    "retrain_ridge_rbsr_and_lamm": true,
+    "same_3925_free_vertex_rmse": true,
+    "same_9_hard_fixed_controls": true,
+    "same_split": true,
+    "same_target_relative_new_flip": true,
+    "same_train_identity_pool": true
+  },
+  "model_seed": 20260609,
+  "parent_split_manifest_sha256": "6e8442d47021ffd6d4cf446733040d6f8be0b2ced500dc6ae5f4c2b8e5775da1",
+  "primary_hypothesis": "On the 9,900 pairs held out from the final retraining, certified RB-SR has mean free-ROI RMSE strictly below its matched Ridge anchor, target-relative new flip no greater than Ridge, and a projected-fold-set subset certificate rate of exactly 1.0.",
+  "scope": "Retrospective internal identity-disjoint final-rerun holdout. These identities and some pair outcomes were available during earlier project development, so this is not a historically untouched or external confirmation. They are excluded from every input to the final retraining and the frozen holdout is not reopened until all models are frozen.",
+  "split_manifest": "final_rerun_holdout_split_manifest.json",
+  "split_manifest_sha256": "f976832beae1a5218e2e9567b1bb7032fbf2a63de0416f97bd4ea1cb004b8356",
+  "split_seed": 20260809,
+  "statistical_analysis_plan": {
+    "degenerate_rule": "all-zero or non-finite Wilcoxon is p=1 and never significant",
+    "primary_family": "certified RB-SR versus matched Ridge across the six frozen metrics",
+    "primary_tests": "source-identity paired two-sided Wilcoxon with Holm correction over six metrics",
+    "secondary_direct_comparison": "certified RB-SR versus LAMM across the same six metrics",
+    "secondary_family": "all reportable methods versus matched Ridge across the same six metrics",
+    "uncertainty": "10,000 source-identity and target-identity cluster bootstrap replicates"
+  },
+  "status": "FROZEN_INTERNAL_FINAL_RERUN_HOLDOUT_POLICY",
+  "test_access": false,
+  "test_access_count": 0,
+  "train_pair_manifest": "final_rerun_holdout_train_pairs.json",
+  "train_pair_manifest_sha256": "d0fca1ee5521a3d9d2ba2f69062769e6ea2ebd5fc4527d8138080b537562e790"
+}

@@ -1,0 +1,29 @@
+{
+  "status": "FROZEN_BEFORE_CALIBRATION_SELECTION_AND_TEST_ACCESS",
+  "recorded_at_utc": "2026-08-10T03:02:09Z",
+  "parent_protocol_sha256": "f92ceb36002d561eb68cdb96e20a5a05b215e81b15117a1b56cd20aaa497b334",
+  "raw_validation_report_sha256": "e895aa3bf11a30fc0d1c5c419735f5e3c232daf798b22a1d8b8ed78435e048d5",
+  "base_model_package_sha256": "40df5a429aab3fade800115ea0eab2bd5100144d6b41df3190ccce08c9350b92",
+  "rbsr_package_sha256": "5ceb2e233bb9d196b6c1b1bff7950d5591e16fab99735712708db25c5d4a266e",
+  "calibration_selection_observed_before_fix": false,
+  "test_access_before_fix": false,
+  "model_weights_changed": false,
+  "split_or_pairing_changed": false,
+  "strict_metric_implementation_changed": false,
+  "raw_validation_metrics_changed": false,
+  "reason": "The projection-free gate evaluator reapplied exact target controls before caching raw RB-SR predictions, but logit calibration reconstructed the fused prediction without reapplying those controls. The strict scorer independently hard-overwrites the same controls, so reported free-ROI RMSE, new-flip and edge-strain metrics were unaffected; the calibration identity check and deployable calibrated output contract were not.",
+  "observed_beta0_max_abs_difference": 2.3679001331329346,
+  "observed_non_landmark_max_abs_difference": 9.5367431640625e-07,
+  "mismatched_landmark_vertices": [47, 139, 149, 197, 212, 530, 630, 812, 824],
+  "correction": "Reapply the exact target-control hard overwrite after every calibrated fusion in validation calibration and final evaluation; compare zero-gate output with the correspondingly hard-fixed Ridge anchor.",
+  "old_implementation_sha256": {
+    "rhinoform/rbsr_calibration.py": "41d664eaace478b433582e85c44f5f9378bca5e4e44e9d44ebc0c72d865c71f2",
+    "scripts/evaluation/rbsr_gate.py": "67653fa24a14eb2ea2f6edadc406953a7d582c3cbf25e1bda38c25ff75415dcf",
+    "scripts/evaluation/rbsr_gate_calibration.py": "039355cab223989e6c6da7fda8a3fdbdf507fca4f34840e6f585e32a68d201d0"
+  },
+  "corrected_implementation_sha256": {
+    "rhinoform/rbsr_calibration.py": "74ca40f3b17ccdb7a671c0699060dd96d20703d010b6dfb4530557fdfba3bd0d",
+    "scripts/evaluation/rbsr_gate.py": "55eed7e0b641b5d8ecf0ce5c366f614ec4b0776231bfda9e409ea2abd4a93b7d",
+    "scripts/evaluation/rbsr_gate_calibration.py": "b75fef279845630e7316f81b273fad8867581cf24929dfcaee2e8077b7091a4f"
+  }
+}

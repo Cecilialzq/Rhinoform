@@ -1,0 +1,7 @@
+comparison,metric,mean_difference,holm_p_two_sided,source_ci95_low,source_ci95_high,final_judgement
+Certified RB-SR minus Ridge,roi_rmse,-0.013982612101659273,5.477198187516316e-13,-0.01670832338035042,-0.011029535338469041,improved
+Certified RB-SR minus Ridge,landmark_rmse,0.0,1.0,0.0,0.0,not_significant_or_cluster_sensitive
+Certified RB-SR minus Ridge,dorsum_rmse,-0.021145890958303992,1.7260104793424332e-10,-0.02587782603796679,-0.016272961449998548,improved
+Certified RB-SR minus Ridge,tip_rmse,-0.031670435465939104,7.35374465287317e-16,-0.03546821738578646,-0.027460171587482915,improved
+Certified RB-SR minus Ridge,edge_strain_p95,0.00012019594745675128,0.1977239680957643,-0.001438452059780001,0.001919513392331225,not_significant_or_cluster_sensitive
+Certified RB-SR minus Ridge,normal_flip_pct,-0.10476938086935485,2.3379359070575454e-17,-0.11311895313457405,-0.0968550382765431,improved

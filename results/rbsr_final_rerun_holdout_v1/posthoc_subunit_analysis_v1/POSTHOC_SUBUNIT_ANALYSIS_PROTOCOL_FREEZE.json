@@ -1,0 +1,167 @@
+{
+  "claim_boundary": "secondary post-hoc regional analysis; not a new untouched confirmation",
+  "dense_prediction_policy": "recomputed from repository-frozen checkpoints; no archival dense chunks read",
+  "edge_rule": "same-region endpoints only; cross-region edges are boundary",
+  "face_rule_reportable": "historical three-vertex vote; argmax tie break in frozen region order",
+  "face_rule_sensitivity": "unique 2-of-3 majority; 1-1-1 faces boundary/excluded",
+  "formulas": {
+    "abs_flip_pct": "100*mean[det_pred<0]",
+    "edge_strain_p95": "P95 intra-region |l_pred-l_source|/max(l_source,1e-12)",
+    "free_rmse": "sqrt(mean free regional squared Euclidean displacement error)",
+    "landmark_rmse": "regional control RMSE after exact target-control overwrite",
+    "missed_flip_pct": "100*mean[target and not prediction fold]",
+    "normal_flip_pct": "100*mean[(det_pred<0) and not(det_target<0)] on regional faces",
+    "target_flip_pct": "100*mean[det_target<0]"
+  },
+  "implementation_hashes": {
+    "experiments/lamm/run_lamm_facescape.py": "546796843e8f7bdc1387714747abc043afad00877b362cf6d5135cfe86932539",
+    "requirements-lamm-inference.txt": "8fa694ad70804bd3163c152398cc4a69c5224da58dae014cfd04497f84ef830a",
+    "rhinoform/baselines.py": "5cea2850161dc80c3a1c5bded09eabdf96cf284130bd42bf75d4d3c226b54136",
+    "rhinoform/confirmation.py": "677d8df8001d44cb745ad1f1097c4e53f42d09dd2b158a984d7fbe6126affd08",
+    "rhinoform/data.py": "2e7f3bf3f00ca12b784105d0f7294f9939fe190fd57d6a897f7cb7d4f505247e",
+    "rhinoform/geometry.py": "47c5f47b4de7428a9491bcb044ad348c87a0f8a9c535bd4d69dd5804fdf82a31",
+    "rhinoform/rbsr_calibration.py": "74ca40f3b17ccdb7a671c0699060dd96d20703d010b6dfb4530557fdfba3bd0d",
+    "rhinoform/regional_analysis.py": "2f3725e1a62d9a67bbdd97d4ffd00bdbad90fd6723b0932fd1af2e020f3555ff",
+    "rhinoform/repro.py": "0fdaeb2928d0d560d0c74e89c871c8a69882b7a8b92b77861adb4646e90963a7",
+    "rhinoform/safe_fusion.py": "4be72c59c26b4e202a3015a412f12cbb4d685e91a22e2df28e3ae24632f0ed52",
+    "rhinoform/strict_protocol_patch.py": "f793e5958c8319c5aa605c899b3d8f3b446907844ab960c0dde25ba5f5c816bb",
+    "rhinoform/train.py": "892fc9dd141cb1163a681eeef91901723be9ae27ab4636515786dafa3ae79c9e",
+    "rhinoform/train_rbsr_gate.py": "de0c08676d31d9a70416b32f5fe0e762d5b162b5db847c14528b979ece15111a",
+    "scripts/evaluation/direct_paired_statistics.py": "38c593b5f1f63e6b42009ede4812557f5efec4aa12f9323e741b547009e1e544",
+    "scripts/evaluation/lamm_validation_reference.py": "ac897774c5a15cec39ae3c3f9ad163e3b20e0af1b0e7db97eed4d3c230b477c2",
+    "scripts/evaluation/posthoc_personalization_ablation.py": "02519255bbdcd1c709490995ffc905e50e3eddc2c7c9ca751904973c580c6b77",
+    "scripts/evaluation/posthoc_qualitative_cases.py": "52bef9a45d43a5156a62e52cf6cec3f8bd935ef523ff86a75fddcafd84c7f29e",
+    "scripts/evaluation/posthoc_strict_noise_robustness.py": "7b38010dd80d7420f907a61b2a2c3311f9803c6d68c8fe745edc4549344a2541",
+    "scripts/evaluation/posthoc_subunit_analysis.py": "7c7774c5e9b4aa04ebee6d17a1fc4c74e836b6a55a9a783f23a5c36ee90d82e3"
+  },
+  "methods": [
+    "ridge",
+    "certified_rbsr",
+    "cvae",
+    "hybrid",
+    "lamm",
+    "laplacian",
+    "bilaplacian",
+    "arap"
+  ],
+  "metrics": [
+    "free_rmse",
+    "landmark_rmse",
+    "edge_strain_p95",
+    "normal_flip_pct",
+    "abs_flip_pct",
+    "missed_flip_pct",
+    "target_flip_pct"
+  ],
+  "multiple_comparison_families": {
+    "all_methods_vs_ridge": "7x5x5=175 Holm tests",
+    "certified_rbsr_vs_lamm": "1x5x5=25 Holm tests",
+    "descriptive_invariants_excluded": {
+      "landmark_rmse": "identically zero after hard-fixing controls",
+      "target_flip_pct": "target-only quantity identical across methods"
+    },
+    "inferential_metrics": [
+      "free_rmse",
+      "edge_strain_p95",
+      "normal_flip_pct",
+      "abs_flip_pct",
+      "missed_flip_pct"
+    ]
+  },
+  "noise_robustness": {
+    "holm_family": "4x3x3=36 tests",
+    "levels_mm": [
+      0,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "methods": [
+      "ridge",
+      "certified_rbsr",
+      "lamm",
+      "arap"
+    ],
+    "metrics": [
+      "roi_rmse",
+      "normal_flip_pct",
+      "edge_strain_p95"
+    ],
+    "old_results": "absolute-flip/nonzero-landmark legacy results are not reused",
+    "operating_point_reselected": false,
+    "pair_panel": "all 4,830 frozen validation pairs",
+    "scoring": "unnoised true controls hard-fixed; free RMSE; target-relative new flip",
+    "seeds": [
+      20260609,
+      20260610,
+      20260611
+    ]
+  },
+  "original_all_models_freeze_sha256": "5787b767ee5138a0dfefe644afc266ff47acb0427b8ec00b792a4ab8355a429b",
+  "original_final_evidence_sha256": "70a7a18ac2e7bbc4d0bc82fa1381c3f56aa2827a2df5143dba6ccbb6656fc327",
+  "original_final_implementation_hashes": {
+    "experiments/lamm/run_lamm_facescape.py": "546796843e8f7bdc1387714747abc043afad00877b362cf6d5135cfe86932539",
+    "rhinoform/baselines.py": "5cea2850161dc80c3a1c5bded09eabdf96cf284130bd42bf75d4d3c226b54136",
+    "rhinoform/confirmation.py": "677d8df8001d44cb745ad1f1097c4e53f42d09dd2b158a984d7fbe6126affd08",
+    "rhinoform/geometry.py": "47c5f47b4de7428a9491bcb044ad348c87a0f8a9c535bd4d69dd5804fdf82a31",
+    "rhinoform/rbsr_calibration.py": "e91feefe9dbb6eb0ce973d0f4245ba5bab31704f94f5b4990012f387f1518166",
+    "rhinoform/safe_fusion.py": "4be72c59c26b4e202a3015a412f12cbb4d685e91a22e2df28e3ae24632f0ed52",
+    "rhinoform/strict_protocol_patch.py": "f793e5958c8319c5aa605c899b3d8f3b446907844ab960c0dde25ba5f5c816bb",
+    "rhinoform/train.py": "892fc9dd141cb1163a681eeef91901723be9ae27ab4636515786dafa3ae79c9e",
+    "rhinoform/train_rbsr_gate.py": "dddfe45927714777cd672d12e7ba4a9c65624ad46f85799fe4156ffc70f8ca45",
+    "scripts/analysis/select_rbsr_certified_projection.py": "12e4c8b3729ebb7f3bbcc4ea217229689155be616a4909e552e8b9438660d2c7",
+    "scripts/evaluation/classical_confirmation.py": "0f898878081d8c3ca3e7ee51e6a96bd807a95f6cd6f6361f588e3a640c7823e7",
+    "scripts/evaluation/direct_paired_statistics.py": "38c593b5f1f63e6b42009ede4812557f5efec4aa12f9323e741b547009e1e544",
+    "scripts/evaluation/rbsr_gate.py": "e9ab821dade09f0bbaad523802907b3e3c919a7f0366b767904b19efd0bb8efd",
+    "scripts/evaluation/rbsr_ridge_fold_projection.py": "2096d833fd55860d816873e77ba177d77379fea120dddf77e441e122ae34f3c1"
+  },
+  "personalization_ablation": {
+    "claim_boundary": "mechanistic personalization evidence on validation",
+    "pair_panel": "all 4,830 frozen validation pairs",
+    "primary_family": "3 source-PCA-vs-alternative free-ROI RMSE Holm tests",
+    "secondary_family": "6 geometry-metric Holm tests",
+    "shuffle": "fixed identity-level cyclic derangement; identical mapping across outgoing pairs",
+    "variants": [
+      "controls_only_ridge",
+      "source_pca_ridge",
+      "mean_source_code",
+      "shuffled_source_code"
+    ]
+  },
+  "qualitative_cases": {
+    "claim_boundary": "descriptive post-hoc; no inferential claim",
+    "methods": [
+      "ridge",
+      "certified_rbsr",
+      "lamm"
+    ],
+    "n_cases": 6,
+    "selection": "deterministic median, P10/P90 control magnitude, high certificate iterations, largest RB-SR gain over Ridge, and worst real failure versus min(Ridge,LAMM)",
+    "selection_timing": "manifest frozen before dense re-inference",
+    "visualisation": "shared error scale and target-relative new-flip overlay"
+  },
+  "regional_inference": {
+    "decision_rule": "Holm p<0.05 and both source/target cluster CIs agree in direction",
+    "effect_size": "source-identity paired Cohen dz and identity win rate",
+    "pairing": "candidate minus baseline on identical directed identity pairs",
+    "primary_test": "two-sided Wilcoxon on source-identity mean paired differences",
+    "uncertainty": "10,000 source-identity and target-identity cluster bootstrap replicates"
+  },
+  "regions": [
+    "root",
+    "dorsum",
+    "tip",
+    "alar_left",
+    "alar_right"
+  ],
+  "spatial_diagnostics": {
+    "edge": "mean/worst relative strain",
+    "face": "new/absolute/missed/target flip frequency",
+    "tails": "p50/p90/p95/p99/max/top-decile mass",
+    "vertex": "mean/worst error"
+  },
+  "split_manifest_sha256": "f976832beae1a5218e2e9567b1bb7032fbf2a63de0416f97bd4ea1cb004b8356",
+  "status": "FROZEN_POSTHOC_AFTER_COMPLETED_TEST_BEFORE_REGIONAL_COMPUTATION",
+  "subunit_definition_sha256": "6f4be6f8c7e1a8864127068ebe7e1d1234943c065aefe62064350a7f5f0414ca",
+  "vertex_rule": "the five frozen masks partition all 3,934 ROI vertices exactly"
+}

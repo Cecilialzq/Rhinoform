@@ -1,0 +1,3530 @@
+{
+  "all_ordered_pairs": 870,
+  "all_ordered_pairs_used": true,
+  "budget": 870,
+  "chain": "chain_2",
+  "coverage_policy": "coverage-balanced ordered pairs; every identity appears at least once as source and target whenever feasible",
+  "curve": "primary",
+  "ids": [
+    "3",
+    "40",
+    "47",
+    "75",
+    "85",
+    "116",
+    "141",
+    "170",
+    "215",
+    "238",
+    "251",
+    "253",
+    "261",
+    "337",
+    "345",
+    "369",
+    "428",
+    "447",
+    "456",
+    "543",
+    "548",
+    "618",
+    "633",
+    "646",
+    "671",
+    "674",
+    "697",
+    "702",
+    "743",
+    "816"
+  ],
+  "n_pairs": 870,
+  "pair_budget_policy": "primary fixed at 870; secondary fixed at min(N*(N-1), 8700)",
+  "pairs": [
+    {
+      "source_id": "3",
+      "target_id": "40"
+    },
+    {
+      "source_id": "3",
+      "target_id": "47"
+    },
+    {
+      "source_id": "3",
+      "target_id": "75"
+    },
+    {
+      "source_id": "3",
+      "target_id": "85"
+    },
+    {
+      "source_id": "3",
+      "target_id": "116"
+    },
+    {
+      "source_id": "3",
+      "target_id": "141"
+    },
+    {
+      "source_id": "3",
+      "target_id": "170"
+    },
+    {
+      "source_id": "3",
+      "target_id": "215"
+    },
+    {
+      "source_id": "3",
+      "target_id": "238"
+    },
+    {
+      "source_id": "3",
+      "target_id": "251"
+    },
+    {
+      "source_id": "3",
+      "target_id": "253"
+    },
+    {
+      "source_id": "3",
+      "target_id": "261"
+    },
+    {
+      "source_id": "3",
+      "target_id": "337"
+    },
+    {
+      "source_id": "3",
+      "target_id": "345"
+    },
+    {
+      "source_id": "3",
+      "target_id": "369"
+    },
+    {
+      "source_id": "3",
+      "target_id": "428"
+    },
+    {
+      "source_id": "3",
+      "target_id": "447"
+    },
+    {
+      "source_id": "3",
+      "target_id": "456"
+    },
+    {
+      "source_id": "3",
+      "target_id": "543"
+    },
+    {
+      "source_id": "3",
+      "target_id": "548"
+    },
+    {
+      "source_id": "3",
+      "target_id": "618"
+    },
+    {
+      "source_id": "3",
+      "target_id": "633"
+    },
+    {
+      "source_id": "3",
+      "target_id": "646"
+    },
+    {
+      "source_id": "3",
+      "target_id": "671"
+    },
+    {
+      "source_id": "3",
+      "target_id": "674"
+    },
+    {
+      "source_id": "3",
+      "target_id": "697"
+    },
+    {
+      "source_id": "3",
+      "target_id": "702"
+    },
+    {
+      "source_id": "3",
+      "target_id": "743"
+    },
+    {
+      "source_id": "3",
+      "target_id": "816"
+    },
+    {
+      "source_id": "40",
+      "target_id": "3"
+    },
+    {
+      "source_id": "40",
+      "target_id": "47"
+    },
+    {
+      "source_id": "40",
+      "target_id": "75"
+    },
+    {
+      "source_id": "40",
+      "target_id": "85"
+    },
+    {
+      "source_id": "40",
+      "target_id": "116"
+    },
+    {
+      "source_id": "40",
+      "target_id": "141"
+    },
+    {
+      "source_id": "40",
+      "target_id": "170"
+    },
+    {
+      "source_id": "40",
+      "target_id": "215"
+    },
+    {
+      "source_id": "40",
+      "target_id": "238"
+    },
+    {
+      "source_id": "40",
+      "target_id": "251"
+    },
+    {
+      "source_id": "40",
+      "target_id": "253"
+    },
+    {
+      "source_id": "40",
+      "target_id": "261"
+    },
+    {
+      "source_id": "40",
+      "target_id": "337"
+    },
+    {
+      "source_id": "40",
+      "target_id": "345"
+    },
+    {
+      "source_id": "40",
+      "target_id": "369"
+    },
+    {
+      "source_id": "40",
+      "target_id": "428"
+    },
+    {
+      "source_id": "40",
+      "target_id": "447"
+    },
+    {
+      "source_id": "40",
+      "target_id": "456"
+    },
+    {
+      "source_id": "40",
+      "target_id": "543"
+    },
+    {
+      "source_id": "40",
+      "target_id": "548"
+    },
+    {
+      "source_id": "40",
+      "target_id": "618"
+    },
+    {
+      "source_id": "40",
+      "target_id": "633"
+    },
+    {
+      "source_id": "40",
+      "target_id": "646"
+    },
+    {
+      "source_id": "40",
+      "target_id": "671"
+    },
+    {
+      "source_id": "40",
+      "target_id": "674"
+    },
+    {
+      "source_id": "40",
+      "target_id": "697"
+    },
+    {
+      "source_id": "40",
+      "target_id": "702"
+    },
+    {
+      "source_id": "40",
+      "target_id": "743"
+    },
+    {
+      "source_id": "40",
+      "target_id": "816"
+    },
+    {
+      "source_id": "47",
+      "target_id": "3"
+    },
+    {
+      "source_id": "47",
+      "target_id": "40"
+    },
+    {
+      "source_id": "47",
+      "target_id": "75"
+    },
+    {
+      "source_id": "47",
+      "target_id": "85"
+    },
+    {
+      "source_id": "47",
+      "target_id": "116"
+    },
+    {
+      "source_id": "47",
+      "target_id": "141"
+    },
+    {
+      "source_id": "47",
+      "target_id": "170"
+    },
+    {
+      "source_id": "47",
+      "target_id": "215"
+    },
+    {
+      "source_id": "47",
+      "target_id": "238"
+    },
+    {
+      "source_id": "47",
+      "target_id": "251"
+    },
+    {
+      "source_id": "47",
+      "target_id": "253"
+    },
+    {
+      "source_id": "47",
+      "target_id": "261"
+    },
+    {
+      "source_id": "47",
+      "target_id": "337"
+    },
+    {
+      "source_id": "47",
+      "target_id": "345"
+    },
+    {
+      "source_id": "47",
+      "target_id": "369"
+    },
+    {
+      "source_id": "47",
+      "target_id": "428"
+    },
+    {
+      "source_id": "47",
+      "target_id": "447"
+    },
+    {
+      "source_id": "47",
+      "target_id": "456"
+    },
+    {
+      "source_id": "47",
+      "target_id": "543"
+    },
+    {
+      "source_id": "47",
+      "target_id": "548"
+    },
+    {
+      "source_id": "47",
+      "target_id": "618"
+    },
+    {
+      "source_id": "47",
+      "target_id": "633"
+    },
+    {
+      "source_id": "47",
+      "target_id": "646"
+    },
+    {
+      "source_id": "47",
+      "target_id": "671"
+    },
+    {
+      "source_id": "47",
+      "target_id": "674"
+    },
+    {
+      "source_id": "47",
+      "target_id": "697"
+    },
+    {
+      "source_id": "47",
+      "target_id": "702"
+    },
+    {
+      "source_id": "47",
+      "target_id": "743"
+    },
+    {
+      "source_id": "47",
+      "target_id": "816"
+    },
+    {
+      "source_id": "75",
+      "target_id": "3"
+    },
+    {
+      "source_id": "75",
+      "target_id": "40"
+    },
+    {
+      "source_id": "75",
+      "target_id": "47"
+    },
+    {
+      "source_id": "75",
+      "target_id": "85"
+    },
+    {
+      "source_id": "75",
+      "target_id": "116"
+    },
+    {
+      "source_id": "75",
+      "target_id": "141"
+    },
+    {
+      "source_id": "75",
+      "target_id": "170"
+    },
+    {
+      "source_id": "75",
+      "target_id": "215"
+    },
+    {
+      "source_id": "75",
+      "target_id": "238"
+    },
+    {
+      "source_id": "75",
+      "target_id": "251"
+    },
+    {
+      "source_id": "75",
+      "target_id": "253"
+    },
+    {
+      "source_id": "75",
+      "target_id": "261"
+    },
+    {
+      "source_id": "75",
+      "target_id": "337"
+    },
+    {
+      "source_id": "75",
+      "target_id": "345"
+    },
+    {
+      "source_id": "75",
+      "target_id": "369"
+    },
+    {
+      "source_id": "75",
+      "target_id": "428"
+    },
+    {
+      "source_id": "75",
+      "target_id": "447"
+    },
+    {
+      "source_id": "75",
+      "target_id": "456"
+    },
+    {
+      "source_id": "75",
+      "target_id": "543"
+    },
+    {
+      "source_id": "75",
+      "target_id": "548"
+    },
+    {
+      "source_id": "75",
+      "target_id": "618"
+    },
+    {
+      "source_id": "75",
+      "target_id": "633"
+    },
+    {
+      "source_id": "75",
+      "target_id": "646"
+    },
+    {
+      "source_id": "75",
+      "target_id": "671"
+    },
+    {
+      "source_id": "75",
+      "target_id": "674"
+    },
+    {
+      "source_id": "75",
+      "target_id": "697"
+    },
+    {
+      "source_id": "75",
+      "target_id": "702"
+    },
+    {
+      "source_id": "75",
+      "target_id": "743"
+    },
+    {
+      "source_id": "75",
+      "target_id": "816"
+    },
+    {
+      "source_id": "85",
+      "target_id": "3"
+    },
+    {
+      "source_id": "85",
+      "target_id": "40"
+    },
+    {
+      "source_id": "85",
+      "target_id": "47"
+    },
+    {
+      "source_id": "85",
+      "target_id": "75"
+    },
+    {
+      "source_id": "85",
+      "target_id": "116"
+    },
+    {
+      "source_id": "85",
+      "target_id": "141"
+    },
+    {
+      "source_id": "85",
+      "target_id": "170"
+    },
+    {
+      "source_id": "85",
+      "target_id": "215"
+    },
+    {
+      "source_id": "85",
+      "target_id": "238"
+    },
+    {
+      "source_id": "85",
+      "target_id": "251"
+    },
+    {
+      "source_id": "85",
+      "target_id": "253"
+    },
+    {
+      "source_id": "85",
+      "target_id": "261"
+    },
+    {
+      "source_id": "85",
+      "target_id": "337"
+    },
+    {
+      "source_id": "85",
+      "target_id": "345"
+    },
+    {
+      "source_id": "85",
+      "target_id": "369"
+    },
+    {
+      "source_id": "85",
+      "target_id": "428"
+    },
+    {
+      "source_id": "85",
+      "target_id": "447"
+    },
+    {
+      "source_id": "85",
+      "target_id": "456"
+    },
+    {
+      "source_id": "85",
+      "target_id": "543"
+    },
+    {
+      "source_id": "85",
+      "target_id": "548"
+    },
+    {
+      "source_id": "85",
+      "target_id": "618"
+    },
+    {
+      "source_id": "85",
+      "target_id": "633"
+    },
+    {
+      "source_id": "85",
+      "target_id": "646"
+    },
+    {
+      "source_id": "85",
+      "target_id": "671"
+    },
+    {
+      "source_id": "85",
+      "target_id": "674"
+    },
+    {
+      "source_id": "85",
+      "target_id": "697"
+    },
+    {
+      "source_id": "85",
+      "target_id": "702"
+    },
+    {
+      "source_id": "85",
+      "target_id": "743"
+    },
+    {
+      "source_id": "85",
+      "target_id": "816"
+    },
+    {
+      "source_id": "116",
+      "target_id": "3"
+    },
+    {
+      "source_id": "116",
+      "target_id": "40"
+    },
+    {
+      "source_id": "116",
+      "target_id": "47"
+    },
+    {
+      "source_id": "116",
+      "target_id": "75"
+    },
+    {
+      "source_id": "116",
+      "target_id": "85"
+    },
+    {
+      "source_id": "116",
+      "target_id": "141"
+    },
+    {
+      "source_id": "116",
+      "target_id": "170"
+    },
+    {
+      "source_id": "116",
+      "target_id": "215"
+    },
+    {
+      "source_id": "116",
+      "target_id": "238"
+    },
+    {
+      "source_id": "116",
+      "target_id": "251"
+    },
+    {
+      "source_id": "116",
+      "target_id": "253"
+    },
+    {
+      "source_id": "116",
+      "target_id": "261"
+    },
+    {
+      "source_id": "116",
+      "target_id": "337"
+    },
+    {
+      "source_id": "116",
+      "target_id": "345"
+    },
+    {
+      "source_id": "116",
+      "target_id": "369"
+    },
+    {
+      "source_id": "116",
+      "target_id": "428"
+    },
+    {
+      "source_id": "116",
+      "target_id": "447"
+    },
+    {
+      "source_id": "116",
+      "target_id": "456"
+    },
+    {
+      "source_id": "116",
+      "target_id": "543"
+    },
+    {
+      "source_id": "116",
+      "target_id": "548"
+    },
+    {
+      "source_id": "116",
+      "target_id": "618"
+    },
+    {
+      "source_id": "116",
+      "target_id": "633"
+    },
+    {
+      "source_id": "116",
+      "target_id": "646"
+    },
+    {
+      "source_id": "116",
+      "target_id": "671"
+    },
+    {
+      "source_id": "116",
+      "target_id": "674"
+    },
+    {
+      "source_id": "116",
+      "target_id": "697"
+    },
+    {
+      "source_id": "116",
+      "target_id": "702"
+    },
+    {
+      "source_id": "116",
+      "target_id": "743"
+    },
+    {
+      "source_id": "116",
+      "target_id": "816"
+    },
+    {
+      "source_id": "141",
+      "target_id": "3"
+    },
+    {
+      "source_id": "141",
+      "target_id": "40"
+    },
+    {
+      "source_id": "141",
+      "target_id": "47"
+    },
+    {
+      "source_id": "141",
+      "target_id": "75"
+    },
+    {
+      "source_id": "141",
+      "target_id": "85"
+    },
+    {
+      "source_id": "141",
+      "target_id": "116"
+    },
+    {
+      "source_id": "141",
+      "target_id": "170"
+    },
+    {
+      "source_id": "141",
+      "target_id": "215"
+    },
+    {
+      "source_id": "141",
+      "target_id": "238"
+    },
+    {
+      "source_id": "141",
+      "target_id": "251"
+    },
+    {
+      "source_id": "141",
+      "target_id": "253"
+    },
+    {
+      "source_id": "141",
+      "target_id": "261"
+    },
+    {
+      "source_id": "141",
+      "target_id": "337"
+    },
+    {
+      "source_id": "141",
+      "target_id": "345"
+    },
+    {
+      "source_id": "141",
+      "target_id": "369"
+    },
+    {
+      "source_id": "141",
+      "target_id": "428"
+    },
+    {
+      "source_id": "141",
+      "target_id": "447"
+    },
+    {
+      "source_id": "141",
+      "target_id": "456"
+    },
+    {
+      "source_id": "141",
+      "target_id": "543"
+    },
+    {
+      "source_id": "141",
+      "target_id": "548"
+    },
+    {
+      "source_id": "141",
+      "target_id": "618"
+    },
+    {
+      "source_id": "141",
+      "target_id": "633"
+    },
+    {
+      "source_id": "141",
+      "target_id": "646"
+    },
+    {
+      "source_id": "141",
+      "target_id": "671"
+    },
+    {
+      "source_id": "141",
+      "target_id": "674"
+    },
+    {
+      "source_id": "141",
+      "target_id": "697"
+    },
+    {
+      "source_id": "141",
+      "target_id": "702"
+    },
+    {
+      "source_id": "141",
+      "target_id": "743"
+    },
+    {
+      "source_id": "141",
+      "target_id": "816"
+    },
+    {
+      "source_id": "170",
+      "target_id": "3"
+    },
+    {
+      "source_id": "170",
+      "target_id": "40"
+    },
+    {
+      "source_id": "170",
+      "target_id": "47"
+    },
+    {
+      "source_id": "170",
+      "target_id": "75"
+    },
+    {
+      "source_id": "170",
+      "target_id": "85"
+    },
+    {
+      "source_id": "170",
+      "target_id": "116"
+    },
+    {
+      "source_id": "170",
+      "target_id": "141"
+    },
+    {
+      "source_id": "170",
+      "target_id": "215"
+    },
+    {
+      "source_id": "170",
+      "target_id": "238"
+    },
+    {
+      "source_id": "170",
+      "target_id": "251"
+    },
+    {
+      "source_id": "170",
+      "target_id": "253"
+    },
+    {
+      "source_id": "170",
+      "target_id": "261"
+    },
+    {
+      "source_id": "170",
+      "target_id": "337"
+    },
+    {
+      "source_id": "170",
+      "target_id": "345"
+    },
+    {
+      "source_id": "170",
+      "target_id": "369"
+    },
+    {
+      "source_id": "170",
+      "target_id": "428"
+    },
+    {
+      "source_id": "170",
+      "target_id": "447"
+    },
+    {
+      "source_id": "170",
+      "target_id": "456"
+    },
+    {
+      "source_id": "170",
+      "target_id": "543"
+    },
+    {
+      "source_id": "170",
+      "target_id": "548"
+    },
+    {
+      "source_id": "170",
+      "target_id": "618"
+    },
+    {
+      "source_id": "170",
+      "target_id": "633"
+    },
+    {
+      "source_id": "170",
+      "target_id": "646"
+    },
+    {
+      "source_id": "170",
+      "target_id": "671"
+    },
+    {
+      "source_id": "170",
+      "target_id": "674"
+    },
+    {
+      "source_id": "170",
+      "target_id": "697"
+    },
+    {
+      "source_id": "170",
+      "target_id": "702"
+    },
+    {
+      "source_id": "170",
+      "target_id": "743"
+    },
+    {
+      "source_id": "170",
+      "target_id": "816"
+    },
+    {
+      "source_id": "215",
+      "target_id": "3"
+    },
+    {
+      "source_id": "215",
+      "target_id": "40"
+    },
+    {
+      "source_id": "215",
+      "target_id": "47"
+    },
+    {
+      "source_id": "215",
+      "target_id": "75"
+    },
+    {
+      "source_id": "215",
+      "target_id": "85"
+    },
+    {
+      "source_id": "215",
+      "target_id": "116"
+    },
+    {
+      "source_id": "215",
+      "target_id": "141"
+    },
+    {
+      "source_id": "215",
+      "target_id": "170"
+    },
+    {
+      "source_id": "215",
+      "target_id": "238"
+    },
+    {
+      "source_id": "215",
+      "target_id": "251"
+    },
+    {
+      "source_id": "215",
+      "target_id": "253"
+    },
+    {
+      "source_id": "215",
+      "target_id": "261"
+    },
+    {
+      "source_id": "215",
+      "target_id": "337"
+    },
+    {
+      "source_id": "215",
+      "target_id": "345"
+    },
+    {
+      "source_id": "215",
+      "target_id": "369"
+    },
+    {
+      "source_id": "215",
+      "target_id": "428"
+    },
+    {
+      "source_id": "215",
+      "target_id": "447"
+    },
+    {
+      "source_id": "215",
+      "target_id": "456"
+    },
+    {
+      "source_id": "215",
+      "target_id": "543"
+    },
+    {
+      "source_id": "215",
+      "target_id": "548"
+    },
+    {
+      "source_id": "215",
+      "target_id": "618"
+    },
+    {
+      "source_id": "215",
+      "target_id": "633"
+    },
+    {
+      "source_id": "215",
+      "target_id": "646"
+    },
+    {
+      "source_id": "215",
+      "target_id": "671"
+    },
+    {
+      "source_id": "215",
+      "target_id": "674"
+    },
+    {
+      "source_id": "215",
+      "target_id": "697"
+    },
+    {
+      "source_id": "215",
+      "target_id": "702"
+    },
+    {
+      "source_id": "215",
+      "target_id": "743"
+    },
+    {
+      "source_id": "215",
+      "target_id": "816"
+    },
+    {
+      "source_id": "238",
+      "target_id": "3"
+    },
+    {
+      "source_id": "238",
+      "target_id": "40"
+    },
+    {
+      "source_id": "238",
+      "target_id": "47"
+    },
+    {
+      "source_id": "238",
+      "target_id": "75"
+    },
+    {
+      "source_id": "238",
+      "target_id": "85"
+    },
+    {
+      "source_id": "238",
+      "target_id": "116"
+    },
+    {
+      "source_id": "238",
+      "target_id": "141"
+    },
+    {
+      "source_id": "238",
+      "target_id": "170"
+    },
+    {
+      "source_id": "238",
+      "target_id": "215"
+    },
+    {
+      "source_id": "238",
+      "target_id": "251"
+    },
+    {
+      "source_id": "238",
+      "target_id": "253"
+    },
+    {
+      "source_id": "238",
+      "target_id": "261"
+    },
+    {
+      "source_id": "238",
+      "target_id": "337"
+    },
+    {
+      "source_id": "238",
+      "target_id": "345"
+    },
+    {
+      "source_id": "238",
+      "target_id": "369"
+    },
+    {
+      "source_id": "238",
+      "target_id": "428"
+    },
+    {
+      "source_id": "238",
+      "target_id": "447"
+    },
+    {
+      "source_id": "238",
+      "target_id": "456"
+    },
+    {
+      "source_id": "238",
+      "target_id": "543"
+    },
+    {
+      "source_id": "238",
+      "target_id": "548"
+    },
+    {
+      "source_id": "238",
+      "target_id": "618"
+    },
+    {
+      "source_id": "238",
+      "target_id": "633"
+    },
+    {
+      "source_id": "238",
+      "target_id": "646"
+    },
+    {
+      "source_id": "238",
+      "target_id": "671"
+    },
+    {
+      "source_id": "238",
+      "target_id": "674"
+    },
+    {
+      "source_id": "238",
+      "target_id": "697"
+    },
+    {
+      "source_id": "238",
+      "target_id": "702"
+    },
+    {
+      "source_id": "238",
+      "target_id": "743"
+    },
+    {
+      "source_id": "238",
+      "target_id": "816"
+    },
+    {
+      "source_id": "251",
+      "target_id": "3"
+    },
+    {
+      "source_id": "251",
+      "target_id": "40"
+    },
+    {
+      "source_id": "251",
+      "target_id": "47"
+    },
+    {
+      "source_id": "251",
+      "target_id": "75"
+    },
+    {
+      "source_id": "251",
+      "target_id": "85"
+    },
+    {
+      "source_id": "251",
+      "target_id": "116"
+    },
+    {
+      "source_id": "251",
+      "target_id": "141"
+    },
+    {
+      "source_id": "251",
+      "target_id": "170"
+    },
+    {
+      "source_id": "251",
+      "target_id": "215"
+    },
+    {
+      "source_id": "251",
+      "target_id": "238"
+    },
+    {
+      "source_id": "251",
+      "target_id": "253"
+    },
+    {
+      "source_id": "251",
+      "target_id": "261"
+    },
+    {
+      "source_id": "251",
+      "target_id": "337"
+    },
+    {
+      "source_id": "251",
+      "target_id": "345"
+    },
+    {
+      "source_id": "251",
+      "target_id": "369"
+    },
+    {
+      "source_id": "251",
+      "target_id": "428"
+    },
+    {
+      "source_id": "251",
+      "target_id": "447"
+    },
+    {
+      "source_id": "251",
+      "target_id": "456"
+    },
+    {
+      "source_id": "251",
+      "target_id": "543"
+    },
+    {
+      "source_id": "251",
+      "target_id": "548"
+    },
+    {
+      "source_id": "251",
+      "target_id": "618"
+    },
+    {
+      "source_id": "251",
+      "target_id": "633"
+    },
+    {
+      "source_id": "251",
+      "target_id": "646"
+    },
+    {
+      "source_id": "251",
+      "target_id": "671"
+    },
+    {
+      "source_id": "251",
+      "target_id": "674"
+    },
+    {
+      "source_id": "251",
+      "target_id": "697"
+    },
+    {
+      "source_id": "251",
+      "target_id": "702"
+    },
+    {
+      "source_id": "251",
+      "target_id": "743"
+    },
+    {
+      "source_id": "251",
+      "target_id": "816"
+    },
+    {
+      "source_id": "253",
+      "target_id": "3"
+    },
+    {
+      "source_id": "253",
+      "target_id": "40"
+    },
+    {
+      "source_id": "253",
+      "target_id": "47"
+    },
+    {
+      "source_id": "253",
+      "target_id": "75"
+    },
+    {
+      "source_id": "253",
+      "target_id": "85"
+    },
+    {
+      "source_id": "253",
+      "target_id": "116"
+    },
+    {
+      "source_id": "253",
+      "target_id": "141"
+    },
+    {
+      "source_id": "253",
+      "target_id": "170"
+    },
+    {
+      "source_id": "253",
+      "target_id": "215"
+    },
+    {
+      "source_id": "253",
+      "target_id": "238"
+    },
+    {
+      "source_id": "253",
+      "target_id": "251"
+    },
+    {
+      "source_id": "253",
+      "target_id": "261"
+    },
+    {
+      "source_id": "253",
+      "target_id": "337"
+    },
+    {
+      "source_id": "253",
+      "target_id": "345"
+    },
+    {
+      "source_id": "253",
+      "target_id": "369"
+    },
+    {
+      "source_id": "253",
+      "target_id": "428"
+    },
+    {
+      "source_id": "253",
+      "target_id": "447"
+    },
+    {
+      "source_id": "253",
+      "target_id": "456"
+    },
+    {
+      "source_id": "253",
+      "target_id": "543"
+    },
+    {
+      "source_id": "253",
+      "target_id": "548"
+    },
+    {
+      "source_id": "253",
+      "target_id": "618"
+    },
+    {
+      "source_id": "253",
+      "target_id": "633"
+    },
+    {
+      "source_id": "253",
+      "target_id": "646"
+    },
+    {
+      "source_id": "253",
+      "target_id": "671"
+    },
+    {
+      "source_id": "253",
+      "target_id": "674"
+    },
+    {
+      "source_id": "253",
+      "target_id": "697"
+    },
+    {
+      "source_id": "253",
+      "target_id": "702"
+    },
+    {
+      "source_id": "253",
+      "target_id": "743"
+    },
+    {
+      "source_id": "253",
+      "target_id": "816"
+    },
+    {
+      "source_id": "261",
+      "target_id": "3"
+    },
+    {
+      "source_id": "261",
+      "target_id": "40"
+    },
+    {
+      "source_id": "261",
+      "target_id": "47"
+    },
+    {
+      "source_id": "261",
+      "target_id": "75"
+    },
+    {
+      "source_id": "261",
+      "target_id": "85"
+    },
+    {
+      "source_id": "261",
+      "target_id": "116"
+    },
+    {
+      "source_id": "261",
+      "target_id": "141"
+    },
+    {
+      "source_id": "261",
+      "target_id": "170"
+    },
+    {
+      "source_id": "261",
+      "target_id": "215"
+    },
+    {
+      "source_id": "261",
+      "target_id": "238"
+    },
+    {
+      "source_id": "261",
+      "target_id": "251"
+    },
+    {
+      "source_id": "261",
+      "target_id": "253"
+    },
+    {
+      "source_id": "261",
+      "target_id": "337"
+    },
+    {
+      "source_id": "261",
+      "target_id": "345"
+    },
+    {
+      "source_id": "261",
+      "target_id": "369"
+    },
+    {
+      "source_id": "261",
+      "target_id": "428"
+    },
+    {
+      "source_id": "261",
+      "target_id": "447"
+    },
+    {
+      "source_id": "261",
+      "target_id": "456"
+    },
+    {
+      "source_id": "261",
+      "target_id": "543"
+    },
+    {
+      "source_id": "261",
+      "target_id": "548"
+    },
+    {
+      "source_id": "261",
+      "target_id": "618"
+    },
+    {
+      "source_id": "261",
+      "target_id": "633"
+    },
+    {
+      "source_id": "261",
+      "target_id": "646"
+    },
+    {
+      "source_id": "261",
+      "target_id": "671"
+    },
+    {
+      "source_id": "261",
+      "target_id": "674"
+    },
+    {
+      "source_id": "261",
+      "target_id": "697"
+    },
+    {
+      "source_id": "261",
+      "target_id": "702"
+    },
+    {
+      "source_id": "261",
+      "target_id": "743"
+    },
+    {
+      "source_id": "261",
+      "target_id": "816"
+    },
+    {
+      "source_id": "337",
+      "target_id": "3"
+    },
+    {
+      "source_id": "337",
+      "target_id": "40"
+    },
+    {
+      "source_id": "337",
+      "target_id": "47"
+    },
+    {
+      "source_id": "337",
+      "target_id": "75"
+    },
+    {
+      "source_id": "337",
+      "target_id": "85"
+    },
+    {
+      "source_id": "337",
+      "target_id": "116"
+    },
+    {
+      "source_id": "337",
+      "target_id": "141"
+    },
+    {
+      "source_id": "337",
+      "target_id": "170"
+    },
+    {
+      "source_id": "337",
+      "target_id": "215"
+    },
+    {
+      "source_id": "337",
+      "target_id": "238"
+    },
+    {
+      "source_id": "337",
+      "target_id": "251"
+    },
+    {
+      "source_id": "337",
+      "target_id": "253"
+    },
+    {
+      "source_id": "337",
+      "target_id": "261"
+    },
+    {
+      "source_id": "337",
+      "target_id": "345"
+    },
+    {
+      "source_id": "337",
+      "target_id": "369"
+    },
+    {
+      "source_id": "337",
+      "target_id": "428"
+    },
+    {
+      "source_id": "337",
+      "target_id": "447"
+    },
+    {
+      "source_id": "337",
+      "target_id": "456"
+    },
+    {
+      "source_id": "337",
+      "target_id": "543"
+    },
+    {
+      "source_id": "337",
+      "target_id": "548"
+    },
+    {
+      "source_id": "337",
+      "target_id": "618"
+    },
+    {
+      "source_id": "337",
+      "target_id": "633"
+    },
+    {
+      "source_id": "337",
+      "target_id": "646"
+    },
+    {
+      "source_id": "337",
+      "target_id": "671"
+    },
+    {
+      "source_id": "337",
+      "target_id": "674"
+    },
+    {
+      "source_id": "337",
+      "target_id": "697"
+    },
+    {
+      "source_id": "337",
+      "target_id": "702"
+    },
+    {
+      "source_id": "337",
+      "target_id": "743"
+    },
+    {
+      "source_id": "337",
+      "target_id": "816"
+    },
+    {
+      "source_id": "345",
+      "target_id": "3"
+    },
+    {
+      "source_id": "345",
+      "target_id": "40"
+    },
+    {
+      "source_id": "345",
+      "target_id": "47"
+    },
+    {
+      "source_id": "345",
+      "target_id": "75"
+    },
+    {
+      "source_id": "345",
+      "target_id": "85"
+    },
+    {
+      "source_id": "345",
+      "target_id": "116"
+    },
+    {
+      "source_id": "345",
+      "target_id": "141"
+    },
+    {
+      "source_id": "345",
+      "target_id": "170"
+    },
+    {
+      "source_id": "345",
+      "target_id": "215"
+    },
+    {
+      "source_id": "345",
+      "target_id": "238"
+    },
+    {
+      "source_id": "345",
+      "target_id": "251"
+    },
+    {
+      "source_id": "345",
+      "target_id": "253"
+    },
+    {
+      "source_id": "345",
+      "target_id": "261"
+    },
+    {
+      "source_id": "345",
+      "target_id": "337"
+    },
+    {
+      "source_id": "345",
+      "target_id": "369"
+    },
+    {
+      "source_id": "345",
+      "target_id": "428"
+    },
+    {
+      "source_id": "345",
+      "target_id": "447"
+    },
+    {
+      "source_id": "345",
+      "target_id": "456"
+    },
+    {
+      "source_id": "345",
+      "target_id": "543"
+    },
+    {
+      "source_id": "345",
+      "target_id": "548"
+    },
+    {
+      "source_id": "345",
+      "target_id": "618"
+    },
+    {
+      "source_id": "345",
+      "target_id": "633"
+    },
+    {
+      "source_id": "345",
+      "target_id": "646"
+    },
+    {
+      "source_id": "345",
+      "target_id": "671"
+    },
+    {
+      "source_id": "345",
+      "target_id": "674"
+    },
+    {
+      "source_id": "345",
+      "target_id": "697"
+    },
+    {
+      "source_id": "345",
+      "target_id": "702"
+    },
+    {
+      "source_id": "345",
+      "target_id": "743"
+    },
+    {
+      "source_id": "345",
+      "target_id": "816"
+    },
+    {
+      "source_id": "369",
+      "target_id": "3"
+    },
+    {
+      "source_id": "369",
+      "target_id": "40"
+    },
+    {
+      "source_id": "369",
+      "target_id": "47"
+    },
+    {
+      "source_id": "369",
+      "target_id": "75"
+    },
+    {
+      "source_id": "369",
+      "target_id": "85"
+    },
+    {
+      "source_id": "369",
+      "target_id": "116"
+    },
+    {
+      "source_id": "369",
+      "target_id": "141"
+    },
+    {
+      "source_id": "369",
+      "target_id": "170"
+    },
+    {
+      "source_id": "369",
+      "target_id": "215"
+    },
+    {
+      "source_id": "369",
+      "target_id": "238"
+    },
+    {
+      "source_id": "369",
+      "target_id": "251"
+    },
+    {
+      "source_id": "369",
+      "target_id": "253"
+    },
+    {
+      "source_id": "369",
+      "target_id": "261"
+    },
+    {
+      "source_id": "369",
+      "target_id": "337"
+    },
+    {
+      "source_id": "369",
+      "target_id": "345"
+    },
+    {
+      "source_id": "369",
+      "target_id": "428"
+    },
+    {
+      "source_id": "369",
+      "target_id": "447"
+    },
+    {
+      "source_id": "369",
+      "target_id": "456"
+    },
+    {
+      "source_id": "369",
+      "target_id": "543"
+    },
+    {
+      "source_id": "369",
+      "target_id": "548"
+    },
+    {
+      "source_id": "369",
+      "target_id": "618"
+    },
+    {
+      "source_id": "369",
+      "target_id": "633"
+    },
+    {
+      "source_id": "369",
+      "target_id": "646"
+    },
+    {
+      "source_id": "369",
+      "target_id": "671"
+    },
+    {
+      "source_id": "369",
+      "target_id": "674"
+    },
+    {
+      "source_id": "369",
+      "target_id": "697"
+    },
+    {
+      "source_id": "369",
+      "target_id": "702"
+    },
+    {
+      "source_id": "369",
+      "target_id": "743"
+    },
+    {
+      "source_id": "369",
+      "target_id": "816"
+    },
+    {
+      "source_id": "428",
+      "target_id": "3"
+    },
+    {
+      "source_id": "428",
+      "target_id": "40"
+    },
+    {
+      "source_id": "428",
+      "target_id": "47"
+    },
+    {
+      "source_id": "428",
+      "target_id": "75"
+    },
+    {
+      "source_id": "428",
+      "target_id": "85"
+    },
+    {
+      "source_id": "428",
+      "target_id": "116"
+    },
+    {
+      "source_id": "428",
+      "target_id": "141"
+    },
+    {
+      "source_id": "428",
+      "target_id": "170"
+    },
+    {
+      "source_id": "428",
+      "target_id": "215"
+    },
+    {
+      "source_id": "428",
+      "target_id": "238"
+    },
+    {
+      "source_id": "428",
+      "target_id": "251"
+    },
+    {
+      "source_id": "428",
+      "target_id": "253"
+    },
+    {
+      "source_id": "428",
+      "target_id": "261"
+    },
+    {
+      "source_id": "428",
+      "target_id": "337"
+    },
+    {
+      "source_id": "428",
+      "target_id": "345"
+    },
+    {
+      "source_id": "428",
+      "target_id": "369"
+    },
+    {
+      "source_id": "428",
+      "target_id": "447"
+    },
+    {
+      "source_id": "428",
+      "target_id": "456"
+    },
+    {
+      "source_id": "428",
+      "target_id": "543"
+    },
+    {
+      "source_id": "428",
+      "target_id": "548"
+    },
+    {
+      "source_id": "428",
+      "target_id": "618"
+    },
+    {
+      "source_id": "428",
+      "target_id": "633"
+    },
+    {
+      "source_id": "428",
+      "target_id": "646"
+    },
+    {
+      "source_id": "428",
+      "target_id": "671"
+    },
+    {
+      "source_id": "428",
+      "target_id": "674"
+    },
+    {
+      "source_id": "428",
+      "target_id": "697"
+    },
+    {
+      "source_id": "428",
+      "target_id": "702"
+    },
+    {
+      "source_id": "428",
+      "target_id": "743"
+    },
+    {
+      "source_id": "428",
+      "target_id": "816"
+    },
+    {
+      "source_id": "447",
+      "target_id": "3"
+    },
+    {
+      "source_id": "447",
+      "target_id": "40"
+    },
+    {
+      "source_id": "447",
+      "target_id": "47"
+    },
+    {
+      "source_id": "447",
+      "target_id": "75"
+    },
+    {
+      "source_id": "447",
+      "target_id": "85"
+    },
+    {
+      "source_id": "447",
+      "target_id": "116"
+    },
+    {
+      "source_id": "447",
+      "target_id": "141"
+    },
+    {
+      "source_id": "447",
+      "target_id": "170"
+    },
+    {
+      "source_id": "447",
+      "target_id": "215"
+    },
+    {
+      "source_id": "447",
+      "target_id": "238"
+    },
+    {
+      "source_id": "447",
+      "target_id": "251"
+    },
+    {
+      "source_id": "447",
+      "target_id": "253"
+    },
+    {
+      "source_id": "447",
+      "target_id": "261"
+    },
+    {
+      "source_id": "447",
+      "target_id": "337"
+    },
+    {
+      "source_id": "447",
+      "target_id": "345"
+    },
+    {
+      "source_id": "447",
+      "target_id": "369"
+    },
+    {
+      "source_id": "447",
+      "target_id": "428"
+    },
+    {
+      "source_id": "447",
+      "target_id": "456"
+    },
+    {
+      "source_id": "447",
+      "target_id": "543"
+    },
+    {
+      "source_id": "447",
+      "target_id": "548"
+    },
+    {
+      "source_id": "447",
+      "target_id": "618"
+    },
+    {
+      "source_id": "447",
+      "target_id": "633"
+    },
+    {
+      "source_id": "447",
+      "target_id": "646"
+    },
+    {
+      "source_id": "447",
+      "target_id": "671"
+    },
+    {
+      "source_id": "447",
+      "target_id": "674"
+    },
+    {
+      "source_id": "447",
+      "target_id": "697"
+    },
+    {
+      "source_id": "447",
+      "target_id": "702"
+    },
+    {
+      "source_id": "447",
+      "target_id": "743"
+    },
+    {
+      "source_id": "447",
+      "target_id": "816"
+    },
+    {
+      "source_id": "456",
+      "target_id": "3"
+    },
+    {
+      "source_id": "456",
+      "target_id": "40"
+    },
+    {
+      "source_id": "456",
+      "target_id": "47"
+    },
+    {
+      "source_id": "456",
+      "target_id": "75"
+    },
+    {
+      "source_id": "456",
+      "target_id": "85"
+    },
+    {
+      "source_id": "456",
+      "target_id": "116"
+    },
+    {
+      "source_id": "456",
+      "target_id": "141"
+    },
+    {
+      "source_id": "456",
+      "target_id": "170"
+    },
+    {
+      "source_id": "456",
+      "target_id": "215"
+    },
+    {
+      "source_id": "456",
+      "target_id": "238"
+    },
+    {
+      "source_id": "456",
+      "target_id": "251"
+    },
+    {
+      "source_id": "456",
+      "target_id": "253"
+    },
+    {
+      "source_id": "456",
+      "target_id": "261"
+    },
+    {
+      "source_id": "456",
+      "target_id": "337"
+    },
+    {
+      "source_id": "456",
+      "target_id": "345"
+    },
+    {
+      "source_id": "456",
+      "target_id": "369"
+    },
+    {
+      "source_id": "456",
+      "target_id": "428"
+    },
+    {
+      "source_id": "456",
+      "target_id": "447"
+    },
+    {
+      "source_id": "456",
+      "target_id": "543"
+    },
+    {
+      "source_id": "456",
+      "target_id": "548"
+    },
+    {
+      "source_id": "456",
+      "target_id": "618"
+    },
+    {
+      "source_id": "456",
+      "target_id": "633"
+    },
+    {
+      "source_id": "456",
+      "target_id": "646"
+    },
+    {
+      "source_id": "456",
+      "target_id": "671"
+    },
+    {
+      "source_id": "456",
+      "target_id": "674"
+    },
+    {
+      "source_id": "456",
+      "target_id": "697"
+    },
+    {
+      "source_id": "456",
+      "target_id": "702"
+    },
+    {
+      "source_id": "456",
+      "target_id": "743"
+    },
+    {
+      "source_id": "456",
+      "target_id": "816"
+    },
+    {
+      "source_id": "543",
+      "target_id": "3"
+    },
+    {
+      "source_id": "543",
+      "target_id": "40"
+    },
+    {
+      "source_id": "543",
+      "target_id": "47"
+    },
+    {
+      "source_id": "543",
+      "target_id": "75"
+    },
+    {
+      "source_id": "543",
+      "target_id": "85"
+    },
+    {
+      "source_id": "543",
+      "target_id": "116"
+    },
+    {
+      "source_id": "543",
+      "target_id": "141"
+    },
+    {
+      "source_id": "543",
+      "target_id": "170"
+    },
+    {
+      "source_id": "543",
+      "target_id": "215"
+    },
+    {
+      "source_id": "543",
+      "target_id": "238"
+    },
+    {
+      "source_id": "543",
+      "target_id": "251"
+    },
+    {
+      "source_id": "543",
+      "target_id": "253"
+    },
+    {
+      "source_id": "543",
+      "target_id": "261"
+    },
+    {
+      "source_id": "543",
+      "target_id": "337"
+    },
+    {
+      "source_id": "543",
+      "target_id": "345"
+    },
+    {
+      "source_id": "543",
+      "target_id": "369"
+    },
+    {
+      "source_id": "543",
+      "target_id": "428"
+    },
+    {
+      "source_id": "543",
+      "target_id": "447"
+    },
+    {
+      "source_id": "543",
+      "target_id": "456"
+    },
+    {
+      "source_id": "543",
+      "target_id": "548"
+    },
+    {
+      "source_id": "543",
+      "target_id": "618"
+    },
+    {
+      "source_id": "543",
+      "target_id": "633"
+    },
+    {
+      "source_id": "543",
+      "target_id": "646"
+    },
+    {
+      "source_id": "543",
+      "target_id": "671"
+    },
+    {
+      "source_id": "543",
+      "target_id": "674"
+    },
+    {
+      "source_id": "543",
+      "target_id": "697"
+    },
+    {
+      "source_id": "543",
+      "target_id": "702"
+    },
+    {
+      "source_id": "543",
+      "target_id": "743"
+    },
+    {
+      "source_id": "543",
+      "target_id": "816"
+    },
+    {
+      "source_id": "548",
+      "target_id": "3"
+    },
+    {
+      "source_id": "548",
+      "target_id": "40"
+    },
+    {
+      "source_id": "548",
+      "target_id": "47"
+    },
+    {
+      "source_id": "548",
+      "target_id": "75"
+    },
+    {
+      "source_id": "548",
+      "target_id": "85"
+    },
+    {
+      "source_id": "548",
+      "target_id": "116"
+    },
+    {
+      "source_id": "548",
+      "target_id": "141"
+    },
+    {
+      "source_id": "548",
+      "target_id": "170"
+    },
+    {
+      "source_id": "548",
+      "target_id": "215"
+    },
+    {
+      "source_id": "548",
+      "target_id": "238"
+    },
+    {
+      "source_id": "548",
+      "target_id": "251"
+    },
+    {
+      "source_id": "548",
+      "target_id": "253"
+    },
+    {
+      "source_id": "548",
+      "target_id": "261"
+    },
+    {
+      "source_id": "548",
+      "target_id": "337"
+    },
+    {
+      "source_id": "548",
+      "target_id": "345"
+    },
+    {
+      "source_id": "548",
+      "target_id": "369"
+    },
+    {
+      "source_id": "548",
+      "target_id": "428"
+    },
+    {
+      "source_id": "548",
+      "target_id": "447"
+    },
+    {
+      "source_id": "548",
+      "target_id": "456"
+    },
+    {
+      "source_id": "548",
+      "target_id": "543"
+    },
+    {
+      "source_id": "548",
+      "target_id": "618"
+    },
+    {
+      "source_id": "548",
+      "target_id": "633"
+    },
+    {
+      "source_id": "548",
+      "target_id": "646"
+    },
+    {
+      "source_id": "548",
+      "target_id": "671"
+    },
+    {
+      "source_id": "548",
+      "target_id": "674"
+    },
+    {
+      "source_id": "548",
+      "target_id": "697"
+    },
+    {
+      "source_id": "548",
+      "target_id": "702"
+    },
+    {
+      "source_id": "548",
+      "target_id": "743"
+    },
+    {
+      "source_id": "548",
+      "target_id": "816"
+    },
+    {
+      "source_id": "618",
+      "target_id": "3"
+    },
+    {
+      "source_id": "618",
+      "target_id": "40"
+    },
+    {
+      "source_id": "618",
+      "target_id": "47"
+    },
+    {
+      "source_id": "618",
+      "target_id": "75"
+    },
+    {
+      "source_id": "618",
+      "target_id": "85"
+    },
+    {
+      "source_id": "618",
+      "target_id": "116"
+    },
+    {
+      "source_id": "618",
+      "target_id": "141"
+    },
+    {
+      "source_id": "618",
+      "target_id": "170"
+    },
+    {
+      "source_id": "618",
+      "target_id": "215"
+    },
+    {
+      "source_id": "618",
+      "target_id": "238"
+    },
+    {
+      "source_id": "618",
+      "target_id": "251"
+    },
+    {
+      "source_id": "618",
+      "target_id": "253"
+    },
+    {
+      "source_id": "618",
+      "target_id": "261"
+    },
+    {
+      "source_id": "618",
+      "target_id": "337"
+    },
+    {
+      "source_id": "618",
+      "target_id": "345"
+    },
+    {
+      "source_id": "618",
+      "target_id": "369"
+    },
+    {
+      "source_id": "618",
+      "target_id": "428"
+    },
+    {
+      "source_id": "618",
+      "target_id": "447"
+    },
+    {
+      "source_id": "618",
+      "target_id": "456"
+    },
+    {
+      "source_id": "618",
+      "target_id": "543"
+    },
+    {
+      "source_id": "618",
+      "target_id": "548"
+    },
+    {
+      "source_id": "618",
+      "target_id": "633"
+    },
+    {
+      "source_id": "618",
+      "target_id": "646"
+    },
+    {
+      "source_id": "618",
+      "target_id": "671"
+    },
+    {
+      "source_id": "618",
+      "target_id": "674"
+    },
+    {
+      "source_id": "618",
+      "target_id": "697"
+    },
+    {
+      "source_id": "618",
+      "target_id": "702"
+    },
+    {
+      "source_id": "618",
+      "target_id": "743"
+    },
+    {
+      "source_id": "618",
+      "target_id": "816"
+    },
+    {
+      "source_id": "633",
+      "target_id": "3"
+    },
+    {
+      "source_id": "633",
+      "target_id": "40"
+    },
+    {
+      "source_id": "633",
+      "target_id": "47"
+    },
+    {
+      "source_id": "633",
+      "target_id": "75"
+    },
+    {
+      "source_id": "633",
+      "target_id": "85"
+    },
+    {
+      "source_id": "633",
+      "target_id": "116"
+    },
+    {
+      "source_id": "633",
+      "target_id": "141"
+    },
+    {
+      "source_id": "633",
+      "target_id": "170"
+    },
+    {
+      "source_id": "633",
+      "target_id": "215"
+    },
+    {
+      "source_id": "633",
+      "target_id": "238"
+    },
+    {
+      "source_id": "633",
+      "target_id": "251"
+    },
+    {
+      "source_id": "633",
+      "target_id": "253"
+    },
+    {
+      "source_id": "633",
+      "target_id": "261"
+    },
+    {
+      "source_id": "633",
+      "target_id": "337"
+    },
+    {
+      "source_id": "633",
+      "target_id": "345"
+    },
+    {
+      "source_id": "633",
+      "target_id": "369"
+    },
+    {
+      "source_id": "633",
+      "target_id": "428"
+    },
+    {
+      "source_id": "633",
+      "target_id": "447"
+    },
+    {
+      "source_id": "633",
+      "target_id": "456"
+    },
+    {
+      "source_id": "633",
+      "target_id": "543"
+    },
+    {
+      "source_id": "633",
+      "target_id": "548"
+    },
+    {
+      "source_id": "633",
+      "target_id": "618"
+    },
+    {
+      "source_id": "633",
+      "target_id": "646"
+    },
+    {
+      "source_id": "633",
+      "target_id": "671"
+    },
+    {
+      "source_id": "633",
+      "target_id": "674"
+    },
+    {
+      "source_id": "633",
+      "target_id": "697"
+    },
+    {
+      "source_id": "633",
+      "target_id": "702"
+    },
+    {
+      "source_id": "633",
+      "target_id": "743"
+    },
+    {
+      "source_id": "633",
+      "target_id": "816"
+    },
+    {
+      "source_id": "646",
+      "target_id": "3"
+    },
+    {
+      "source_id": "646",
+      "target_id": "40"
+    },
+    {
+      "source_id": "646",
+      "target_id": "47"
+    },
+    {
+      "source_id": "646",
+      "target_id": "75"
+    },
+    {
+      "source_id": "646",
+      "target_id": "85"
+    },
+    {
+      "source_id": "646",
+      "target_id": "116"
+    },
+    {
+      "source_id": "646",
+      "target_id": "141"
+    },
+    {
+      "source_id": "646",
+      "target_id": "170"
+    },
+    {
+      "source_id": "646",
+      "target_id": "215"
+    },
+    {
+      "source_id": "646",
+      "target_id": "238"
+    },
+    {
+      "source_id": "646",
+      "target_id": "251"
+    },
+    {
+      "source_id": "646",
+      "target_id": "253"
+    },
+    {
+      "source_id": "646",
+      "target_id": "261"
+    },
+    {
+      "source_id": "646",
+      "target_id": "337"
+    },
+    {
+      "source_id": "646",
+      "target_id": "345"
+    },
+    {
+      "source_id": "646",
+      "target_id": "369"
+    },
+    {
+      "source_id": "646",
+      "target_id": "428"
+    },
+    {
+      "source_id": "646",
+      "target_id": "447"
+    },
+    {
+      "source_id": "646",
+      "target_id": "456"
+    },
+    {
+      "source_id": "646",
+      "target_id": "543"
+    },
+    {
+      "source_id": "646",
+      "target_id": "548"
+    },
+    {
+      "source_id": "646",
+      "target_id": "618"
+    },
+    {
+      "source_id": "646",
+      "target_id": "633"
+    },
+    {
+      "source_id": "646",
+      "target_id": "671"
+    },
+    {
+      "source_id": "646",
+      "target_id": "674"
+    },
+    {
+      "source_id": "646",
+      "target_id": "697"
+    },
+    {
+      "source_id": "646",
+      "target_id": "702"
+    },
+    {
+      "source_id": "646",
+      "target_id": "743"
+    },
+    {
+      "source_id": "646",
+      "target_id": "816"
+    },
+    {
+      "source_id": "671",
+      "target_id": "3"
+    },
+    {
+      "source_id": "671",
+      "target_id": "40"
+    },
+    {
+      "source_id": "671",
+      "target_id": "47"
+    },
+    {
+      "source_id": "671",
+      "target_id": "75"
+    },
+    {
+      "source_id": "671",
+      "target_id": "85"
+    },
+    {
+      "source_id": "671",
+      "target_id": "116"
+    },
+    {
+      "source_id": "671",
+      "target_id": "141"
+    },
+    {
+      "source_id": "671",
+      "target_id": "170"
+    },
+    {
+      "source_id": "671",
+      "target_id": "215"
+    },
+    {
+      "source_id": "671",
+      "target_id": "238"
+    },
+    {
+      "source_id": "671",
+      "target_id": "251"
+    },
+    {
+      "source_id": "671",
+      "target_id": "253"
+    },
+    {
+      "source_id": "671",
+      "target_id": "261"
+    },
+    {
+      "source_id": "671",
+      "target_id": "337"
+    },
+    {
+      "source_id": "671",
+      "target_id": "345"
+    },
+    {
+      "source_id": "671",
+      "target_id": "369"
+    },
+    {
+      "source_id": "671",
+      "target_id": "428"
+    },
+    {
+      "source_id": "671",
+      "target_id": "447"
+    },
+    {
+      "source_id": "671",
+      "target_id": "456"
+    },
+    {
+      "source_id": "671",
+      "target_id": "543"
+    },
+    {
+      "source_id": "671",
+      "target_id": "548"
+    },
+    {
+      "source_id": "671",
+      "target_id": "618"
+    },
+    {
+      "source_id": "671",
+      "target_id": "633"
+    },
+    {
+      "source_id": "671",
+      "target_id": "646"
+    },
+    {
+      "source_id": "671",
+      "target_id": "674"
+    },
+    {
+      "source_id": "671",
+      "target_id": "697"
+    },
+    {
+      "source_id": "671",
+      "target_id": "702"
+    },
+    {
+      "source_id": "671",
+      "target_id": "743"
+    },
+    {
+      "source_id": "671",
+      "target_id": "816"
+    },
+    {
+      "source_id": "674",
+      "target_id": "3"
+    },
+    {
+      "source_id": "674",
+      "target_id": "40"
+    },
+    {
+      "source_id": "674",
+      "target_id": "47"
+    },
+    {
+      "source_id": "674",
+      "target_id": "75"
+    },
+    {
+      "source_id": "674",
+      "target_id": "85"
+    },
+    {
+      "source_id": "674",
+      "target_id": "116"
+    },
+    {
+      "source_id": "674",
+      "target_id": "141"
+    },
+    {
+      "source_id": "674",
+      "target_id": "170"
+    },
+    {
+      "source_id": "674",
+      "target_id": "215"
+    },
+    {
+      "source_id": "674",
+      "target_id": "238"
+    },
+    {
+      "source_id": "674",
+      "target_id": "251"
+    },
+    {
+      "source_id": "674",
+      "target_id": "253"
+    },
+    {
+      "source_id": "674",
+      "target_id": "261"
+    },
+    {
+      "source_id": "674",
+      "target_id": "337"
+    },
+    {
+      "source_id": "674",
+      "target_id": "345"
+    },
+    {
+      "source_id": "674",
+      "target_id": "369"
+    },
+    {
+      "source_id": "674",
+      "target_id": "428"
+    },
+    {
+      "source_id": "674",
+      "target_id": "447"
+    },
+    {
+      "source_id": "674",
+      "target_id": "456"
+    },
+    {
+      "source_id": "674",
+      "target_id": "543"
+    },
+    {
+      "source_id": "674",
+      "target_id": "548"
+    },
+    {
+      "source_id": "674",
+      "target_id": "618"
+    },
+    {
+      "source_id": "674",
+      "target_id": "633"
+    },
+    {
+      "source_id": "674",
+      "target_id": "646"
+    },
+    {
+      "source_id": "674",
+      "target_id": "671"
+    },
+    {
+      "source_id": "674",
+      "target_id": "697"
+    },
+    {
+      "source_id": "674",
+      "target_id": "702"
+    },
+    {
+      "source_id": "674",
+      "target_id": "743"
+    },
+    {
+      "source_id": "674",
+      "target_id": "816"
+    },
+    {
+      "source_id": "697",
+      "target_id": "3"
+    },
+    {
+      "source_id": "697",
+      "target_id": "40"
+    },
+    {
+      "source_id": "697",
+      "target_id": "47"
+    },
+    {
+      "source_id": "697",
+      "target_id": "75"
+    },
+    {
+      "source_id": "697",
+      "target_id": "85"
+    },
+    {
+      "source_id": "697",
+      "target_id": "116"
+    },
+    {
+      "source_id": "697",
+      "target_id": "141"
+    },
+    {
+      "source_id": "697",
+      "target_id": "170"
+    },
+    {
+      "source_id": "697",
+      "target_id": "215"
+    },
+    {
+      "source_id": "697",
+      "target_id": "238"
+    },
+    {
+      "source_id": "697",
+      "target_id": "251"
+    },
+    {
+      "source_id": "697",
+      "target_id": "253"
+    },
+    {
+      "source_id": "697",
+      "target_id": "261"
+    },
+    {
+      "source_id": "697",
+      "target_id": "337"
+    },
+    {
+      "source_id": "697",
+      "target_id": "345"
+    },
+    {
+      "source_id": "697",
+      "target_id": "369"
+    },
+    {
+      "source_id": "697",
+      "target_id": "428"
+    },
+    {
+      "source_id": "697",
+      "target_id": "447"
+    },
+    {
+      "source_id": "697",
+      "target_id": "456"
+    },
+    {
+      "source_id": "697",
+      "target_id": "543"
+    },
+    {
+      "source_id": "697",
+      "target_id": "548"
+    },
+    {
+      "source_id": "697",
+      "target_id": "618"
+    },
+    {
+      "source_id": "697",
+      "target_id": "633"
+    },
+    {
+      "source_id": "697",
+      "target_id": "646"
+    },
+    {
+      "source_id": "697",
+      "target_id": "671"
+    },
+    {
+      "source_id": "697",
+      "target_id": "674"
+    },
+    {
+      "source_id": "697",
+      "target_id": "702"
+    },
+    {
+      "source_id": "697",
+      "target_id": "743"
+    },
+    {
+      "source_id": "697",
+      "target_id": "816"
+    },
+    {
+      "source_id": "702",
+      "target_id": "3"
+    },
+    {
+      "source_id": "702",
+      "target_id": "40"
+    },
+    {
+      "source_id": "702",
+      "target_id": "47"
+    },
+    {
+      "source_id": "702",
+      "target_id": "75"
+    },
+    {
+      "source_id": "702",
+      "target_id": "85"
+    },
+    {
+      "source_id": "702",
+      "target_id": "116"
+    },
+    {
+      "source_id": "702",
+      "target_id": "141"
+    },
+    {
+      "source_id": "702",
+      "target_id": "170"
+    },
+    {
+      "source_id": "702",
+      "target_id": "215"
+    },
+    {
+      "source_id": "702",
+      "target_id": "238"
+    },
+    {
+      "source_id": "702",
+      "target_id": "251"
+    },
+    {
+      "source_id": "702",
+      "target_id": "253"
+    },
+    {
+      "source_id": "702",
+      "target_id": "261"
+    },
+    {
+      "source_id": "702",
+      "target_id": "337"
+    },
+    {
+      "source_id": "702",
+      "target_id": "345"
+    },
+    {
+      "source_id": "702",
+      "target_id": "369"
+    },
+    {
+      "source_id": "702",
+      "target_id": "428"
+    },
+    {
+      "source_id": "702",
+      "target_id": "447"
+    },
+    {
+      "source_id": "702",
+      "target_id": "456"
+    },
+    {
+      "source_id": "702",
+      "target_id": "543"
+    },
+    {
+      "source_id": "702",
+      "target_id": "548"
+    },
+    {
+      "source_id": "702",
+      "target_id": "618"
+    },
+    {
+      "source_id": "702",
+      "target_id": "633"
+    },
+    {
+      "source_id": "702",
+      "target_id": "646"
+    },
+    {
+      "source_id": "702",
+      "target_id": "671"
+    },
+    {
+      "source_id": "702",
+      "target_id": "674"
+    },
+    {
+      "source_id": "702",
+      "target_id": "697"
+    },
+    {
+      "source_id": "702",
+      "target_id": "743"
+    },
+    {
+      "source_id": "702",
+      "target_id": "816"
+    },
+    {
+      "source_id": "743",
+      "target_id": "3"
+    },
+    {
+      "source_id": "743",
+      "target_id": "40"
+    },
+    {
+      "source_id": "743",
+      "target_id": "47"
+    },
+    {
+      "source_id": "743",
+      "target_id": "75"
+    },
+    {
+      "source_id": "743",
+      "target_id": "85"
+    },
+    {
+      "source_id": "743",
+      "target_id": "116"
+    },
+    {
+      "source_id": "743",
+      "target_id": "141"
+    },
+    {
+      "source_id": "743",
+      "target_id": "170"
+    },
+    {
+      "source_id": "743",
+      "target_id": "215"
+    },
+    {
+      "source_id": "743",
+      "target_id": "238"
+    },
+    {
+      "source_id": "743",
+      "target_id": "251"
+    },
+    {
+      "source_id": "743",
+      "target_id": "253"
+    },
+    {
+      "source_id": "743",
+      "target_id": "261"
+    },
+    {
+      "source_id": "743",
+      "target_id": "337"
+    },
+    {
+      "source_id": "743",
+      "target_id": "345"
+    },
+    {
+      "source_id": "743",
+      "target_id": "369"
+    },
+    {
+      "source_id": "743",
+      "target_id": "428"
+    },
+    {
+      "source_id": "743",
+      "target_id": "447"
+    },
+    {
+      "source_id": "743",
+      "target_id": "456"
+    },
+    {
+      "source_id": "743",
+      "target_id": "543"
+    },
+    {
+      "source_id": "743",
+      "target_id": "548"
+    },
+    {
+      "source_id": "743",
+      "target_id": "618"
+    },
+    {
+      "source_id": "743",
+      "target_id": "633"
+    },
+    {
+      "source_id": "743",
+      "target_id": "646"
+    },
+    {
+      "source_id": "743",
+      "target_id": "671"
+    },
+    {
+      "source_id": "743",
+      "target_id": "674"
+    },
+    {
+      "source_id": "743",
+      "target_id": "697"
+    },
+    {
+      "source_id": "743",
+      "target_id": "702"
+    },
+    {
+      "source_id": "743",
+      "target_id": "816"
+    },
+    {
+      "source_id": "816",
+      "target_id": "3"
+    },
+    {
+      "source_id": "816",
+      "target_id": "40"
+    },
+    {
+      "source_id": "816",
+      "target_id": "47"
+    },
+    {
+      "source_id": "816",
+      "target_id": "75"
+    },
+    {
+      "source_id": "816",
+      "target_id": "85"
+    },
+    {
+      "source_id": "816",
+      "target_id": "116"
+    },
+    {
+      "source_id": "816",
+      "target_id": "141"
+    },
+    {
+      "source_id": "816",
+      "target_id": "170"
+    },
+    {
+      "source_id": "816",
+      "target_id": "215"
+    },
+    {
+      "source_id": "816",
+      "target_id": "238"
+    },
+    {
+      "source_id": "816",
+      "target_id": "251"
+    },
+    {
+      "source_id": "816",
+      "target_id": "253"
+    },
+    {
+      "source_id": "816",
+      "target_id": "261"
+    },
+    {
+      "source_id": "816",
+      "target_id": "337"
+    },
+    {
+      "source_id": "816",
+      "target_id": "345"
+    },
+    {
+      "source_id": "816",
+      "target_id": "369"
+    },
+    {
+      "source_id": "816",
+      "target_id": "428"
+    },
+    {
+      "source_id": "816",
+      "target_id": "447"
+    },
+    {
+      "source_id": "816",
+      "target_id": "456"
+    },
+    {
+      "source_id": "816",
+      "target_id": "543"
+    },
+    {
+      "source_id": "816",
+      "target_id": "548"
+    },
+    {
+      "source_id": "816",
+      "target_id": "618"
+    },
+    {
+      "source_id": "816",
+      "target_id": "633"
+    },
+    {
+      "source_id": "816",
+      "target_id": "646"
+    },
+    {
+      "source_id": "816",
+      "target_id": "671"
+    },
+    {
+      "source_id": "816",
+      "target_id": "674"
+    },
+    {
+      "source_id": "816",
+      "target_id": "697"
+    },
+    {
+      "source_id": "816",
+      "target_id": "702"
+    },
+    {
+      "source_id": "816",
+      "target_id": "743"
+    }
+  ],
+  "required_tier": true,
+  "scale": 30,
+  "seed": 20260641,
+  "source_coverage": 30,
+  "target_coverage": 30,
+  "tier": "required"
+}

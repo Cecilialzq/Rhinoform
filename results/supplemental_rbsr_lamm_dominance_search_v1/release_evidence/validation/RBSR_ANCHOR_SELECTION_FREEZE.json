@@ -1,0 +1,49 @@
+{
+  "dimensions": [
+    32,
+    64,
+    96,
+    128
+  ],
+  "lambdas": [
+    1.0,
+    3.0,
+    10.0,
+    30.0,
+    100.0,
+    300.0
+  ],
+  "n_train_pairs": 870,
+  "n_validation_pairs": 4830,
+  "reference": {
+    "edge_strain_p95": 0.3333882698977357,
+    "normal_flip_pct": 0.8559117250241619,
+    "roi_rmse": 1.016005897028082
+  },
+  "reference_validation_summary_sha256": "f3da7fcad5fe8dd0468e055f3a0a0d691b32017226b2c931ce6936f716cdd645",
+  "relative_margin": 0.02,
+  "selected": {
+    "dominates_reference_core": true,
+    "edge_strain_p95": 0.3069274169928526,
+    "label": "pca128_lambda1",
+    "minimum_core_relative_improvement": 0.06198887166445114,
+    "normal_flip_pct": 0.7581703996813287,
+    "relative_improvement_vs_reference_edge_strain_p95": 0.07936947785535393,
+    "relative_improvement_vs_reference_normal_flip_pct": 0.11419556770305257,
+    "relative_improvement_vs_reference_roi_rmse": 0.06198887166445114,
+    "ridge_lambda": 1.0,
+    "roi_rmse": 0.9530248378668827,
+    "source_pca_dim": 128,
+    "strict_scored": true
+  },
+  "selection_policy": "Maximise the minimum relative validation improvement over LAMM across ROI RMSE, new flip, and edge strain among candidates satisfying the declared margin.",
+  "source_pca_package_sha256": "bea5442341ad380b3eb8bf67fe95045cc2543babeb8dc0b11423387c22ac4934",
+  "split": "validation",
+  "split_manifest_sha256": "f976832beae1a5218e2e9567b1bb7032fbf2a63de0416f97bd4ea1cb004b8356",
+  "status": "FROZEN_VALIDATION_SELECTED_RBSR_ANCHOR",
+  "strict_top_k": 12,
+  "summary_csv": "ridge_anchor_validation_sweep.csv",
+  "summary_csv_sha256": "47be5308297bccc3eeef9b7de6f1ea31860876bf02ac0819c73240f499dde76b",
+  "test_access": false,
+  "train_pair_manifest_sha256": "d0fca1ee5521a3d9d2ba2f69062769e6ea2ebd5fc4527d8138080b537562e790"
+}

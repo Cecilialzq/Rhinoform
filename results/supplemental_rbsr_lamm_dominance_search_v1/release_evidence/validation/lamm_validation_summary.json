@@ -1,0 +1,30 @@
+{
+  "checkpoint_sha256": "dfa432e510dbb7232cfc396102aa286e78441a6c25cb363688b8040faaf0116b",
+  "evaluation_signature": "dde4a6e24012d50bd5556574c7b69cf2de7e3bed83d0af8773ff706a642f44fd",
+  "means": {
+    "abs_flip_pct": 1.7890252441377035,
+    "dorsum_rmse": 1.0157111425866454,
+    "edge_strain_p95": 0.3333882698977357,
+    "landmark_rmse": 0.0,
+    "missed_flip_pct": 1.096950037273549,
+    "normal_flip_pct": 0.8559117250241619,
+    "roi_rmse": 1.016005897028082,
+    "target_flip_pct": 2.030063556387091,
+    "tip_rmse": 0.7637075711631518
+  },
+  "method": "lamm_cvpr2024_five_semantic_patches",
+  "n_pairs": 4830,
+  "normalisation_sha256": "f4a03449c8be17a64d0694900636b3f6f3275219d9bb95cfc8ec64c28372e85f",
+  "pair_metrics": "pair_metrics_lamm_validation.csv",
+  "pair_metrics_sha256": "689c0993d94b115594d0f0e1c989fdb0893dd48068ed18c2b4382e7a20b87586",
+  "source_hashes": {
+    "manifest": "46a2c28fb48766b4425c04582ac9efaede4ecac3ec83c7a25b91f9c52647d16d",
+    "roi": "020fbe308db6ebde3c650fd9ede962e5c872f1eec54cb4a874be9b40491e9d52",
+    "split": "f976832beae1a5218e2e9567b1bb7032fbf2a63de0416f97bd4ea1cb004b8356",
+    "subunits": "6f4be6f8c7e1a8864127068ebe7e1d1234943c065aefe62064350a7f5f0414ca"
+  },
+  "split": "validation",
+  "split_manifest_sha256": "f976832beae1a5218e2e9567b1bb7032fbf2a63de0416f97bd4ea1cb004b8356",
+  "status": "FROZEN_LAMM_VALIDATION_REFERENCE_COMPLETE",
+  "test_access": false
+}

@@ -1,0 +1,35 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+data/meshes/
+data/**/*.npz
+demo/public/head.json
+demo/public/demo_case.json
+demo/public/*.png
+results/pending/**/checkpoints/
+results/pending/**/*.pt
+results/pending/**/*.npy
+results/pending/**/*.npz
+experiments/lamm/output/
+reproduction_output/
+reproduction.local.toml
+release_assets/
+
+# Model/checkpoint payloads are distributed through GitHub Release assets.
+# Their JSON sidecars and release manifests remain tracked in Git.
+results/**/*.pt
+results/**/*.npy
+results/**/*.npz
+
+# Per-chunk resume caches are derived artifacts. Their final aggregate evidence
+# and hashes are tracked; raw chunks belong in the release bundle if published.
+results/**/chunks/
+results/**/validation_chunks/
+
+# Large regenerable post-hoc tables are also release assets; compact summaries,
+# paired statistics and publication tables remain in Git.
+results/**/subunit_pair_metrics_all_methods.csv
+results/**/subunit_pair_metrics_unique_majority_sensitivity.csv
+results/**/noise_pair_metrics_all_methods.csv

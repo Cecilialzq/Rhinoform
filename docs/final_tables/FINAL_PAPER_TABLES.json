@@ -1,0 +1,35 @@
+{
+  "main_method_count": 8,
+  "main_test_pairs": 9900,
+  "outputs": [
+    "main_results_9900_pairs.csv",
+    "component_ablation_validation_4830_pairs.csv",
+    "primary_rbsr_vs_ridge_statistics.csv",
+    "supplementary_rbsr_vs_lamm_9900_pairs.csv"
+  ],
+  "paper_experiment_families": [
+    {
+      "claim_boundary": "internal identity-disjoint held-out-from-final-retrain evidence; not historically untouched and not external",
+      "name": "certified RB-SR internal held-out final-rerun confirmation",
+      "role": "primary"
+    },
+    {
+      "claim_boundary": "supplementary post-hoc matched comparison; not blind confirmatory headline",
+      "name": "PCA-128 calibrated RB-SR versus frozen LAMM",
+      "role": "supplementary"
+    }
+  ],
+  "source_sha256": {
+    "results/rbsr_final_rerun_holdout_v1/classical/classical_confirmation_test_summary.json": "c8ab7b07f7dffea1328621fd18cca38ac1273c98251b9b74a65eb4aca116bd6b",
+    "results/rbsr_final_rerun_holdout_v1/direct_paired_statistics/paired_primary_rbsr_vs_ridge.json": "e8cfd7c2478b685971bbb6f66d710e3e3698de99247bedb6d988db5217271cae",
+    "results/rbsr_final_rerun_holdout_v1/lamm/seed20260609/lamm_test_summary.json": "f75a2d9cacbdc6542be53034070143056bf4661bcd3c45f306f143a55634c7c4",
+    "results/rbsr_final_rerun_holdout_v1/rbsr/seed20260609/certified_projection_validation/RBSR_CERTIFIED_PROJECTION_FREEZE.json": "dbefa7d3529d0c04ae94c42c31f68338ab259d28a38ef7e862f5a07475cab092",
+    "results/rbsr_final_rerun_holdout_v1/rbsr/seed20260609/one_shot_test/rbsr_evaluation_test.json": "599c4549fbfa9ca203a6d58ce7a0233a3ce4bae001518dfd3f2c63da399ade44",
+    "results/rbsr_final_rerun_holdout_v1/rbsr/seed20260609/validation_raw/rbsr_evaluation_validation.json": "42aa76b8c746e89b3e23c33eadd736f2a7f08bb0fe3436e7c8b297853a80eb31",
+    "results/supplemental_rbsr_lamm_dominance_search_v1/release_evidence/analysis/RBSR_VS_LAMM_CORE_DOMINANCE_VERDICT.json": "8ca647df540efd8d30816771d25d32eb5b0b8ffdaf7bd5fdac9d32c801b54d6c",
+    "results/supplemental_rbsr_lamm_dominance_search_v1/release_evidence/analysis/rbsr_vs_lamm_core_paired_statistics.json": "61c7cef5eaa79409e605537b9e70932a1b3600e6e40e1e6f037ae9b0dab592aa"
+  },
+  "status": "FINAL_PAPER_TABLES_GENERATED_FROM_FROZEN_EVIDENCE",
+  "supplementary_test_pairs": 9900,
+  "validation_ablation_pairs": 4830
+}

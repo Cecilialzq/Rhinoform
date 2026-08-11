@@ -1,0 +1,61 @@
+{
+  "free_vertex_counts": {
+    "alar_left": 1082,
+    "alar_right": 1095,
+    "dorsum": 573,
+    "root": 513,
+    "tip": 662
+  },
+  "intra_region_edge_counts": {
+    "alar_left": 3143,
+    "alar_right": 3181,
+    "dorsum": 1625,
+    "root": 1418,
+    "tip": 1873
+  },
+  "landmark_counts": {
+    "alar_left": 2,
+    "alar_right": 2,
+    "dorsum": 2,
+    "root": 1,
+    "tip": 2
+  },
+  "legacy_face_counts": {
+    "alar_left": 2129,
+    "alar_right": 2154,
+    "dorsum": 1140,
+    "root": 937,
+    "tip": 1322
+  },
+  "legacy_tie_break_order": [
+    "root",
+    "dorsum",
+    "tip",
+    "alar_left",
+    "alar_right"
+  ],
+  "n_cross_region_edges": 375,
+  "n_face_ties_1_1_1": 2,
+  "n_sensitivity_boundary_faces": 2,
+  "regions": [
+    "root",
+    "dorsum",
+    "tip",
+    "alar_left",
+    "alar_right"
+  ],
+  "unique_majority_face_counts": {
+    "alar_left": 2129,
+    "alar_right": 2154,
+    "dorsum": 1138,
+    "root": 937,
+    "tip": 1322
+  },
+  "vertex_counts": {
+    "alar_left": 1084,
+    "alar_right": 1097,
+    "dorsum": 575,
+    "root": 514,
+    "tip": 664
+  }
+}

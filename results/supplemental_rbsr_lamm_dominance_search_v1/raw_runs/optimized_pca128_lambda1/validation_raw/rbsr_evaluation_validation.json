@@ -1,0 +1,112 @@
+{
+  "all_models_freeze": null,
+  "all_models_freeze_sha256": null,
+  "artifact_paths_relative_to": "this_report_directory",
+  "base_model_package_sha256": "40df5a429aab3fade800115ea0eab2bd5100144d6b41df3190ccce08c9350b92",
+  "calibration_freeze": null,
+  "calibration_freeze_sha256": null,
+  "calibration_freeze_status": null,
+  "calibration_selected": null,
+  "chunking": {
+    "chunk_pairs": 320,
+    "chunk_root": "validation_chunks/5f35b2cc1ff0aca4",
+    "chunk_signature": "5f35b2cc1ff0aca4cf5af82ceab99e15359fbd68a6a5e537fe25132d62c61069",
+    "completed_chunks": 16,
+    "completed_pairs": 4830
+  },
+  "clean_base_comparators": {
+    "field_clean": {
+      "pair_metrics": "pair_metrics_field_clean_validation.csv",
+      "pair_metrics_sha256": "f1b67b17aa0c7489dc39a8fd603a576c6aa5f21a0ccf7d5b654d4898b7f116c2",
+      "summary": {
+        "abs_flip_pct": 1.9739942205785568,
+        "dorsum_rmse": 1.3686015279800043,
+        "edge_strain_p95": 0.25620172023117344,
+        "landmark_rmse": 0.0,
+        "missed_flip_pct": 1.5013909529038063,
+        "normal_flip_pct": 1.445321617095272,
+        "roi_rmse": 1.4080913876576673,
+        "target_flip_pct": 2.030063556387091,
+        "tip_rmse": 1.1235720194186467
+      }
+    },
+    "hybrid_ridge_field_validation_selected_clean": {
+      "pair_metrics": "pair_metrics_hybrid_ridge_field_validation_selected_clean_validation.csv",
+      "pair_metrics_sha256": "277fc4a4ade07175aaff506da1aca9cb8e79d015351953b8e3dead56bb5ac789",
+      "summary": {
+        "abs_flip_pct": 1.5024016239732254,
+        "dorsum_rmse": 1.0457166062323018,
+        "edge_strain_p95": 0.2439078210483237,
+        "landmark_rmse": 0.0,
+        "missed_flip_pct": 1.4879934972075832,
+        "normal_flip_pct": 0.960331564793718,
+        "roi_rmse": 1.0765334225732477,
+        "target_flip_pct": 2.030063556387091,
+        "tip_rmse": 0.7934405671095911
+      }
+    },
+    "ridge_sourcepca_clean": {
+      "pair_metrics": "pair_metrics_ridge_sourcepca_clean_validation.csv",
+      "pair_metrics_sha256": "6a5993eb5d8102a964e5e4b3ac52551dbae55fbf6d7cf651ebe4b5b3f7035563",
+      "summary": {
+        "abs_flip_pct": 1.3823662424004275,
+        "dorsum_rmse": 0.9176146143248373,
+        "edge_strain_p95": 0.30692751255429884,
+        "landmark_rmse": 0.0,
+        "missed_flip_pct": 1.4058731039136956,
+        "normal_flip_pct": 0.7581757899270323,
+        "roi_rmse": 0.9530251064620378,
+        "target_flip_pct": 2.030063556387091,
+        "tip_rmse": 0.6643445041908186
+      }
+    }
+  },
+  "confirmation_policy": null,
+  "confirmation_policy_sha256": null,
+  "dense_predictions": null,
+  "dense_predictions_sha256": null,
+  "gate": {
+    "active_fraction_0p5": 0.2078383388014033,
+    "mean": 0.3215857446193695,
+    "p95": 0.7273992300033569,
+    "validation_selected_checkpoint": {
+      "epoch": 15,
+      "feasible": false,
+      "gate_active_fraction_0p5": 0.2078383388014033,
+      "gate_mean": 0.3215857446193695,
+      "gate_p95": 0.7273992300033569,
+      "lambda_orientation": 0.0,
+      "lambda_strain": 0.0,
+      "orientation_surrogate": 0.0051814008454019,
+      "relative_violation": 0.10809007159233097,
+      "roi_rmse": 1.0302125215530396,
+      "strain_surrogate": 0.017269647890397234,
+      "train_loss": 0.6340324048338265
+    }
+  },
+  "gate_map": "gate_map_validation.npz",
+  "gate_map_sha256": "a25343f59cc278dba78bb9e86ae87f0416a23ff82309c12858849779aea272b4",
+  "method": "rbsr_gate_prototype",
+  "n_pairs": 4830,
+  "pair_metrics": "pair_metrics_rbsr_validation.csv",
+  "pair_metrics_sha256": "702322429f5d18bba85ecf7b2f8a637162b34fba4deb87bef26b04f53dfbed09",
+  "projection_certificate": null,
+  "projection_freeze": null,
+  "projection_freeze_sha256": null,
+  "projection_selected": null,
+  "rbsr_package_sha256": "5ceb2e233bb9d196b6c1b1bff7950d5591e16fab99735712708db25c5d4a266e",
+  "residual_proposer": "field",
+  "selection_status": "validation_only_checkpoint_assessment",
+  "split": "validation",
+  "summary": {
+    "abs_flip_pct": 1.3785256923366338,
+    "dorsum_rmse": 1.0438342777684162,
+    "edge_strain_p95": 0.27251374797855477,
+    "landmark_rmse": 0.0,
+    "missed_flip_pct": 1.4498116917663457,
+    "normal_flip_pct": 0.7982738277158887,
+    "roi_rmse": 1.0302126832018104,
+    "target_flip_pct": 2.030063556387091,
+    "tip_rmse": 0.6754667413512716
+  }
+}

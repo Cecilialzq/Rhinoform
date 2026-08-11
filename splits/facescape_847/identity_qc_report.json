@@ -1,0 +1,16 @@
+{
+  "decision": "pass",
+  "expected_usable": 846,
+  "max_id_scanned": 847,
+  "failed": [
+    {
+      "reason": "missing_neutral_obj",
+      "subject_id": "832"
+    }
+  ],
+  "failed_count": 1,
+  "usable_count": 846,
+  "excluded_incomplete_ids": [
+    "832"
+  ]
+}

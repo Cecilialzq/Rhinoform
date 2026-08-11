@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rhinoform"
+version = "1.0.0"
+description = "Sparse-control nasal morphology deformation on registered FaceScape meshes (RB-SR)"
+requires-python = ">=3.10"
+dynamic = ["dependencies"]
+
+[tool.setuptools]
+packages = ["rhinoform", "rhinoform.novelty_upgrade",
+            "scripts", "scripts.data_processing", "scripts.training",
+            "scripts.evaluation", "scripts.analysis",
+            "scripts.analysis.negative_controls", "scripts.analysis.flip_validation",
+            "scripts.pipeline", "tools"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}

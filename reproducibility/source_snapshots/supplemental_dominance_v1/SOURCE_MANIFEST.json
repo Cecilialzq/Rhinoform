@@ -1,0 +1,120 @@
+{
+  "created_at_utc": "2026-08-11T08:00:49.358396+00:00",
+  "erratum": "results/supplemental_rbsr_lamm_dominance_search_v1/release_evidence/protocol/RBSR_CALIBRATION_EXACT_CONTROL_ERRATUM.json",
+  "erratum_sha256": "53ab048feff1792ba0879fe253063d4c5ae244ce6bf48a198938060c6979265d",
+  "expected_git_tag": "supplemental-dominance-v1",
+  "experiment": "supplemental_rbsr_lamm_dominance_v1",
+  "recovery_statement": "Both the pre-erratum protocol implementation and the corrected reportable implementation are retained; no file is silently substituted.",
+  "schema": "rhinoform_source_snapshot_v1",
+  "source_freeze": "results/supplemental_rbsr_lamm_dominance_search_v1/release_evidence/protocol/RBSR_LAMM_DOMINANCE_SEARCH_PROTOCOL_FREEZE.json",
+  "source_freeze_sha256": "f92ceb36002d561eb68cdb96e20a5a05b215e81b15117a1b56cd20aaa497b334",
+  "status": "COMPLETE_HASH_VERIFIED_DUAL_SOURCE_SNAPSHOT",
+  "variants": {
+    "corrected": {
+      "files": [
+        {
+          "bytes": 10835,
+          "path": "rhinoform/rbsr_calibration.py",
+          "provenance": "current_repository_exact_match",
+          "sha256": "74ca40f3b17ccdb7a671c0699060dd96d20703d010b6dfb4530557fdfba3bd0d"
+        },
+        {
+          "bytes": 45726,
+          "path": "rhinoform/train.py",
+          "provenance": "current_repository_exact_match",
+          "sha256": "892fc9dd141cb1163a681eeef91901723be9ae27ab4636515786dafa3ae79c9e"
+        },
+        {
+          "bytes": 43708,
+          "path": "rhinoform/train_rbsr_gate.py",
+          "provenance": "current_repository_exact_match",
+          "sha256": "de0c08676d31d9a70416b32f5fe0e762d5b162b5db847c14528b979ece15111a"
+        },
+        {
+          "bytes": 12808,
+          "path": "scripts/analysis/rbsr_anchor_validation_sweep.py",
+          "provenance": "current_repository_exact_match",
+          "sha256": "10f4027a710ae0378f900f1ba85b786beaae602c137f39567bf7e66eba962cb6"
+        },
+        {
+          "bytes": 4925,
+          "path": "scripts/analysis/select_rbsr_reference_dominating_calibration.py",
+          "provenance": "current_repository_exact_match",
+          "sha256": "8dfaecdd93eee2aaf7b996d848b4b5905e08ad0653174319b54dfa7a54069d21"
+        },
+        {
+          "bytes": 9552,
+          "path": "scripts/evaluation/lamm_validation_reference.py",
+          "provenance": "hash_verified_historical_reconstruction",
+          "sha256": "00a25271a63fd5124df93fb6e5a2e0421447669ac91edeba717099c435cd2fe7"
+        },
+        {
+          "bytes": 37106,
+          "path": "scripts/evaluation/rbsr_gate.py",
+          "provenance": "current_repository_exact_match",
+          "sha256": "55eed7e0b641b5d8ecf0ce5c366f614ec4b0776231bfda9e409ea2abd4a93b7d"
+        },
+        {
+          "bytes": 16894,
+          "path": "scripts/evaluation/rbsr_gate_calibration.py",
+          "provenance": "current_repository_exact_match",
+          "sha256": "b75fef279845630e7316f81b273fad8867581cf24929dfcaee2e8077b7091a4f"
+        }
+      ],
+      "reportable": true
+    },
+    "pre_erratum": {
+      "files": [
+        {
+          "bytes": 9799,
+          "path": "rhinoform/rbsr_calibration.py",
+          "provenance": "hash_verified_historical_reconstruction",
+          "sha256": "41d664eaace478b433582e85c44f5f9378bca5e4e44e9d44ebc0c72d865c71f2"
+        },
+        {
+          "bytes": 45726,
+          "path": "rhinoform/train.py",
+          "provenance": "current_repository_exact_match",
+          "sha256": "892fc9dd141cb1163a681eeef91901723be9ae27ab4636515786dafa3ae79c9e"
+        },
+        {
+          "bytes": 43708,
+          "path": "rhinoform/train_rbsr_gate.py",
+          "provenance": "current_repository_exact_match",
+          "sha256": "de0c08676d31d9a70416b32f5fe0e762d5b162b5db847c14528b979ece15111a"
+        },
+        {
+          "bytes": 12808,
+          "path": "scripts/analysis/rbsr_anchor_validation_sweep.py",
+          "provenance": "current_repository_exact_match",
+          "sha256": "10f4027a710ae0378f900f1ba85b786beaae602c137f39567bf7e66eba962cb6"
+        },
+        {
+          "bytes": 4925,
+          "path": "scripts/analysis/select_rbsr_reference_dominating_calibration.py",
+          "provenance": "current_repository_exact_match",
+          "sha256": "8dfaecdd93eee2aaf7b996d848b4b5905e08ad0653174319b54dfa7a54069d21"
+        },
+        {
+          "bytes": 9552,
+          "path": "scripts/evaluation/lamm_validation_reference.py",
+          "provenance": "hash_verified_historical_reconstruction",
+          "sha256": "00a25271a63fd5124df93fb6e5a2e0421447669ac91edeba717099c435cd2fe7"
+        },
+        {
+          "bytes": 36889,
+          "path": "scripts/evaluation/rbsr_gate.py",
+          "provenance": "hash_verified_historical_reconstruction",
+          "sha256": "67653fa24a14eb2ea2f6edadc406953a7d582c3cbf25e1bda38c25ff75415dcf"
+        },
+        {
+          "bytes": 16278,
+          "path": "scripts/evaluation/rbsr_gate_calibration.py",
+          "provenance": "hash_verified_historical_reconstruction",
+          "sha256": "039355cab223989e6c6da7fda8a3fdbdf507fca4f34840e6f585e32a68d201d0"
+        }
+      ],
+      "reportable": false
+    }
+  }
+}
