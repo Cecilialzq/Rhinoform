@@ -1,6 +1,7 @@
 {
   "schema": "rhinoform_release_archive_v1",
-  "status": "PREPARED_FOR_GITHUB_RELEASE",
+  "status": "WITHHELD_PENDING_THIRD_PARTY_PERMISSION",
+  "public_distribution_authorized": false,
   "filename": "rhinoform-v1.0.0-checkpoints.tar",
   "bytes": 1109153280,
   "sha256": "9827c1bf6e4cdb39ec616336fe79b084241f67270662fed3b140a1b1023544b2",

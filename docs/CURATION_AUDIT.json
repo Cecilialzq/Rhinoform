@@ -34,7 +34,7 @@
     "is_git_worktree": true,
     "remaining": [
       "publish the remote repository",
-      "attach the manifest-bound checkpoint bundle to the matching GitHub release"
+      "obtain written FaceScape and LAMM permission before distributing frozen checkpoints"
     ]
   }
 }

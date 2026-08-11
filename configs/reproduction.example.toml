@@ -6,9 +6,10 @@
 # and meshes/<subject>_neutral.npz. It is intentionally outside Git.
 data_root = "/absolute/path/to/processed_facescape"
 
-# Root of an extracted GitHub Release asset bundle. The bundle preserves
+# Root of an authorised local checkpoint overlay. Public redistribution is
+# currently withheld pending third-party permission. The overlay preserves
 # repository-relative paths such as results/rbsr_final_rerun_holdout_v1/....
-# Leave as "." when the artifacts are already present in the checkout.
+# Leave as "." only when the artifacts are already present in the checkout.
 artifact_root = "."
 
 # All reproduction outputs are written here; source and frozen results remain read-only.

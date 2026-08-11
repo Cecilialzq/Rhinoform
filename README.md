@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/Cecilialzq/Rhinoform/actions/workflows/ci.yml/badge.svg)](https://github.com/Cecilialzq/Rhinoform/actions/workflows/ci.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)
-[![Licence pending](https://img.shields.io/badge/licence-pending-lightgrey.svg)](LICENSE_PENDING.md)
+[![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](LICENSE)
 
 Rhinoform is a safety-aware method for sparse-control deformation of registered
 3D nasal meshes. Its proposed **residual-based safety refinement (RB-SR)**
@@ -90,8 +90,10 @@ imports independent of the checkout location and avoids the `No module named
 
 1. Obtain FaceScape through its official licence route.
 2. Rebuild the processed 846-mesh cache using [`data/README.md`](data/README.md).
-3. Download the checkpoint bundle attached to the matching GitHub release and
-   extract it without changing its repository-relative paths.
+3. Train the models from the frozen configuration using your licensed local
+   FaceScape copy and a separately obtained LAMM checkout. The author's frozen
+   checkpoint archive is currently withheld pending written third-party
+   permission; it is not a public GitHub Release asset.
 4. Copy [`configs/reproduction.example.toml`](configs/reproduction.example.toml)
    to the Git-ignored `reproduction.local.toml` and edit paths only.
 
@@ -108,10 +110,14 @@ work starts. CLI arguments and the environment variables
 `RHINOFORM_DATA_ROOT`, `RHINOFORM_ARTIFACT_ROOT`, `RHINOFORM_OUTPUT_ROOT`, and
 `RHINOFORM_LAMM_ROOT` can replace the TOML file; no source edit is required.
 
-The exact release-asset inventory is
+The exact private frozen-checkpoint inventory is
 [`reproducibility/RELEASE_ASSET_MANIFEST.json`](reproducibility/RELEASE_ASSET_MANIFEST.json).
-The outer archive filename, size and SHA-256 are frozen in
+Its local archive filename, size and SHA-256 are frozen in
 [`reproducibility/RELEASE_ARCHIVE.json`](reproducibility/RELEASE_ARCHIVE.json).
+These records preserve provenance but do not grant or imply redistribution
+permission. `verify-assets` is available only to an authorised holder of those
+exact bytes; public evidence verification and statistical replay need neither
+the archive nor FaceScape.
 The original executed Colab notebooks are retained as protocol/provenance
 records; portable verification starts from the commands above, not from their
 author-specific Drive mount cells.
@@ -122,8 +128,8 @@ author-specific Drive mount cells.
 |---|---|---|---|
 | Evidence verification | Git checkout | Check frozen statuses and source snapshots | `python -m tools.reproduce verify` |
 | Statistical replay | Git checkout | Recompute the paper-level paired inference | `python -m tools.reproduce replay` |
-| Artifact preflight | Checkout + release assets + processed FaceScape | Prove all end-to-end inputs match | `python -m tools.reproduce preflight --config reproduction.local.toml --full-data-hash` |
-| Full GPU rerun | All above + pinned LAMM checkout + CUDA | Re-run training/evaluation protocol | See [`reproducibility/README.md`](reproducibility/README.md) |
+| Private artifact preflight | Checkout + authorised frozen checkpoints + processed FaceScape | Prove the author's retained end-to-end inputs match | `python -m tools.reproduce preflight --config reproduction.local.toml --full-data-hash` |
+| Full GPU rerun | Checkout + licensed FaceScape + separately obtained pinned LAMM + CUDA | Re-run training/evaluation from scratch | See [`reproducibility/README.md`](reproducibility/README.md) |
 
 GPU training can differ at the last floating-point bits across CUDA, driver and
 hardware versions. The release therefore guarantees exact inputs, code lineage,
@@ -160,9 +166,10 @@ GitHub exposes the repository citation from [`CITATION.cff`](CITATION.cff).
 Until a report DOI is available, cite the software release and include the exact
 Git commit and evidence tag used.
 
-## Licence and third-party material
+## License and third-party material
 
-No open-source licence is currently granted. Ownership and licensing must be
-confirmed against Imperial College London's student-IP policy and any project,
-supervisor, funding or third-party obligations before public release. See
-[`LICENSE_PENDING.md`](LICENSE_PENDING.md) and [`THIRD_PARTY.md`](THIRD_PARTY.md).
+Code authored for Rhinoform is released under the
+[`BSD 3-Clause License`](LICENSE). That license does not cover FaceScape,
+upstream LAMM, or checkpoint/model payloads whose redistribution rights are not
+established. See [`THIRD_PARTY.md`](THIRD_PARTY.md) before downloading data,
+running LAMM, or sharing trained artifacts.

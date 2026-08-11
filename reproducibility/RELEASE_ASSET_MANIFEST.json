@@ -1,7 +1,8 @@
 {
   "schema": "rhinoform_release_asset_manifest_v1",
-  "status": "FROZEN",
-  "distribution": "GitHub Release asset or equivalent immutable object storage",
+  "status": "FROZEN_PRIVATE_INVENTORY",
+  "distribution": "WITHHELD_PENDING_WRITTEN_FACESCAPE_AND_LAMM_PERMISSION",
+  "public_distribution_authorized": false,
   "layout": "Extract as a repository-relative overlay and set RHINOFORM_ARTIFACT_ROOT to its root.",
   "artifacts": [
     {

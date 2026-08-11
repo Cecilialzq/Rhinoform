@@ -89,7 +89,11 @@ def main() -> int:
         if not valid_sha256_sidecar(release_manifest):
             raise RuntimeError("Release-asset manifest or SHA-256 sidecar is invalid")
         release_record = json.loads(release_manifest.read_text(encoding="utf-8"))
-        if release_record.get("status") != "FROZEN" or len(release_record.get("artifacts", [])) != 8:
+        if (
+            release_record.get("status") != "FROZEN_PRIVATE_INVENTORY"
+            or release_record.get("public_distribution_authorized") is not False
+            or len(release_record.get("artifacts", [])) != 8
+        ):
             raise RuntimeError("Unexpected release-asset manifest schema or inventory")
         report["release_asset_inventory"] = {
             "status": release_record["status"],
@@ -99,9 +103,13 @@ def main() -> int:
         if not valid_sha256_sidecar(archive_record_path):
             raise RuntimeError("Release-archive record or SHA-256 sidecar is invalid")
         archive_record = json.loads(archive_record_path.read_text(encoding="utf-8"))
-        if archive_record.get("status") != "PREPARED_FOR_GITHUB_RELEASE":
+        if (
+            archive_record.get("status") != "WITHHELD_PENDING_THIRD_PARTY_PERMISSION"
+            or archive_record.get("public_distribution_authorized") is not False
+        ):
             raise RuntimeError("Unexpected release-archive status")
         report["release_archive"] = {
+            "status": archive_record["status"],
             "filename": archive_record["filename"],
             "bytes": archive_record["bytes"],
             "sha256": archive_record["sha256"],

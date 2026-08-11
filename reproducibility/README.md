@@ -31,11 +31,14 @@ FaceScape is licensed separately. The public `data/manifest.json` binds all 846
 processed meshes by relative path and SHA-256. The preflight refuses a missing,
 renamed, incomplete, or differently processed dataset.
 
-Large checkpoints are not ordinary Git blobs. Download the release asset bundle
-and either extract it over the checkout or set `artifact_root` to the extracted
-overlay. The overlay must preserve repository-relative paths. The authoritative
-file list, sizes and hashes are in `RELEASE_ASSET_MANIFEST.json`; `verify-assets`
-checks every byte before an experiment starts.
+Large checkpoints are not ordinary Git blobs and are currently withheld from
+public distribution pending written FaceScape/LAMM permission. An authorised
+holder may point `artifact_root` to the retained private overlay, which must
+preserve repository-relative paths. The authoritative private file list, sizes
+and hashes are in `RELEASE_ASSET_MANIFEST.json`; `verify-assets` checks every
+byte before an experiment starts. Public reviewers can run `verify` and
+`replay` without checkpoints or FaceScape, or retrain from scratch with their
+own licensed data and separately obtained upstream dependencies.
 
 For convenience the same checks are available as `make verify`,
 `make verify-assets`, and `make preflight`. Override the default local config

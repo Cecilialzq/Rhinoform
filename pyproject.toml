@@ -10,6 +10,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 dynamic = ["dependencies"]
 authors = [{name = "Zequan Li"}]
+license = "BSD-3-Clause"
 keywords = ["3D morphable models", "shape deformation", "geometric deep learning"]
 classifiers = [
     "Development Status :: 4 - Beta",

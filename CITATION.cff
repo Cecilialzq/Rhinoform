@@ -9,6 +9,7 @@ repository-code: "https://github.com/Cecilialzq/Rhinoform"
 url: "https://github.com/Cecilialzq/Rhinoform"
 version: 1.0.0
 date-released: 2026-08-11
+license: BSD-3-Clause
 keywords:
   - 3D morphable models
   - geometric deep learning

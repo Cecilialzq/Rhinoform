@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 MAX_GITHUB_BLOB_BYTES = 100_000_000
 REQUIRED = (
     "README.md",
-    "LICENSE_PENDING.md",
+    "LICENSE",
     "CITATION.cff",
     "THIRD_PARTY.md",
     "SECURITY.md",
