@@ -1,0 +1,5 @@
+# Minimal CPU-only dependency set for the complete unit and protocol suite.
+# PyTorch is installed separately from its official CPU wheel index in CI.
+numpy==2.1.3
+scipy==1.15.3
+pytest==8.3.5
