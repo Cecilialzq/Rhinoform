@@ -30,11 +30,9 @@ Documentation = "https://github.com/Cecilialzq/Rhinoform#readme"
 rhinoform-reproduce = "tools.reproduce:main"
 
 [tool.setuptools]
-packages = ["rhinoform", "rhinoform.novelty_upgrade",
+packages = ["rhinoform",
             "scripts", "scripts.data_processing", "scripts.training",
-            "scripts.evaluation", "scripts.analysis",
-            "scripts.analysis.negative_controls", "scripts.analysis.flip_validation",
-            "scripts.pipeline", "tools"]
+            "scripts.evaluation", "scripts.analysis", "tools"]
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}

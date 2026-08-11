@@ -112,12 +112,11 @@ work starts. CLI arguments and the environment variables
 
 The exact private frozen-checkpoint inventory is
 [`reproducibility/RELEASE_ASSET_MANIFEST.json`](reproducibility/RELEASE_ASSET_MANIFEST.json).
-Its local archive filename, size and SHA-256 are frozen in
-[`reproducibility/RELEASE_ARCHIVE.json`](reproducibility/RELEASE_ARCHIVE.json).
-These records preserve provenance but do not grant or imply redistribution
-permission. `verify-assets` is available only to an authorised holder of those
-exact bytes; public evidence verification and statistical replay need neither
-the archive nor FaceScape.
+The manifest preserves the repository-relative path, byte size and SHA-256 of
+each retained checkpoint without publishing a private local archive record.
+It does not grant or imply redistribution permission. `verify-assets` is
+available only to an authorised holder of those exact bytes; public evidence
+verification and statistical replay need neither checkpoints nor FaceScape.
 The original executed Colab notebooks are retained as protocol/provenance
 records; portable verification starts from the commands above, not from their
 author-specific Drive mount cells.
@@ -145,7 +144,7 @@ scripts/                   data, training, evaluation and analysis modules
 experiments/lamm/          independently written LAMM evaluation adapter
 roi/                       frozen ROI, subunit and control definitions
 splits/                    deterministic dataset/split construction contracts
-results/                   two retained frozen evidence families
+results/                   primary, supplementary and post-hoc evidence
 docs/final_tables/         report tables derived from frozen evidence
 reproducibility/           source snapshots and release-asset manifests
 notebooks/                 executed experiment provenance records

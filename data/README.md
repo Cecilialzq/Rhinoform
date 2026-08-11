@@ -13,7 +13,10 @@ data/
     ...
 ```
 
-The included `data/manifest.json` records the frozen split and processed dataset metadata used for the final results. Raw meshes and processed mesh arrays are excluded from GitHub.
+The included `data/manifest.json` records the immutable 846-mesh preprocessing
+contract. Its parent split reference is dataset-construction provenance, not
+the report-facing final split. Raw meshes and processed mesh arrays are
+excluded from GitHub.
 
 The ROI crop is generated per subject from full-head FaceScape registered
 meshes. The preview meshes in `roi/` are examples only; the crop is not limited
@@ -54,3 +57,5 @@ python -m tools.reproduce preflight \
 The experiment-specific final holdout identities are not inferred from local
 folder names. Training and evaluation consume the tracked frozen protocol at
 `results/rbsr_final_rerun_holdout_v1/protocol/final_rerun_holdout_split_manifest.json`.
+See `splits/README.md` for the distinction between the 847-identity source QC,
+the 846 usable meshes and the final 576/70/100 experiment split.

@@ -99,21 +99,6 @@ def main() -> int:
             "status": release_record["status"],
             "artifacts": len(release_record["artifacts"]),
         }
-        archive_record_path = paths.repo_root / "reproducibility/RELEASE_ARCHIVE.json"
-        if not valid_sha256_sidecar(archive_record_path):
-            raise RuntimeError("Release-archive record or SHA-256 sidecar is invalid")
-        archive_record = json.loads(archive_record_path.read_text(encoding="utf-8"))
-        if (
-            archive_record.get("status") != "WITHHELD_PENDING_THIRD_PARTY_PERMISSION"
-            or archive_record.get("public_distribution_authorized") is not False
-        ):
-            raise RuntimeError("Unexpected release-archive status")
-        report["release_archive"] = {
-            "status": archive_record["status"],
-            "filename": archive_record["filename"],
-            "bytes": archive_record["bytes"],
-            "sha256": archive_record["sha256"],
-        }
     if args.command == "replay":
         report["release_statistics"] = replay_release()
     if args.command in {"verify-assets", "preflight"}:

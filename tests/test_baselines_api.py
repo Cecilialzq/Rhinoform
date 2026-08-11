@@ -15,17 +15,5 @@ class ClassicalBaselineApiTests(unittest.TestCase):
         ):
             self.assertTrue(callable(getattr(baselines, name, None)), name)
 
-    def test_required_reproduction_helpers_are_present(self) -> None:
-        from rhinoform.novelty_upgrade import srg_common
-
-        for name in (
-            "load_package",
-            "load_available_rows",
-            "build_vertex_features",
-            "regenerate_predictions",
-        ):
-            self.assertTrue(callable(getattr(srg_common, name, None)), name)
-
-
 if __name__ == "__main__":
     unittest.main()

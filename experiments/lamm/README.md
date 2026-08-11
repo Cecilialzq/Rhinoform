@@ -11,7 +11,7 @@ before redistributing their source or weights.
 
 Fairness controls:
 
-- exact frozen 676/70/100 identities and 9,900 ordered test pairs;
+- exact frozen 576/70/100 final-rerun identities and 9,900 ordered test pairs;
 - train-only per-vertex normalisation;
 - five patches are the existing disjoint Rhinoform subunits and cover all 3,934
   vertices exactly;
@@ -52,27 +52,15 @@ atomic pair CSV (written about every 500 pairs). A missing or mismatched
 integrity record is never silently accepted as complete. Re-run the interrupted
 cell: the log states either `resume from Drive` or the unit being recomputed.
 
-## Common evaluation suite
+## Retained evaluation surface
 
-After the primary run, `evaluate_lamm_suite.py` applies the method-independent
-experiments used for the frozen baselines:
+The final confirmation notebook evaluates LAMM once on the same 9,900 ordered
+pairs and with the same strict scorer used for every method. The five-subunit,
+noise and qualitative analyses are implemented by the separate frozen post-hoc
+notebook and shared method-independent evaluators. Historical suite runners and
+multi-seed development utilities are intentionally not part of the public
+release surface.
 
-- exact 9,900-pair/order and zero-noise reproduction checks;
-- four-level control-noise robustness using the frozen artefact's exact NumPy
-  draws and validation-derived scale;
-- strict five-subunit RMSE/new-flip localisation;
-- pair-tail and worst-case summaries;
-- batch-1 GPU model-only latency; and
-- an optional clean dense-prediction archive for the existing auxiliary
-  perceptual-proxy implementation.
-
-The noise command must be given the frozen baseline summary and fails closed if
-the levels, seeds or validation median differ. The actual frozen artefact uses
-levels `0,0.05,0.10,0.20` and seeds `2026,2027,2028`. Its
-`normal_flip_pct` column is the strict target-relative **new-flip** percentage;
-the suite also emits `abs_flip_pct` so the two quantities cannot be conflated.
-
-The Colab notebook additionally runs the existing 36-test Holm family,
-two-way identity/LOIO dependence checks and two predeclared confirmatory
-training seeds (`20260610`, `20260611`). Ridge-PCA, Hybrid-alpha and RB-SR-gate
-ablations are method-specific and are therefore not applied to LAMM.
+In every retained table, `normal_flip_pct` is the strict target-relative
+**new-flip** percentage. `abs_flip_pct` is emitted separately and must not be
+substituted for it.

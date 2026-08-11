@@ -39,9 +39,9 @@ withheld pending written authorisation.
 
 ## Frozen artifacts
 
-The author's private checkpoint archive is integrity-bound by
-`reproducibility/RELEASE_ASSET_MANIFEST.json` and
-`reproducibility/RELEASE_ARCHIVE.json`. These records are supplied for
-provenance; the archive is not authorised for public distribution. The public
-repository instead supplies frozen pair-level research evidence, hashes,
-configuration, source snapshots and from-scratch reproduction code.
+The author's retained checkpoint files are integrity-bound by
+`reproducibility/RELEASE_ASSET_MANIFEST.json`. This inventory is supplied for
+provenance; the checkpoint payloads are not authorised for public
+distribution. The public repository instead supplies frozen pair-level
+research evidence, hashes, configuration, source snapshots and from-scratch
+reproduction code.

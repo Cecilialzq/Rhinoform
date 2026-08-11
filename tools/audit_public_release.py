@@ -22,7 +22,6 @@ REQUIRED = (
     "configs/reproduction.example.toml",
     "data/manifest.json",
     "reproducibility/RELEASE_ASSET_MANIFEST.json",
-    "reproducibility/RELEASE_ARCHIVE.json",
     ".github/workflows/ci.yml",
 )
 FORBIDDEN_SUFFIXES = {".pt", ".npy", ".npz"}

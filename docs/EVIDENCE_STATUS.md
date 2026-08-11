@@ -1,6 +1,9 @@
 # Evidence status and report claim gate
 
-This file is the controlling evidence map. Files outside the two retained result families are implementation or data-construction support, not additional paper result sets.
+This file is the controlling evidence map. The public result surface contains
+the primary confirmation, the supplementary matched LAMM comparison and the
+five-subunit post-hoc analysis. Other tracked files are implementation,
+data-construction or exact-source provenance, not additional paper result sets.
 
 | Claim or component | Status | Canonical evidence | Permitted wording |
 |---|---|---|---|
@@ -16,7 +19,7 @@ This file is the controlling evidence map. Files outside the two retained result
 | Statistical significance of all three PCA-128-versus-LAMM core metrics | verified | `release_evidence/analysis/rbsr_vs_lamm_core_paired_statistics.*` | matched-pair significant within this supplementary analysis |
 | Primary result-tree freeze | verified Drive snapshot | `RESULT_TREE_MANIFEST.json`; `FINAL_RESULT_FREEZE_AUDIT.json` | exact Drive result files are frozen |
 | Supplementary release freeze | verified Drive snapshot | `release_evidence/RELEASE_MANIFEST.json` | exact supplementary evidence files are frozen |
-| Public GitHub source release | prepared locally; remote publication pending | clean Git history, annotated evidence tags, CI and release audit | public source repository after push and online CI pass |
+| Public GitHub source release | verified | public `Cecilialzq/Rhinoform` repository, annotated evidence tags and passing CI | public reproducible source release |
 | Five-subunit, robustness and qualitative post-hoc analyses | verified secondary post-hoc evidence | `results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/` | secondary analysis; not a new blind confirmation |
 
 ## Claim boundaries
