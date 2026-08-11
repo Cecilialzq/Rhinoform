@@ -33,7 +33,7 @@ The supplementary PCA-128 comparison obtains ROI RMSE 0.915294, new flip 0.79343
 rhinoform/                 reusable implementation
 scripts/                   training, evaluation and analysis entry points
 experiments/lamm/          LAMM baseline adapter
-notebooks/                 exactly two retained Colab experiment notebooks
+notebooks/                 three retained Colab experiment notebooks
 splits/                    dataset construction inputs; not a paper result family
 roi/                       ROI definitions
 results/rbsr_final_rerun_holdout_v1/
@@ -47,8 +47,12 @@ docs/final_tables/         paper-ready tables derived from frozen evidence
 
 - `notebooks/Rhinoform_RBSR_internal_final_rerun_holdout_colab.ipynb`
 - `notebooks/Rhinoform_RBSR_LAMM_dominance_search_colab.ipynb`
+- `notebooks/Rhinoform_final_rerun_posthoc_subunits_colab.ipynb`
 
-Both notebooks stage immutable data under Colab `/content`, persist resumable checkpoints and outputs to Drive, use atomic writes and SHA-256 sidecars, and stream live progress. The result directories, rather than notebook display output, are the evidence of record.
+All three notebooks stage immutable data under Colab `/content`, persist
+resumable checkpoints and outputs to Drive, use atomic writes and SHA-256
+sidecars, and stream live progress. The result directories, rather than
+notebook display output, are the evidence of record.
 
 ## Reproducibility and release
 
