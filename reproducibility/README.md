@@ -15,6 +15,9 @@ cp configs/reproduction.example.toml reproduction.local.toml
 python -m tools.reproduce verify --config reproduction.local.toml
 python -m tools.reproduce verify-assets --config reproduction.local.toml
 python -m tools.reproduce preflight --config reproduction.local.toml --full-data-hash
+python -m tools.reproduce materialize \
+  --experiment final-holdout \
+  --config reproduction.local.toml
 ```
 
 For the data-free reviewer path, install only `requirements-replay.txt` and the
@@ -53,6 +56,41 @@ with `make preflight REPRO_CONFIG=/absolute/path/to/config.toml`.
 
 Run `python -m tools.audit_source_snapshots --require-tags` to verify every byte
 and confirm that all three annotated Git tags contain the exact manifests.
+
+### Executable historical source isolation
+
+Archival provenance and executable reproduction are separate checks. The
+`materialize` command makes the latter explicit. For `final-holdout` it:
+
+1. requires the annotated `final-holdout-v1` tag;
+2. verifies that the tag contains the byte-identical source manifest;
+3. exports the complete project runtime from that tagged commit;
+4. overlays and rechecks the 14 manifest-bound historical files; and
+5. imports the four historically changed RB-SR modules under Python isolated
+   mode, failing if any Rhinoform module resolves to the live checkout.
+
+The default destination is
+`reproduction_output/source_runtimes/final-holdout`. It contains
+`RUNTIME_SOURCE_LOCK.json`, which records the tag commit, manifest hash and all
+overlaid file hashes. The command refuses to overwrite a non-empty directory.
+
+Run an individual historical CLI only through the isolated wrapper. For
+example, this checks the archived training CLI without importing the current
+root package:
+
+```bash
+python -m tools.reproduce runtime-exec \
+  --runtime-root reproduction_output/source_runtimes/final-holdout \
+  --module rhinoform.train \
+  --module-args --help
+```
+
+Replace the module and arguments with the frozen stage command. Do not invoke
+`python scripts/...` from the current checkout for a historical experiment.
+The three executed Colab notebooks are immutable provenance records (including
+the original console output and stage ordering); they are not the portable
+import boundary and are not required for evidence verification or statistical
+replay.
 
 ## What is and is not guaranteed
 

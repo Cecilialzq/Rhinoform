@@ -102,6 +102,9 @@ python -m tools.reproduce verify-assets --config reproduction.local.toml
 python -m tools.reproduce preflight \
   --config reproduction.local.toml \
   --full-data-hash
+python -m tools.reproduce materialize \
+  --experiment final-holdout \
+  --config reproduction.local.toml
 ```
 
 Preflight validates the canonical manifest, all 846 processed mesh hashes, the
@@ -109,6 +112,14 @@ split, every released model artifact, and all SHA-256 sidecars before expensive
 work starts. CLI arguments and the environment variables
 `RHINOFORM_DATA_ROOT`, `RHINOFORM_ARTIFACT_ROOT`, `RHINOFORM_OUTPUT_ROOT`, and
 `RHINOFORM_LAMM_ROOT` can replace the TOML file; no source edit is required.
+
+`materialize` constructs a non-overwriting historical runtime from the
+annotated `final-holdout-v1` tag, overlays the exact 14-file source snapshot and
+executes an isolated import-origin check for the four RB-SR files that later
+changed. Historical stages must then be launched with `runtime-exec`; this
+prevents the current root implementation from entering a v1 reproduction. See
+[`reproducibility/README.md`](reproducibility/README.md) for the exact contract
+and example command.
 
 The exact private frozen-checkpoint inventory is
 [`reproducibility/RELEASE_ASSET_MANIFEST.json`](reproducibility/RELEASE_ASSET_MANIFEST.json).
@@ -128,6 +139,7 @@ author-specific Drive mount cells.
 | Evidence verification | Git checkout | Check frozen statuses and source snapshots | `python -m tools.reproduce verify` |
 | Statistical replay | Git checkout | Recompute the paper-level paired inference | `python -m tools.reproduce replay` |
 | Private artifact preflight | Checkout + authorised frozen checkpoints + processed FaceScape | Prove the author's retained end-to-end inputs match | `python -m tools.reproduce preflight --config reproduction.local.toml --full-data-hash` |
+| Historical source runtime | Checkout with annotated tags | Build and verify a tag-bound, non-hybrid final-holdout v1 execution tree | `python -m tools.reproduce materialize --experiment final-holdout --config reproduction.local.toml` |
 | Full GPU rerun | Checkout + licensed FaceScape + separately obtained pinned LAMM + CUDA | Re-run training/evaluation from scratch | See [`reproducibility/README.md`](reproducibility/README.md) |
 
 GPU training can differ at the last floating-point bits across CUDA, driver and
