@@ -16,7 +16,8 @@ This file is the controlling evidence map. Files outside the two retained result
 | Statistical significance of all three PCA-128-versus-LAMM core metrics | verified | `release_evidence/analysis/rbsr_vs_lamm_core_paired_statistics.*` | matched-pair significant within this supplementary analysis |
 | Primary result-tree freeze | verified Drive snapshot | `RESULT_TREE_MANIFEST.json`; `FINAL_RESULT_FREEZE_AUDIT.json` | exact Drive result files are frozen |
 | Supplementary release freeze | verified Drive snapshot | `release_evidence/RELEASE_MANIFEST.json` | exact supplementary evidence files are frozen |
-| Public GitHub release | pending external state | a real clean Git commit, remote publication and LFS/release assets | submission repository until completed |
+| Public GitHub source release | prepared locally; remote publication pending | clean Git history, annotated evidence tags, CI and release audit | public source repository after push and online CI pass |
+| Five-subunit, robustness and qualitative post-hoc analyses | verified secondary post-hoc evidence | `results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/` | secondary analysis; not a new blind confirmation |
 
 ## Claim boundaries
 

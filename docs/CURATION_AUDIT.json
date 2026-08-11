@@ -1,8 +1,8 @@
 {
   "status": "PASS_FINAL_SUBMISSION_BOUNDARY_CURATED",
   "curation_date": "2026-08-10",
-  "submission_root": "/Users/lizequan/Library/CloudStorage/GoogleDrive-lizequan0928@gmail.com/我的云端硬盘/Rhinoform_GitHub_Ready_20260808",
-  "private_archive_root": "/Users/lizequan/Library/CloudStorage/GoogleDrive-lizequan0928@gmail.com/我的云端硬盘/Rhinoform_Private_Archive_20260810",
+  "submission_root": ".",
+  "private_archive_root": "not-distributed",
   "pre_curation_inventory": {
     "path_inventory_entries": 5373,
     "path_size_inventory_lines": 5376,
@@ -21,21 +21,20 @@
   "regenerable_cache_disposition": "deleted_after_explicit_path_review",
   "development_split_note": "The complete facescape_847 pair-manifest directory is retained as referenced implementation/data-construction infrastructure; it is not a paper evidence family.",
   "verification": {
-    "pytest": "67 passed",
+    "pytest": "100 passed in a clean location-independent checkout",
     "primary_result_manifest": "124 of 124 artifacts SHA-256 verified",
     "supplementary_release_manifest": "13 of 13 artifacts SHA-256 verified",
     "primary_pair_alignment": "8 methods, identical ordered 9900 pairs",
     "supplementary_pair_alignment": "RB-SR and frozen LAMM, identical ordered 9900 pairs and identical to the primary test ordering",
-    "notebook_contract": "exactly 2 notebooks; all 23 code cells compile and have execution counts",
+    "notebook_contract": "three retained executed provenance notebooks; code-cell contracts covered by tests",
     "supplementary_migrated_packages": "4 selected/frozen artifacts have valid SHA-256 sidecars"
   },
   "paper_table_source": "docs/final_tables/FINAL_PAPER_TABLES.json",
   "release_gate": {
-    "is_git_worktree": false,
+    "is_git_worktree": true,
     "remaining": [
-      "initialise and commit the real Git repository",
       "publish the remote repository",
-      "store the two LAMM checkpoints and other over-limit assets with Git LFS or release assets"
+      "attach the manifest-bound checkpoint bundle to the matching GitHub release"
     ]
   }
 }

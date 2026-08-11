@@ -10,7 +10,9 @@ from rhinoform.reproduction import (
     validate_processed_facescape,
     validate_release_assets,
 )
+from rhinoform.repro import valid_sha256_sidecar
 from tools.audit_source_snapshots import audit_snapshot
+from tools.replay_release import replay_release
 
 
 def resolve_paths(args: argparse.Namespace) -> ReproductionPaths:
@@ -46,6 +48,8 @@ def verify_evidence_roots(paths: ReproductionPaths) -> list[dict[str, object]]:
     reports=[]
     for relative, expected_status in specifications:
         path=paths.locate(relative)
+        if not valid_sha256_sidecar(path):
+            raise RuntimeError(f"Evidence file or SHA-256 sidecar is invalid: {path}")
         record=json.loads(path.read_text(encoding="utf-8"))
         if record.get("status") != expected_status:
             raise RuntimeError(
@@ -58,7 +62,8 @@ def verify_evidence_roots(paths: ReproductionPaths) -> list[dict[str, object]]:
 def parser() -> argparse.ArgumentParser:
     result=argparse.ArgumentParser(description=__doc__)
     result.add_argument(
-        "command", choices=("show-paths", "verify", "verify-assets", "preflight")
+        "command",
+        choices=("show-paths", "verify", "replay", "verify-assets", "preflight"),
     )
     result.add_argument("--config", type=Path)
     result.add_argument("--data-root", type=Path)
@@ -80,6 +85,29 @@ def main() -> int:
     if args.command in {"verify", "verify-assets", "preflight"}:
         report["source_snapshots"]=verify_snapshots(paths)
         report["evidence_roots"]=verify_evidence_roots(paths)
+        release_manifest = paths.repo_root / "reproducibility/RELEASE_ASSET_MANIFEST.json"
+        if not valid_sha256_sidecar(release_manifest):
+            raise RuntimeError("Release-asset manifest or SHA-256 sidecar is invalid")
+        release_record = json.loads(release_manifest.read_text(encoding="utf-8"))
+        if release_record.get("status") != "FROZEN" or len(release_record.get("artifacts", [])) != 8:
+            raise RuntimeError("Unexpected release-asset manifest schema or inventory")
+        report["release_asset_inventory"] = {
+            "status": release_record["status"],
+            "artifacts": len(release_record["artifacts"]),
+        }
+        archive_record_path = paths.repo_root / "reproducibility/RELEASE_ARCHIVE.json"
+        if not valid_sha256_sidecar(archive_record_path):
+            raise RuntimeError("Release-archive record or SHA-256 sidecar is invalid")
+        archive_record = json.loads(archive_record_path.read_text(encoding="utf-8"))
+        if archive_record.get("status") != "PREPARED_FOR_GITHUB_RELEASE":
+            raise RuntimeError("Unexpected release-archive status")
+        report["release_archive"] = {
+            "filename": archive_record["filename"],
+            "bytes": archive_record["bytes"],
+            "sha256": archive_record["sha256"],
+        }
+    if args.command == "replay":
+        report["release_statistics"] = replay_release()
     if args.command in {"verify-assets", "preflight"}:
         report["release_assets"] = validate_release_assets(paths)
     if args.command == "preflight":

@@ -1,77 +1,168 @@
 # Rhinoform
 
-This repository contains the implementation and the two experiment families used by the final report. FaceScape meshes are licensed separately and are not included.
+[![CI](https://github.com/Cecilialzq/Rhinoform/actions/workflows/ci.yml/badge.svg)](https://github.com/Cecilialzq/Rhinoform/actions/workflows/ci.yml)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)
+[![Licence pending](https://img.shields.io/badge/licence-pending-lightgrey.svg)](LICENSE_PENDING.md)
 
-## Final evidence boundary
+Rhinoform is a safety-aware method for sparse-control deformation of registered
+3D nasal meshes. Its proposed **residual-based safety refinement (RB-SR)**
+combines a Ridge anchor, a learned residual proposer and gate, and a hard
+geometric certificate. The project studies preoperative design geometry; it is
+not a clinical planning, diagnostic, outcome-prediction or medical device tool.
 
-The paper uses exactly two evidence families:
+This public repository contains the implementation, frozen pair-level evidence,
+exact split and ROI contracts, source snapshots, tests, and portable verification
+commands. FaceScape meshes are licensed separately and are not redistributed.
 
-1. **Primary internal final-rerun confirmation** — the frozen PCA-64 certified RB-SR model and all seven matched baselines on the same 9,900 ordered test pairs.
-2. **Supplementary post-hoc matched comparison** — a separately selected PCA-128 calibrated RB-SR operating point compared with the already frozen LAMM predictions on the same 9,900 ordered test pairs.
+## Results and claim boundary
 
-These are complementary, not one merged model. The PCA-64 certified model is the primary deployable accuracy–safety result. The PCA-128 result is capacity/trade-off evidence and must remain labelled supplementary post-hoc.
+The primary experiment is a clean identity-disjoint internal final rerun on
+9,900 matched ordered test pairs. The deployed PCA-64 certified model improves
+the predeclared accuracy and target-relative new-flip objectives over its matched
+Ridge anchor.
 
-The final paper tables are generated directly from the frozen JSON and pair-level evidence in [`docs/final_tables`](docs/final_tables/README.md). The complete claim map is in [`docs/FINAL_EXPERIMENT_MAP.md`](docs/FINAL_EXPERIMENT_MAP.md).
-
-## Main result
-
-The primary predeclared comparison passed on 9,900 matched test pairs:
-
-| Method | ROI RMSE ↓ | Target-relative new flip % ↓ | Edge-strain p95 ↓ |
+| Method | ROI RMSE ↓ | Target-relative new flip ↓ | Edge-strain p95 ↓ |
 |---|---:|---:|---:|
-| Certified RB-SR | 1.059931 | 0.226894 | 0.203530 |
-| Ridge | 1.073914 | 0.331663 | 0.203410 |
-| LAMM | 0.971544 | 0.878723 | 0.319585 |
+| Certified RB-SR (primary, PCA-64) | **1.059931** | **0.226894%** | 0.203530 |
+| Ridge | 1.073914 | 0.331663% | **0.203410** |
+| LAMM | **0.971544** | 0.878723% | 0.319585 |
 
-Direct paired RB-SR-versus-Ridge tests support the RMSE and new-flip improvements after Holm correction. Edge strain is statistically indistinguishable from Ridge, not improved.
+Direct RB-SR-versus-Ridge tests support the ROI RMSE and new-flip improvements
+after Holm correction. Edge strain is statistically indistinguishable from
+Ridge and is not claimed as improved.
 
-The supplementary PCA-128 comparison obtains ROI RMSE 0.915294, new flip 0.793430%, and edge-strain p95 0.299634, all lower than frozen LAMM (0.971544, 0.878723%, 0.319585) with matched-pair significance. This is not the primary confirmatory headline.
+A separate **supplementary post-hoc** PCA-128 operating point is evaluated on
+the same 9,900 pairs and with the same strict scorer. It obtains ROI RMSE
+0.915294, new flip 0.793430%, and edge-strain p95 0.299634, all below the frozen
+LAMM values; all three matched comparisons pass the stored cluster-aware,
+Holm-corrected procedure. This supplementary model is capacity/trade-off
+evidence, not the primary confirmatory model.
+
+The authoritative wording and evidence files are mapped in
+[`docs/FINAL_EXPERIMENT_MAP.md`](docs/FINAL_EXPERIMENT_MAP.md) and
+[`docs/EVIDENCE_STATUS.md`](docs/EVIDENCE_STATUS.md). Do not merge the PCA-64
+and PCA-128 rows into a synthetic result.
+
+## Reproduce in under one minute
+
+The fastest independent check needs no FaceScape data, checkpoint, GPU, Colab,
+or personal path. It verifies the frozen evidence and recomputes both report-level
+statistical analyses from the tracked 9,900-pair tables.
+
+```bash
+git clone https://github.com/Cecilialzq/Rhinoform.git
+cd Rhinoform
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements-replay.txt
+python -m pip install -e . --no-deps
+
+python -m tools.reproduce verify
+python -m tools.reproduce replay
+```
+
+Expected terminal statuses are `PASS` and
+`PASS_RELEASE_STATISTICS_REPLAY`. The replay uses `rtol=1e-12` and
+`atol=1e-15` only for cross-platform floating-point roundoff; categorical
+judgements, pair ordering, row counts, hashes and schema fields must match
+exactly.
+
+## Installation
+
+The frozen environment uses Python 3.10+ and the versions in
+[`requirements.txt`](requirements.txt). A CUDA-capable PyTorch installation is
+needed only for model inference or training.
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -e .
+python -m pytest -q
+```
+
+Always invoke repository entry points as modules (`python -m ...`). This makes
+imports independent of the checkout location and avoids the `No module named
+'rhinoform'` failure caused by executing nested scripts directly.
+
+## Data and release assets
+
+1. Obtain FaceScape through its official licence route.
+2. Rebuild the processed 846-mesh cache using [`data/README.md`](data/README.md).
+3. Download the checkpoint bundle attached to the matching GitHub release and
+   extract it without changing its repository-relative paths.
+4. Copy [`configs/reproduction.example.toml`](configs/reproduction.example.toml)
+   to the Git-ignored `reproduction.local.toml` and edit paths only.
+
+```bash
+python -m tools.reproduce verify-assets --config reproduction.local.toml
+python -m tools.reproduce preflight \
+  --config reproduction.local.toml \
+  --full-data-hash
+```
+
+Preflight validates the canonical manifest, all 846 processed mesh hashes, the
+split, every released model artifact, and all SHA-256 sidecars before expensive
+work starts. CLI arguments and the environment variables
+`RHINOFORM_DATA_ROOT`, `RHINOFORM_ARTIFACT_ROOT`, `RHINOFORM_OUTPUT_ROOT`, and
+`RHINOFORM_LAMM_ROOT` can replace the TOML file; no source edit is required.
+
+The exact release-asset inventory is
+[`reproducibility/RELEASE_ASSET_MANIFEST.json`](reproducibility/RELEASE_ASSET_MANIFEST.json).
+The outer archive filename, size and SHA-256 are frozen in
+[`reproducibility/RELEASE_ARCHIVE.json`](reproducibility/RELEASE_ARCHIVE.json).
+The original executed Colab notebooks are retained as protocol/provenance
+records; portable verification starts from the commands above, not from their
+author-specific Drive mount cells.
+
+## Reproducibility levels
+
+| Level | Inputs | Typical purpose | Command |
+|---|---|---|---|
+| Evidence verification | Git checkout | Check frozen statuses and source snapshots | `python -m tools.reproduce verify` |
+| Statistical replay | Git checkout | Recompute the paper-level paired inference | `python -m tools.reproduce replay` |
+| Artifact preflight | Checkout + release assets + processed FaceScape | Prove all end-to-end inputs match | `python -m tools.reproduce preflight --config reproduction.local.toml --full-data-hash` |
+| Full GPU rerun | All above + pinned LAMM checkout + CUDA | Re-run training/evaluation protocol | See [`reproducibility/README.md`](reproducibility/README.md) |
+
+GPU training can differ at the last floating-point bits across CUDA, driver and
+hardware versions. The release therefore guarantees exact inputs, code lineage,
+pair ordering and artifact hashes, and uses frozen metric tolerances where
+bitwise GPU equality is not technically portable. It does not claim universal
+bit-for-bit retraining on arbitrary hardware.
 
 ## Repository layout
 
 ```text
-rhinoform/                 reusable implementation
-scripts/                   training, evaluation and analysis entry points
-experiments/lamm/          LAMM baseline adapter
-notebooks/                 three retained Colab experiment notebooks
-splits/                    dataset construction inputs; not a paper result family
-roi/                       ROI definitions
-results/rbsr_final_rerun_holdout_v1/
-                           primary frozen evidence
-results/supplemental_rbsr_lamm_dominance_search_v1/
-                           supplementary post-hoc matched evidence
-docs/final_tables/         paper-ready tables derived from frozen evidence
+rhinoform/                 reusable RB-SR implementation
+scripts/                   data, training, evaluation and analysis modules
+experiments/lamm/          independently written LAMM evaluation adapter
+roi/                       frozen ROI, subunit and control definitions
+splits/                    deterministic dataset/split construction contracts
+results/                   two retained frozen evidence families
+docs/final_tables/         report tables derived from frozen evidence
+reproducibility/           source snapshots and release-asset manifests
+notebooks/                 executed experiment provenance records
+tests/                     protocol, geometry, statistics and release tests
 ```
 
-## Retained notebooks
-
-- `notebooks/Rhinoform_RBSR_internal_final_rerun_holdout_colab.ipynb`
-- `notebooks/Rhinoform_RBSR_LAMM_dominance_search_colab.ipynb`
-- `notebooks/Rhinoform_final_rerun_posthoc_subunits_colab.ipynb`
-
-All three notebooks stage immutable data under Colab `/content`, persist
-resumable checkpoints and outputs to Drive, use atomic writes and SHA-256
-sidecars, and stream live progress. The result directories, rather than
-notebook display output, are the evidence of record.
-
-## Reproducibility and release
-
-The primary result tree is bound by `RESULT_TREE_MANIFEST.json` and `FINAL_RESULT_FREEZE_AUDIT.json`. The supplementary evidence has its own `RELEASE_MANIFEST.json`. The large LAMM checkpoints exceed ordinary GitHub blob limits and must be published through Git LFS or release assets.
-
-Evaluators do not edit source paths. Copy `configs/reproduction.example.toml` to
-the ignored `reproduction.local.toml`, point it at a separately licensed and
-processed FaceScape directory and an extracted release-asset overlay, then run:
+The three annotated evidence tags are `final-holdout-v1`,
+`supplemental-dominance-v1`, and `posthoc-subunits-v1`. Verify their byte-level
+source snapshots with:
 
 ```bash
-python -m tools.reproduce verify --config reproduction.local.toml
-python -m tools.reproduce verify-assets --config reproduction.local.toml
-python -m tools.reproduce preflight --config reproduction.local.toml --full-data-hash
+python -m tools.audit_source_snapshots --require-tags
 ```
 
-The three exact implementation lineages and their manifests are in
-`reproducibility/source_snapshots`. See `reproducibility/README.md` for the
-path-independent contract and tag verification command.
+## Citation
 
-## Scope
+GitHub exposes the repository citation from [`CITATION.cff`](CITATION.cff).
+Until a report DOI is available, cite the software release and include the exact
+Git commit and evidence tag used.
 
-This is non-clinical geometric research. It does not support medical, surgical, airway, diagnostic or aesthetic claims.
+## Licence and third-party material
+
+No open-source licence is currently granted. Ownership and licensing must be
+confirmed against Imperial College London's student-IP policy and any project,
+supervisor, funding or third-party obligations before public release. See
+[`LICENSE_PENDING.md`](LICENSE_PENDING.md) and [`THIRD_PARTY.md`](THIRD_PARTY.md).

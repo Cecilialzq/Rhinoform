@@ -6,8 +6,27 @@ build-backend = "setuptools.build_meta"
 name = "rhinoform"
 version = "1.0.0"
 description = "Sparse-control nasal morphology deformation on registered FaceScape meshes (RB-SR)"
+readme = "README.md"
 requires-python = ">=3.10"
 dynamic = ["dependencies"]
+authors = [{name = "Zequan Li"}]
+keywords = ["3D morphable models", "shape deformation", "geometric deep learning"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Homepage = "https://github.com/Cecilialzq/Rhinoform"
+Repository = "https://github.com/Cecilialzq/Rhinoform"
+Documentation = "https://github.com/Cecilialzq/Rhinoform#readme"
+
+[project.scripts]
+rhinoform-reproduce = "tools.reproduce:main"
 
 [tool.setuptools]
 packages = ["rhinoform", "rhinoform.novelty_upgrade",
@@ -18,3 +37,6 @@ packages = ["rhinoform", "rhinoform.novelty_upgrade",
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

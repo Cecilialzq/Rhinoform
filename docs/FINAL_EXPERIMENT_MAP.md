@@ -48,12 +48,20 @@ The validation-only component table in `docs/final_tables/component_ablation_val
 
 The raw gate gains accuracy but increases new flips; the hard certificate retains nearly all of the RMSE gain while reducing new flips below Ridge with a certificate rate of 1.0. This is the appropriate final-protocol explanation of the safety component.
 
+## Retained post-hoc evaluation evidence
+
+The frozen `posthoc_subunit_analysis_v1` tree contains the five nasal-subunit
+breakdown, robustness/stress analyses, qualitative cases and failure-oriented
+evidence generated after the primary freeze. These analyses use the frozen
+methods and must remain labelled secondary post-hoc; they do not change either
+headline model or reopen test-time selection.
+
 ## Claims that would require a new experiment
 
 - multi-seed stability or variance across training seeds;
 - causal attribution to every individual loss coefficient;
-- robustness to observation noise not already in the retained protocol;
-- subunit-level statistical conclusions;
+- robustness outside the retained frozen noise protocol;
+- subunit claims beyond the retained five-subunit analysis;
 - external-dataset generalisation; or
 - measured deployment latency/memory for the full learned path.
 

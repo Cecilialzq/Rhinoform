@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use Rhinoform, please cite this software release and record the exact Git commit."
+title: "Rhinoform: Safety-aware sparse-control nasal shape deformation"
+type: software
+authors:
+  - family-names: Li
+    given-names: Zequan
+repository-code: "https://github.com/Cecilialzq/Rhinoform"
+url: "https://github.com/Cecilialzq/Rhinoform"
+version: 1.0.0
+date-released: 2026-08-11
+keywords:
+  - 3D morphable models
+  - geometric deep learning
+  - shape deformation
+  - nasal modelling
+  - reproducible research

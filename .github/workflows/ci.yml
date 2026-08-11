@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  release-evidence:
+    name: Frozen evidence and statistical replay
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements-replay.txt
+      - name: Install minimal replay environment
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-replay.txt
+          python -m pip install -e . --no-deps
+      - name: Audit public boundary
+        run: python -m tools.audit_public_release
+      - name: Verify frozen evidence and tagged source snapshots
+        run: |
+          python -m tools.reproduce verify
+          python -m tools.audit_source_snapshots --require-tags
+      - name: Recompute report-level statistics
+        run: python -m tools.reproduce replay
+      - name: Run release-layer tests
+        run: |
+          python -m pytest -q \
+            tests/test_reproduction.py \
+            tests/test_release_replay.py \
+            tests/test_public_release_audit.py \
+            tests/test_direct_paired_statistics.py \
+            tests/test_rbsr_lamm_paired_statistics.py
+
+  unit-tests:
+    name: Full unit and protocol suite
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - name: Install frozen environment
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .
+      - name: Run tests
+        run: python -m pytest -q
