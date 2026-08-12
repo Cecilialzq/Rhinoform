@@ -1,0 +1,212 @@
+{
+ "schema": "rhinoform_golden_upload_v1",
+ "fixture": "mean source + deterministic smooth field (see deploy/export_upload_support.py::perturbed_source); not a real subject",
+ "tolerances": {
+  "certified_rmse_abs": 0.005,
+  "vertex_abs": 0.02,
+  "retention_abs": 0.02,
+  "iterations_abs": 2,
+  "gate_mean_abs": 0.001,
+  "anchor_rmse_abs": 0.0001
+ },
+ "cases": [
+  {
+   "name": "upload_zero",
+   "controls": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "anchor_rmse": 0.0,
+   "certified": true,
+   "status": "local_fold_subset_certified",
+   "iterations": 16,
+   "retention": 0.998552,
+   "gate_mean": 0.463189,
+   "certified_rmse": 0.0,
+   "certified_first_vertices": [
+    [
+     -0.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     0.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     0.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     0.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "name": "upload_combined",
+   "controls": [
+    0.0,
+    -0.96,
+    0.0,
+    0.0,
+    -1.53484825,
+    0.0,
+    0.0,
+    -1.691392,
+    0.0,
+    0.0,
+    1.70609635,
+    0.5755677,
+    0.9,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -0.9,
+    0.0,
+    0.0
+   ],
+   "anchor_rmse": 0.40582537,
+   "certified": true,
+   "status": "local_fold_subset_certified",
+   "iterations": 12,
+   "retention": 0.998664,
+   "gate_mean": 0.446597,
+   "certified_rmse": 0.48177792,
+   "certified_first_vertices": [
+    [
+     0.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.004086,
+     -0.01972,
+     0.022702
+    ],
+    [
+     0.002115,
+     -0.011173,
+     0.012816
+    ],
+    [
+     0.0,
+     -0.0,
+     0.0
+    ],
+    [
+     -0.067889,
+     -0.004083,
+     0.077067
+    ]
+   ]
+  },
+  {
+   "name": "upload_tip_rotate",
+   "controls": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    3.8996488,
+    -2.7987024,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "anchor_rmse": 0.58946565,
+   "certified": true,
+   "status": "local_fold_subset_certified",
+   "iterations": 12,
+   "retention": 0.996819,
+   "gate_mean": 0.437078,
+   "certified_rmse": 0.68964154,
+   "certified_first_vertices": [
+    [
+     0.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.007596,
+     -0.003885,
+     0.022999
+    ],
+    [
+     0.00432,
+     -0.00248,
+     0.013621
+    ],
+    [
+     0.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.025671,
+     -0.02641,
+     0.118302
+    ]
+   ]
+  }
+ ]
+}

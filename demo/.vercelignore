@@ -1,0 +1,11 @@
+# Licensed assets: never leave this machine (FaceScape licence).
+local_private
+
+# Local-only tooling and outputs, not needed by the Vercel build.
+deploy
+captures
+tmp
+dist
+node_modules
+demo_preview.png
+.DS_Store
