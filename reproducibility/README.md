@@ -43,6 +43,12 @@ publish a machine-specific private archive record. Reviewers can run `verify`
 and `replay` without checkpoints or FaceScape, or retrain from scratch with
 their own licensed data and separately obtained upstream dependencies.
 
+The author's retained eight-file overlay was checked byte-for-byte against the
+frozen manifest on 2026-08-12; the path-redacted record is
+`RELEASE_ASSET_VERIFICATION_2026-08-12.json`. This verifies the retained private
+bytes, not a GitHub Release download: the public repository had no GitHub
+Release assets at the time of that check.
+
 For convenience the same checks are available as `make verify`,
 `make verify-assets`, and `make preflight`. Override the default local config
 with `make preflight REPRO_CONFIG=/absolute/path/to/config.toml`.
