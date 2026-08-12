@@ -1,0 +1,433 @@
+{
+ "schema": "rhinoform_deployment_manifest_v1",
+ "generated_utc": "2026-08-12T11:35:58+00:00",
+ "contract": "rhinoform_certified_rbsr_deployment_v1",
+ "locked_identities": {
+  "base_model_sha256": "932db0a879a15ee51d8d6d52fb76d380609ed6ee02f85f8ae78afe9e11e8cfd3",
+  "gate_model_sha256": "9185d1baac0934b5fdb437ce451296132eba68a83d8f62d1bafe95a1aaa4f972",
+  "projection_signature": "4a54c0535cff7d6e14fe8d944510e5831a803244892f770ac0d67f8706688e84"
+ },
+ "frozen_parameters": {
+  "source_basis": "PCA-64",
+  "ridge_lambda": 300.0,
+  "cvae": {
+   "latent_dim": 8,
+   "hidden": 128,
+   "inference": "deterministic prior-mean (eval mode, no sampling)"
+  },
+  "hybrid_alpha": 0.1,
+  "gate": {
+   "hidden": 64,
+   "deployment_status": "RESIDUAL_PROPOSER_ONLY_REQUIRES_CERTIFIED_HARD_PROJECTION"
+  },
+  "handles": {
+   "count": 9,
+   "contract": "target_controls_hard_overwrite_for_all_projection_modes_v1"
+  },
+  "projection": {
+   "attenuation": 0.75,
+   "smoothing_steps": 0,
+   "max_iterations": 64,
+   "uniform_steps": 1001,
+   "final_fallback": "ridge_anchor"
+  }
+ },
+ "authority": "Chapter 4 final rerun (results/rbsr_final_rerun_holdout_v1), seed 20260609",
+ "split": {
+  "train": 576,
+  "val": 70,
+  "test": 100,
+  "split_manifest_sha256": "f976832beae1a5218e2e9567b1bb7032fbf2a63de0416f97bd4ea1cb004b8356"
+ },
+ "public_source_policy": "The public bundle ships only the training-identity mean neutral ROI (feature_template_vertices, a population statistic). No individual FaceScape scan is redistributed in the public build. Real-identity sources are served exclusively by the local research service on machines with licensed data access.",
+ "display_convention": "Editor display is edit-relative (display convention v4). Displayed anchor = taper * (R(c) - R(0)): the PURE learned Ridge field at native amplitude, multiplied by the ROI boundary taper (smoothstep of the graph geodesic distance to the ROI boundary; the band is 5 units near the landmarks and widens smoothly to 12 units in rim regions far from every landmark, so the lateral cheek-side band next to the alae tapers gently; every landmark sits at weight >= 0.93) so the ROI rim never follows an edit, then 12 rounds of rim-pinned Laplacian smoothing (lambda 0.5, boundary ring re-clamped to zero every round) that diffuse the strain the taper concentrates inside its band into a smooth boundary layer -- no wrinkle ring at the ROI boundary. Displayed certified = smooth_pinned(taper * (anchor + smooth(resid(c) - resid(0)))): the RB-SR correction is shown as the EDIT-RELATIVE projected residual -- the residual at the requested controls minus the residual at zero controls (removing the CVAE's edit-independent bias field, which would otherwise appear as a static bump pattern) -- with the nine landmark-pinned values filled by their one-ring neighbour mean and 20 rounds of Laplacian smoothing (lambda 0.5) removing high-frequency proposal noise. At zero controls both displays are exactly zero. RB-SR corrects the Ridge anchor precisely where the linear operator under-realises the requested edit (roughly 1/3 handle reach vs 60-95% certified). No handle enforcement or control amplification exists in the display frame. The certified-pipeline internals (gate, projection, fold-subset certificate) keep the hard point-wise handle contract and are evaluated on the raw frozen-pipeline meshes exactly as in the paper.",
+ "sliders": {
+  "keys": [
+   "tipRotation",
+   "tipProjection",
+   "dorsumHeight",
+   "alarWidth",
+   "bridgeSmoothing",
+   "tipWidth"
+  ],
+  "scale": 3.0,
+  "roles": {
+   "tip": 3,
+   "radix": 0,
+   "alarL": 4,
+   "alarR": 8,
+   "dorsum": [
+    1,
+    2
+   ],
+   "sidewall": [
+    5,
+    6,
+    7
+   ],
+   "tipWidthL": 5,
+   "tipWidthR": 7
+  },
+  "landmark_subunits": [
+   {
+    "landmark": 0,
+    "vertex": 824,
+    "subunit": "root",
+    "role": "radix"
+   },
+   {
+    "landmark": 1,
+    "vertex": 812,
+    "subunit": "dorsum",
+    "role": "dorsum"
+   },
+   {
+    "landmark": 2,
+    "vertex": 212,
+    "subunit": "dorsum",
+    "role": "dorsum"
+   },
+   {
+    "landmark": 3,
+    "vertex": 197,
+    "subunit": "tip",
+    "role": "tip"
+   },
+   {
+    "landmark": 4,
+    "vertex": 530,
+    "subunit": "alar_left",
+    "role": "alarL"
+   },
+   {
+    "landmark": 5,
+    "vertex": 630,
+    "subunit": "alar_left",
+    "role": "sidewall",
+    "tip_width_pair": "tipWidthL"
+   },
+   {
+    "landmark": 6,
+    "vertex": 149,
+    "subunit": "tip",
+    "role": "sidewall"
+   },
+   {
+    "landmark": 7,
+    "vertex": 139,
+    "subunit": "alar_right",
+    "role": "sidewall",
+    "tip_width_pair": "tipWidthR"
+   },
+   {
+    "landmark": 8,
+    "vertex": 47,
+    "subunit": "alar_right",
+    "role": "alarR"
+   }
+  ],
+  "matrix_6x27": [
+   [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    4.874561,
+    -3.498378,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    6.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    2.4,
+    0.0,
+    0.0,
+    4.2,
+    0.0,
+    0.0,
+    4.2,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -3.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    3.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.580607,
+    0.0,
+    0.0,
+    -0.045568,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -2.4,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    2.4,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  ],
+  "note": "controls = sliders @ matrix; identical in browser and Python runtimes. Rows are sparse role-restricted semantic directions (tip rotation -> tip along the rotation arc about the alar-base pivot; tip projection -> tip z; dorsum height -> dorsum + radix y; alar width -> alar-base x; tip width -> tip-lobule lateral pair x), so each slider moves exactly its anatomical target. Roles are derived from the frozen five-subunit vertex partition (landmark_subunits). The displayed deformation is the PURE learned Ridge field at native amplitude (no display-frame handle enforcement, no control amplification), multiplied by the ROI boundary taper stored in ridge_browser.json and rim-pinned Laplacian smoothed (see display_taper.edge_smooth_*). The bridgeSmoothing row stored here is the mean-source instance of a SOURCE-ADAPTIVE hump-removal row (slider=+1 flattens the dorsal-profile deviation of the bound source); both runtimes recompute it at source-bind time with the same formula."
+ },
+ "ood": {
+  "provenance": "raw 27-D landmark controls of all 4830 frozen validation pairs",
+  "per_dim_std": [
+   0.61416,
+   1.316725,
+   2.126501,
+   0.686371,
+   1.636427,
+   2.670488,
+   0.876328,
+   1.957716,
+   2.787652,
+   1.006091,
+   2.567747,
+   3.350556,
+   1.351481,
+   2.194946,
+   2.428094,
+   0.92858,
+   1.980055,
+   2.11763,
+   0.881104,
+   2.61776,
+   2.404707,
+   1.077927,
+   2.197755,
+   2.381551,
+   1.545193,
+   2.422786,
+   2.471359
+  ],
+  "chi_quantiles": {
+   "0.5": 4.8561,
+   "0.9": 6.8727,
+   "0.95": 7.4921,
+   "0.99": 9.0184,
+   "0.995": 9.3966
+  },
+  "policy": {
+   "within_evaluated_range": 7.4921,
+   "near_boundary": 9.3966,
+   "rule": "chi = ||c / per_dim_std||_2; chi <= within: evaluated range; within < chi <= near: near boundary (request is scaled back to the within-threshold); chi > near: outside evaluated range, preview withheld",
+   "semantics": "Input-applicability control on the requested edit. This is NOT the residual certificate and is never described as safety or confidence."
+  },
+  "n_pairs": 4830
+ },
+ "artifacts": {
+  "ridge_browser.json": "66b23d74360715ad1fcfc3967f8629e01f730f94a5cc0be09c84798ae98f00b5",
+  "golden_cases.json": "6e9cac30ff7a31a608dcf720dc8eca69fc9d976c1ecf131275910337243b09f7",
+  "certified_presets.json": "c74a72a7a50a89247db0ced3e944dc1dabcdb85fa0ed1b3f543c146f35dd11b6",
+  "certified_browser.json": "45ac140c48df0c8f7a123862ba7bebcb1afcec02bfc564cb10221672a9d17a96",
+  "golden_certified.json": "29b2ed766ee1a19614692da8ba09083a9c041de39614d53d5ae0a7a88b821207",
+  "upload_support.bin": "754ddfaae596c7c4d422741317eab890743e1e34155f52fe8b5431eaa613f1a4",
+  "golden_upload.json": "2900c6598c898f999d25cdca5f5104033ccc10ba5df06b53dcd24436b07dfdbd",
+  "head_mean.json": "97ba263f3c85a92ce87341ea5466044afb6d3d09ee5341f8a88ab3e013e58d26"
+ },
+ "units": "uncalibrated FaceScape model units (not millimetres)",
+ "zero_edit_baseline": {
+  "mean_abs": 0.029287,
+  "max_abs": 0.097959,
+  "note": "R(0) magnitude on the mean source; removed by the edit-relative display frame"
+ },
+ "upload_support": {
+  "dtype": "float32-le",
+  "tensors": {
+   "pca_mean": {
+    "offset": 0,
+    "shape": [
+     11802
+    ]
+   },
+   "pca_components": {
+    "offset": 11802,
+    "shape": [
+     64,
+     11802
+    ]
+   },
+   "ridge_w": {
+    "offset": 767130,
+    "shape": [
+     91,
+     11802
+    ]
+   },
+   "ridge_b": {
+    "offset": 1841112,
+    "shape": [
+     11802
+    ]
+   },
+   "cond_mean": {
+    "offset": 1852914,
+    "shape": [
+     91
+    ]
+   },
+   "cond_std": {
+    "offset": 1853005,
+    "shape": [
+     91
+    ]
+   },
+   "gate_center": {
+    "offset": 1853096,
+    "shape": [
+     3
+    ]
+   },
+   "gate_scale": {
+    "offset": 1853099,
+    "shape": [
+     1
+    ]
+   }
+  },
+  "accepted_meshes": {
+   "roi": 3934,
+   "full_head": 26317,
+   "requirement": "PLY registered to the frozen FaceScape TU correspondence; full heads have their ROI extracted via the frozen index map"
+  }
+ },
+ "head_context": {
+  "source": "mean of 6 registered FaceScape training-split neutral heads (TU topology, vertex-wise correspondence)",
+  "policy": "Population statistic for display context only; no individual FaceScape scan is redistributed."
+ }
+}

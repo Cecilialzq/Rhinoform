@@ -1,0 +1,9 @@
+.vercel
+.env*
+.DS_Store
+node_modules/
+dist/
+tmp/
+captures/
+deploy/
+local_private/
