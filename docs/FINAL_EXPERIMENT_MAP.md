@@ -20,10 +20,11 @@ This experiment supplies the main method row, all seven baseline rows and the de
 - Split, ROI, strict scorer and ordered test pairs: identical to the primary final rerun.
 - LAMM: reused frozen checkpoint and pair-level result; no LAMM retraining.
 - Selected RB-SR configuration: source PCA dimension 128, Ridge lambda 1, validation-selected logit offset beta 6.
+- Unlike the primary CVAE proposer with a budget-constrained gate, this point uses a deterministic neural-field residual proposer trained for 500 epochs with semantic subunit features, followed by unconstrained accuracy-first gate training.
 - Evidence type: supplementary post-hoc matched comparison.
 - Outcome on 9,900 test pairs: RB-SR is lower on ROI RMSE, target-relative new flip and edge-strain p95; the three matched-pair tests remain significant after the stored correction/robustness procedure.
 
-This experiment supports the narrower statement that additional representation capacity can move RB-SR to a point that dominates LAMM on these three metrics under the matched protocol. It does not establish that increasing PCA dimension always improves every split or that PCA-128 is the primary deployed model.
+This experiment supports the narrower statement that additional representation capacity can move RB-SR to a point that dominates LAMM on these three metrics under the matched protocol. The proposer and gate-training changes do not alter the attribution: the calibrated gate is almost closed (mean admission 0.0021; no vertex above 0.5), and the margin is carried almost entirely by the PCA-128 Ridge anchor. It does not establish that increasing PCA dimension always improves every split or that PCA-128 is the primary deployed model.
 
 ## Why the two experiments must not be numerically merged
 
@@ -55,6 +56,12 @@ breakdown, robustness/stress analyses, qualitative cases and failure-oriented
 evidence generated after the primary freeze. These analyses use the frozen
 methods and must remain labelled secondary post-hoc; they do not change either
 headline model or reopen test-time selection.
+
+The subunit notebook cell 23 applies a runtime-only zero-noise replay repair:
+it authenticates the frozen zero-mm rows by artifact hash and exact pair identity,
+then treats finite cross-GPU order-statistic differences as diagnostics. It does
+not change model weights, noise draws, metric definitions, the operating point,
+split or pair order, or test-data access.
 
 ## Claims that would require a new experiment
 

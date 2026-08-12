@@ -42,6 +42,14 @@ The LAMM configuration-canonicalisation erratum is retained under
 `lamm/seed20260609/`. It was recorded before the first LAMM inference and did
 not change weights, checkpoints, split, operating point or metric semantics.
 
+The post-hoc subunit notebook cell 23 contains a runtime-only repair for the
+zero-noise replay check. It validates the frozen zero-mm baseline by artifact
+hash and exact pair identity and records finite cross-GPU order-statistic
+differences diagnostically; it changes neither weights, noise draws, metrics,
+operating point, split/pair order nor test access. The machine-readable policy
+is retained at
+`posthoc_subunit_analysis_v1/noise/STRICT_NOISE_RUNTIME_CELL_DIAGNOSTIC_POLICY.json`.
+
 ## Deliberate release exclusions
 
 Regenerable chunk directories, dense gate maps, progress ledgers and `*_last.pt`
