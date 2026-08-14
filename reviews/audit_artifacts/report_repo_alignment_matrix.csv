@@ -1,0 +1,38 @@
+id,report_surface,status,report_evidence,repository_evidence,resolution
+1,"Registered topology and tensor dimensions",MATCH,"Report lines 392-406 and method tensor table","data/DATASET_DONE.json; rhinoform/strict_protocol_patch.py; rhinoform/train.py",No change required
+2,"Final identity split and selection algorithm",CORRECTED,"Report final protocol and compute tables","results/rbsr_final_rerun_holdout_v1/protocol/final_rerun_holdout_split_manifest.json; docs/FINAL_EXPERIMENT_MAP.md",Corrected to 576/70/100 SHA256-ordered split with seed 20260809 and 100 parent-test exclusions
+3,"Source PCA fit population",CORRECTED,"Report final protocol","final split manifest; base/neural_field_metadata_seed20260609.json",Corrected from 676 to 576 final training identities
+4,"Training versus split seeds",CORRECTED,"Report compute/architecture/reproducibility sections","final split and train-pair manifests; seed_registry.json; base metadata",Separated split/pair 20260809 from training/global/bootstrap/noise 20260609
+5,"Source-conditioned Ridge implementation",MATCH,"Report Stage 1","rhinoform/data.py; rhinoform/train.py",No change required
+6,"CVAE residual proposal",MATCH,"Report Stage 2","rhinoform/train.py; base neural-field metadata",No change required
+7,"Spatial gate architecture and training",MATCH,"Report Stage 3","rhinoform/train_rbsr_gate.py; rbsr_gate_training.json",No change required
+8,"Ridge-relative certificate",MATCH,"Report Stage 4","rhinoform/safe_fusion.py; certificate evidence",No change required
+9,"Primary Holm family",CORRECTED,"Report statistical protocol and headline inference","protocol/FINAL_RERUN_HOLDOUT_POLICY_FREEZE.json; paired_primary_rbsr_vs_ridge.csv",Corrected from secondary 42-test family to frozen six-metric primary family
+10,"Primary adjusted p-values",CORRECTED,"Report headline inference and figure caption","paired_primary_rbsr_vs_ridge.csv",Corrected ROI/new-flip/edge-strain adjusted values to 5.5e-13/2.3e-17/0.198
+11,"Eight-method headline table",MATCH,"Report Table 5.4","docs/final_tables/main_results_9900_pairs.csv",All rows and metrics match
+12,"Certified RB-SR certificate rate and retention",MATCH,"Abstract and evaluation","FINAL_CONFIRMATION_EVIDENCE.json",9900/9900 and 0.9921 match
+13,"LAMM comparison",MATCH,"Report Section 5.4.1","experiments/lamm; lamm run_provenance.json; protocol_audit.json",No change required
+14,"PCA-128 post-hoc study",MATCH,"Report Section 5.4.2","supplementary_rbsr_vs_lamm_9900_pairs.csv; RBSR_VS_LAMM_CORE_DOMINANCE_VERDICT.json",No change required
+15,"Noise robustness",MATCH,"Report Section 5.5.5","noise_robustness_summary.csv; STRICT_NOISE_ROBUSTNESS_PROTOCOL_FREEZE.json",No change required
+16,"Sub-unit analysis",MATCH,"Report Section 5.5.1 and appendix","posthoc subunit release records and final tables",No change required
+17,"Deterministic qualitative selection",MATCH,"Report spatial/qualitative section","qualitative/QUALITATIVE_CASE_SELECTION_FREEZE.json",No change required
+18,"Runtime applicability admission",MATCH,"Report runtime state machine","demo/src/engine/admission.js",Chi thresholds and retain/scale/withhold logic match
+19,"Runtime edge strain and flip role",CORRECTED,"Report introduction/prototype/evaluation map","demo/src/components/Studio.jsx; demo/src/engine/geometry.js",Corrected from admission triggers to descriptive read-outs
+20,"Display versus evaluation geometry",CORRECTED,"Report display-frame and conformance sections","demo/src/engine/geometry.js; rhinoform/strict_protocol_patch.py",Removed contradictory claim that displayed and benchmarked geometry are identical
+21,"Browser conformance count",CORRECTED_AND_STRENGTHENED,"Abstract/contributions/conformance/reproducibility","demo/verify.mjs final executable output",Initial 49->48 correction; final verifier hardened and synchronized at 51 PASS
+22,"Golden artifact hashes",STRENGTHENED,"Report hash-bound release claim","demo/public/bundle/manifest.json; demo/verify.mjs",Added golden_cases and golden_certified hash assertions
+23,"Certificate fail-closed behavior",STRENGTHENED,"Report fallback claim","demo/src/engine/certified.js; demo/src/engine/certifiedLocal.js; demo/verify.mjs",Added common adapter guard regression check and real new-fold count
+24,"Public statistical replay scope",CORRECTED,"Declarations and reproducibility appendix","tools/reproduce.py; tools/replay_release.py",Narrowed claim to primary six-metric and supplementary three-metric replay
+25,"A100 memory and per-edit latency",REMOVED_NOT_FOUND,"Former compute table and future-work statement","No implementation_constants.json or committed measurement record",Removed unsupported 87.5/104 MB and 7.07/7.81/8.48 ms claims
+26,"README test installation",CORRECTED,"Repository installation instructions","requirements-ci.txt; pyproject.toml",Added requirements-ci installation before pytest
+27,"Exact final figure composites",VERIFY,"All TeX includegraphics surfaces","Underlying result tables mostly present; exact Desktop composite binaries absent",Commit exact generated composites or a deterministic figure manifest/build pipeline
+28,"Full clean-room training and inference",VERIFY,"Reproducibility boundary","Licensed FaceScape/upstream LAMM/restricted checkpoints absent",Current evidence supports committed-output audit not exact public end-to-end retraining
+29,"Annotated tag materialization",VERIFY_ENVIRONMENT,"Source lineage appendix","Expected tags recorded in snapshot manifests; supplied folder has no .git",Run in a real tagged clone
+30,"Final PDF layout",MATCH,"81-page rebuilt PDF","latexmk log and 81 rendered pages",No missing references images clipping overlap black squares or placeholders
+31,"Botsch--Kobbelt RBF bibliography DOI",CORRECTED,"Report bibliography entry botsch2005rbf","Official Eurographics item metadata; Crossref title record",Corrected DOI suffix from 00885 (different paper) to 00886
+32,"Redraw-note topology and framework source paths",CORRECTED,"Non-rendered figplaceholder evidence notes","demo/public/bundle/head_mean.json; rhinoform/train.py; rhinoform/train_rbsr_gate.py; scripts/evaluation/rbsr_ridge_fold_projection.py",Replaced references to absent paper_rewriting_output assets with current repository evidence
+33,"Deployed Ridge browser asset name",CORRECTED,"Computational-cost table","demo/public/bundle/ridge_browser.json",Replaced non-existent engine.json
+34,"Browser server-inference wording",CORRECTED,"Computational-cost table","demo/src/engine/bundle.js; demo/src/engine/certified.js",Standalone local path needs no server but an optional configured service is attempted first
+35,"All included image assets",VERIFY,"40 TeX includegraphics targets","figure_asset_inventory.csv; figure_evidence_chain.csv",40/40 report assets exist and are hashed but no byte-identical final composite is committed in the repository
+36,"All tables",MATCH,"23 table environments","table_evidence_chain.csv",23/23 mapped to implementation protocol metadata or committed result sources
+37,"Bibliography key and identifier inventory",MATCH_WITH_ONE_CORRECTION,"51 bibitems and all citation uses","bibliography_identifier_audit.csv",51/51 keys defined and cited; one wrong DOI corrected; ARAP publisher DOI resolves although Crossref returns 404

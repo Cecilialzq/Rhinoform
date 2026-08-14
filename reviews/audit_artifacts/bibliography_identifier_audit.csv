@@ -1,0 +1,52 @@
+bibkey,citation_use_count,identifier_type,identifier,http_status,report_title,resolved_title,resolved_year
+bouaoud2018,3,doi,10.1097/GOX.0000000000001884,200,Functional and aesthetic factors associated with revision of rhinoplasty,Functional and Aesthetic Factors Associated with Revision of Rhinoplasty,2018
+dissat2024,4,doi,10.20517/2347-9264.2023.111,200,Persistent cosmetic dissatisfaction in rhinoplasty and management of the difficult patient,Persistent cosmetic dissatisfaction in rhinoplasty &amp; management of the difficult patient,2024
+compimg,2,doi,10.1258/002221502761698748,200,Computer imaging and patient satisfaction in rhinoplasty surgery,Computer imaging and patient satisfaction in rhinoplasty surgery,2002
+morph3d2019,3,doi,10.1097/GOX.0000000000002063,200,Three-dimensional morphing and its added value in the rhinoplasty consult,Three-dimensional Morphing and Its Added Value in the Rhinoplasty Consult,2019
+sim3d2025,1,doi,10.1093/asjof/ojaf110,200,Three-dimensional simulation accuracy and patient satisfaction with rhinoplasty,Three-Dimensional Simulation Accuracy and Patient Satisfaction With Rhinoplasty,2025
+awareness2025,1,doi,10.55730/1300-0144.6099,200,Preoperative awareness of nasal and facial aesthetic deformities among rhinoplasty candidates,Preoperative awareness of nasal and facial aesthetic deformities among rhinoplasty candidates,2025
+skinstrain,1,doi,10.1038/jid.1982.4,200,Biomechanical properties of dermis,Biomechanical Properties of Dermis,1982
+softenvelope,1,doi,10.1093/asj/sjw160,200,Managing the difficult soft tissue envelope in facial and rhinoplasty surgery,Managing the Difficult Soft Tissue Envelope in Facial and Rhinoplasty Surgery,2017
+blanz1999,2,doi,10.1145/311535.311556,200,A morphable model for the synthesis of 3D faces,A morphable model for the synthesis of 3D faces,1999
+li2017flame,2,doi,10.1145/3130800.3130813,200,Learning a model of facial shape and expression from 4D scans,Learning a model of facial shape and expression from 4D scans,2017
+yang2020facescape,2,doi,10.1109/CVPR42600.2020.00068,200,FaceScape: A large-scale high quality 3D face dataset and detailed riggable 3D face prediction,FaceScape: A Large-Scale High Quality 3D Face Dataset and Detailed Riggable 3D Face Prediction,2020
+sorkine2004laplacian,4,doi,10.1145/1057432.1057456,200,Laplacian surface editing,Laplacian surface editing,2004
+botsch2008survey,2,doi,10.1109/TVCG.2007.1054,200,On linear variational surface deformation methods,On Linear Variational Surface Deformation Methods,2008
+sorkine2007arap,4,doi,10.2312/SGP/SGP07/109-116,404,As-rigid-as-possible surface modeling,,
+botsch2005rbf,1,doi,10.1111/j.1467-8659.2005.00886.x,200,Real-time shape editing using radial basis functions,Real‐Time Shape Editing using Radial Basis Functions,2005
+schuller2013lim,1,doi,10.1111/cgf.12179,200,Locally injective mappings,Locally Injective Mappings,2013
+liu2016inversionfree,1,doi,10.1145/2980179.2980231,200,Computing inversion-free mappings by simplex assembly,Computing inversion-free mappings by simplex assembly,2016
+rabinovich2017slim,1,doi,10.1145/2983621,200,Scalable locally injective mappings,Scalable Locally Injective Mappings,2017
+aigerman2022njf,1,doi,10.1145/3528223.3530141,200,Neural Jacobian fields: learning intrinsic mappings of arbitrary meshes,Neural jacobian fields,2022
+kingma2014vae,4,arxiv,1312.6114,200,Auto-encoding variational Bayes,,
+sohn2015cvae,4,none,,NO_NETWORK_IDENTIFIER,Learning structured output representation using deep conditional generative models,,
+ranjan2018coma,1,doi,10.1007/978-3-030-01219-9_43,200,Generating 3D faces using convolutional mesh autoencoders,Generating 3D Faces Using Convolutional Mesh Autoencoders,2018
+egger2020survey,1,doi,10.1145/3395208,200,"3D morphable face models---past, present, and future","3D Morphable Face Models—Past, Present, and Future",2020
+tena2011interactive,1,doi,10.1145/2010324.1964971,200,Interactive region-based linear 3D face models,Interactive region-based linear 3D face models,2011
+neumann2013splocs,1,doi,10.1145/2508363.2508417,200,Sparse localized deformation components,Sparse localized deformation components,2013
+wu2016anatomical,1,doi,10.1145/2897824.2925882,200,An anatomically-constrained local deformation model for monocular face capture,An anatomically-constrained local deformation model for monocular face capture,2016
+bouritsas2019neural3dmm,1,none,,NO_NETWORK_IDENTIFIER,Neural 3D morphable models: Spiral convolutional networks for 3D shape representation learning and generation,,
+tarasiou2024lamm,5,arxiv,2401.02937,200,Locally adaptive neural 3D morphable models,,
+potamias2024shapefusion,4,doi,10.1007/978-3-031-72630-9_5,200,ShapeFusion: A 3D diffusion model for localized shape editing,ShapeFusion: A 3D Diffusion Model for Localized Shape Editing,2025
+giebenhain2023nphm,4,none,,NO_NETWORK_IDENTIFIER,Learning neural parametric head models,,
+potamias2025imhead,4,arxiv,2510.10793,200,ImHead: A large-scale implicit morphable model for localized head modeling,,
+vectra,2,url,https://www.canfieldsci.com/imaging-systems/vectra-xt-3d-imaging-system/,200,VECTRA XT 3D imaging system,,
+mirrorme3d,2,url,https://www.mirrorme3d.com/,200,3D patient assessment and surgical planning,,
+threedmd,1,url,https://3dmd.com/2007/05/18/3dmd-announces-new-3d-visualization-and-simulation-software/,200,3dMD announces new 3D visualization and simulation software,,
+lifeviz,1,url,https://www.quantificare.com/3d-photography-systems-old/lifeviz-mini/,200,LifeViz Mini 3D photography system,,
+crisalix,2,url,https://www.crisalix.com/,200,Crisalix: 3D/4D aesthetic simulation,,
+banuba,1,url,https://www.banuba.com/,200,AI plastic-surgery simulator SDK,,
+facetouchup,1,url,https://www.facetouchup.com/,200,Online rhinoplasty (nose job) simulator,,
+aedit,1,url,https://aedit.com/aeditor-app,200,AEDITOR app,,
+arbrea,1,url,https://arbrea-labs.com/,200,Arbrea 3D aesthetic simulation,,
+topsakal2020,2,doi,10.1007/s11548-020-02251-7,200,Digitizing rhinoplasty: a web application with three-dimensional preoperative evaluation to assist rhinoplasty surgeons with surgical planning,Digitizing rhinoplasty: a web application with three-dimensional preoperative evaluation to assist rhinoplasty surgeons with surgical planning,2020
+sobral2021,1,doi,10.1093/asj/sjab085,200,3D virtual planning for rhinoplasty using a free add-on for open-source software,3D Virtual Planning for Rhinoplasty Using a Free Add-On for Open-Source Software,2021
+liao2010laplacian,3,doi,10.1002/cav.347,200,Inhomogeneous volumetric Laplacian deformation for rhinoplasty planning and simulation system,Inhomogeneous volumetric Laplacian deformation for rhinoplasty planning and simulation system,2010
+rao2023,1,doi,10.3390/app13010659,200,3D facial plastic surgery simulation: based on the structured light,3D Facial Plastic Surgery Simulation: Based on the Structured Light,2023
+alrashidi2021,1,doi,10.1109/SoutheastCon45413.2021.9401814,200,Aiding rhinoplasty surgeons with 3D imaging and a rule-based adjustment algorithm,Aiding Rhinoplasty Surgeons with 3D Imaging and a Rule-Based Adjustment Algorithm,2021
+landmarkdiff,1,url,https://github.com/dreamlessx/LandmarkDiff-public,200,LandmarkDiff-public: photorealistic facial surgery outcome prediction from a single photo,,
+rhinoaireview,2,doi,10.1007/s00266-022-02883-x,200,Simulation and artificial intelligence in rhinoplasty: a systematic review,Simulation and Artificial Intelligence in Rhinoplasty: A Systematic Review,2022
+rhinoaisim,2,doi,10.1007/s00266-024-04043-9,200,Turn your vision into reality--AI-powered pre-operative outcome simulation in rhinoplasty surgery,Turn Your Vision into Reality—AI-Powered Pre-operative Outcome Simulation in Rhinoplasty Surgery,2024
+vectravalid,1,doi,10.3390/ijerph19148820,200,Validation of Vectra 3D imaging systems: a review,Validation of Vectra 3D Imaging Systems: A Review,2022
+efron1993,1,none,,NO_NETWORK_IDENTIFIER,,,
+holm1979,1,none,,NO_NETWORK_IDENTIFIER,A simple sequentially rejective multiple test procedure,,
