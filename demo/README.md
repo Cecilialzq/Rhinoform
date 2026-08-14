@@ -124,7 +124,7 @@ verify.mjs                 conformance suite (runs in the Vercel build)
 
 ```bash
 npm install
-npm run verify        # 49 conformance checks (Ridge + certified + upload goldens, hashes, policy, display frame, boundary demos, session export)
+npm run verify        # 48 conformance checks (Ridge + certified + upload goldens, hashes, policy, display frame, boundary demos, session export)
 npm run dev           # dev site on 127.0.0.1:5173
 npm run build         # production build (verify runs first on Vercel)
 ```
