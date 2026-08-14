@@ -325,9 +325,11 @@ export function certifiedLocal(controls, ctx, cb) {
     : Math.min(Math.max(Math.sqrt(diffNorm) / residNorm, 0), 1);
   let ridgeFoldCount = 0;
   let projectedFoldCount = 0;
+  let newVsRidgeFoldCount = 0;
   for (let f = 0; f < nFaces; f++) {
     if (ridgeFold[f]) ridgeFoldCount++;
     if (fold[f]) projectedFoldCount++;
+    if (fold[f] && !ridgeFold[f]) newVsRidgeFoldCount++;
   }
 
   // Display frame (matches the Python runtime, display convention v4):
@@ -411,7 +413,7 @@ export function certifiedLocal(controls, ctx, cb) {
     iterations,
     ridgeFoldCount,
     projectedFoldCount,
-    newVsRidgeFoldCount: 0,
+    newVsRidgeFoldCount,
     gateP50: sortedGate[Math.floor(V * 0.5)],
     gateP95: sortedGate[Math.floor(V * 0.95)],
     gateMean,
