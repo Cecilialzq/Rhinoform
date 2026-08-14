@@ -82,7 +82,7 @@ The sentence and numeric inventories are exhaustive discovery aids. Literal hits
 4. `demo/src/engine/certified.js` now rejects any available result unless `certified === true` and `newVsRidgeFoldCount === 0`, keeping the Ridge anchor as the fail-closed fallback.
 5. Root `README.md` now installs `requirements-ci.txt` before running pytest.
 
-Repository changes are committed on remote branch `agent/report-code-alignment`; latest commit at the time of review: `4810ee90bca5f8db0fffa7f229783367475be0e4`.
+Repository changes are committed on remote branch `agent/report-code-alignment`. The executable/documentation hardening tip is `4810ee90bca5f8db0fffa7f229783367475be0e4`; the exhaustive audit artifacts were published in a subsequent commit on the same branch.
 
 ## Code Quality Summary
 
