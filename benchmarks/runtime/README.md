@@ -76,12 +76,18 @@ benchmark above is the independently runnable release check.
 
 ## LAMM timing boundary
 
-The only surviving LAMM timing record is preserved in
-`results/lamm_historical_a100_noncomparable.json`. It reports 1.380 ms per pair
-for model forward only on an NVIDIA A100 at batch size 32. It has no stored p95
-or p99 samples and is not a same-hardware, batch-size-1 deployment comparison.
-It is therefore reported as historical provenance, not used to rank deployment
-latency.
+The recovered `results/lamm_a100_batch1_forward.json` is the applicable
+batch-size-one record: NVIDIA A100-SXM4-80GB, 100 warmups and 1,000 measured
+forwards, with inputs pre-staged on the GPU. Its model-only latency is
+37.085/39.093/41.931 ms at median/p95/p99. It excludes normalisation,
+host--device transfer, strict scoring and rendering. Because the public-browser
+benchmark above was measured on Apple M3 hardware, these rows must not be used
+as a cross-device method ranking.
+
+`results/lamm_historical_a100_noncomparable.json` retains the older batch-32
+1.380-ms median-only record for provenance. The batch-one record supersedes it
+for batch-one LAMM forward latency, while neither record is a same-hardware
+comparison with the M3 browser pipeline.
 
 ## Interpretation
 

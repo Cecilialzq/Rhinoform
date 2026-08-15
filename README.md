@@ -77,8 +77,9 @@ committed JSON results, environment, memory scope, and the explicit separation
 between compute-only and rendering measurements.
 
 The measured product contract is Ridge as the interactive anchor/fallback and
-certified RB-SR as an asynchronous enhanced preview; no same-hardware LAMM or
-GPU peak-memory ranking is claimed.
+certified RB-SR as an asynchronous enhanced preview. A recovered A100
+batch-size-one LAMM forward distribution is also preserved, but it is not
+ranked against the Apple-M3 paths; no browser GPU peak-memory ranking is claimed.
 
 ## Installation
 

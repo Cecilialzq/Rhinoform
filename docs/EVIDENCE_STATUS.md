@@ -23,8 +23,8 @@ data-construction or exact-source provenance, not additional paper result sets.
 | Five-subunit, robustness and qualitative post-hoc analyses | verified secondary post-hoc evidence | `results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/` | secondary analysis; not a new blind confirmation |
 | Apple M3 certified browser compute distribution | verified deployment evidence | `benchmarks/runtime/browser_certified_benchmark.mjs`; `benchmarks/runtime/results/browser_node_certified.json` | Ridge is the interactive anchor/fallback; certified RB-SR is an asynchronous enhanced preview |
 | Chrome presentation distribution and sampled process RSS | verified single-device deployment evidence | `benchmarks/runtime/browser_render_benchmark.mjs`; `benchmarks/runtime/results/browser_chrome_render.json` | report separately from compute; RSS is process-tree observation, not per-tab or GPU peak memory |
-| LAMM deployment latency | historical non-comparable record only | `benchmarks/runtime/results/lamm_historical_a100_noncomparable.json` | A100 batch-32 model-forward median only; do not rank against batch-one M3 paths |
-| Public clean-room retraining | not supported | FaceScape licence boundary, separately obtained LAMM implementation, restricted checkpoints | exact result replay and browser conformance are public; independent clean-room retraining is not claimed |
+| LAMM deployment latency | verified batch-one A100 forward-only record | `benchmarks/runtime/results/lamm_a100_batch1_forward.json` | 100 warmups/1,000 runs; 37.085/39.093/41.931 ms median/p95/p99; pre-staged GPU inputs; do not rank against M3 paths |
+| Retraining scope | GitHub alone is insufficient, but the documented code supports retraining when the user supplies licensed FaceScape data, the pinned upstream LAMM source and CUDA; author-side licensed retraining was executed | release runbook, private checkpoint preflight and recovered Colab A100 notebook | exact result replay and browser conformance require only GitHub; fresh retraining requires external licensed inputs; exact author-artifact reproduction additionally requires the retained checkpoints |
 
 ## Claim boundaries
 

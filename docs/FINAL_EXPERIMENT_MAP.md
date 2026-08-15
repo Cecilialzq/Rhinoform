@@ -87,10 +87,11 @@ split or pair order, or test-data access.
 - robustness outside the retained frozen noise protocol;
 - subunit claims beyond the retained five-subunit analysis;
 - external-dataset generalisation; or
-- a same-hardware batch-one LAMM/CUDA deployment comparison or a stable browser GPU peak-memory figure.
+- a same-hardware LAMM-versus-public-browser deployment comparison or a stable browser GPU peak-memory figure.
 
 The repository does now include a 100-warmup/1,000-run Apple M3 benchmark of the
 exact browser bundle and a separate Chrome presentation benchmark under
 `benchmarks/runtime/`. Those records support Ridge as the interactive fallback
-and certified RB-SR as an asynchronous enhanced preview. They do not fill the
-same-hardware LAMM/CUDA or GPU-memory gaps above.
+and certified RB-SR as an asynchronous enhanced preview. A recovered
+batch-size-one A100 LAMM forward record is also committed, but it does not fill
+the same-hardware comparison or browser GPU-memory gaps above.
