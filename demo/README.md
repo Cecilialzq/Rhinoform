@@ -1,10 +1,10 @@
-# RHINOFORM — Certified Interactive Nasal Preview (research prototype)
+# RHINOFORM — Interactive Nasal Preview with Certified Enhancement (research prototype)
 
 A public demo of the Rhinoform system: a population-informed sparse-control
 editor for interactive nasal morphology preview. The deployed architecture is
 the paper's final frozen pipeline:
 
-- **Ridge anchor (instant).** The exact frozen ridge operator (PCA-64 source
+- **Ridge anchor (synchronous).** The exact frozen ridge operator (PCA-64 source
   basis, λ = 300) runs in the browser and answers every slider event
   immediately. The displayed field is the pure learned deformation at native
   amplitude (no display-frame handle enforcement, no control amplification),
@@ -124,10 +124,16 @@ verify.mjs                 conformance suite (runs in the Vercel build)
 
 ```bash
 npm install
-npm run verify        # 49 conformance checks (Ridge + certified + upload goldens, hashes, policy, display frame, boundary demos, session export)
+npm run verify        # 51 conformance checks (Ridge + certified + upload goldens, hashes, fail-closed policy, display frame, boundary demos, session export)
 npm run dev           # dev site on 127.0.0.1:5173
 npm run build         # production build (verify runs first on Vercel)
+npm run benchmark:compute  # exact bundle compute: 100 warmups + 1,000 batch-one requests
+npm run benchmark:render   # Chrome presentation/input-to-paint: 100 warmups + 1,000 requests
 ```
+
+The two benchmark commands intentionally keep numerical compute and browser
+presentation separate. Canonical results and memory-scope caveats are in
+`../benchmarks/runtime/README.md`.
 
 The private export pipeline used to regenerate `public/bundle/` is intentionally
 not part of the web deployment. The public conformance suite binds every

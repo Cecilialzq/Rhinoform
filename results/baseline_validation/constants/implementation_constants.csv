@@ -1,0 +1,30 @@
+category,item,value,source,freeze_status
+scope,dataset,FaceScape only; neutral expression; registered 26317-vertex topology,GOAL_experimental_layer.md §0,required
+roi,whole_roi_vertices,3934,roi/vertices.json,frozen
+roi,strict_free_vertices_for_main_rmse,3925 = 3934 ROI vertices - 9 hard-fixed landmark vertices,code/strict_protocol_patch.py strict_metric_rows,required
+roi,subunit_role,diagnostic metrics/visualisation only; not model input for final runs,GOAL_experimental_layer.md §F.bis,required
+model,use_subunit_features_final,false,code/train.py --use-subunit-features,required
+model,vertex_features_without_subunits,normalised coordinates 3 + vertex normals 3 + landmark distances 9 = 15,code/train.py build_static_vertex_features,required
+model,vertex_features_legacy_with_subunits,normalised coordinates 3 + vertex normals 3 + subunit one-hot 5 + landmark distances 9 = 20,code/train.py build_static_vertex_features,legacy_only
+model,condition_dim,43 = 9 landmark deltas x 3 + 16 source-PCA components,code/train.py pair_conditions,required
+model,source_pca_dim,16; fitted on training identities/pairs of each scale only,GOAL_experimental_layer.md §A.2; code/train.py,required
+model,delta_pca_dim,16 observation components for neural-field CVAE posterior,code/train.py default,current_default
+model,latent_dim,8,code/train.py default,current_default
+model,hidden_width,128,code/train.py default,current_default
+model,activation_norm,SiLU + LayerNorm in prior/encoder/field MLP blocks,code/train.py NeuralFieldCVAE,current_default
+model,param_count_no_subunit_features,43939,instantiated from code/train.py,required
+model,param_count_legacy_with_subunit_features,44579,instantiated from code/train.py,legacy_only
+training,epochs,180,code/train.py default,current_default
+training,batch_size,16,code/train.py default,current_default
+training,optimizer,"AdamW, lr=1e-3, weight_decay=1e-4, grad_clip=1.0",code/train.py train_field,current_default
+training,early_stopping,"eval_every=10, patience=50, select best validation ROI RMSE",code/train.py train_field,current_default
+training,loss_weights,"dense=1.0, ctrl=5.0, edge=0.1, lap=0.0, strain=0.0 unless regularity sweep",code/train.py defaults,current_default
+training,kl_beta_warmup,"beta=1e-4, kl_warmup=80",code/train.py defaults,current_default
+linear,ridge_lambda,100.0,code/train.py ridge_fit calls,current_default
+geometric,default_handle_weight,1000.0,code/baselines.py default,legacy_default
+geometric,default_system_ridge,1e-8,code/baselines.py default,legacy_default
+geometric,default_arap_iterations,3,code/baselines.py default,legacy_default
+geometric,final_tuning_grid,"ARAP handle-weight {1e2,1e3,1e4,1e5} x iters {3,5,10,20}; Laplacian/Bi-Laplacian handle-weight {1e2,1e3,1e4,1e5} x ridge {1e-10,1e-8,1e-6,1e-4}",GOAL_experimental_layer.md §9 U3,required
+seeds,seed_registry,global/split/training/bootstrap/noise/figure_case=20260609; chain seeds 20260609..20260613,seed_registry.json,required
+units,coordinate_transform_in_build_data,none; ROI crop is raw OBJ coordinates indexed by roi/vertices.json,code/build_data.py docstring and implementation,verified_local
+units,reported_unit_label_until_raw_scale_confirmed,FaceScape coordinate units; mm conversion requires licensed raw/source documentation and is not inferable from committed files alone,local data absence,blocked_until_facescape_source_available

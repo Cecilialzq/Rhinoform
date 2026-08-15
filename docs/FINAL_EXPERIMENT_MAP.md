@@ -13,6 +13,14 @@
 
 This experiment supplies the main method row, all seven baseline rows and the deployment-oriented conclusion.
 
+The final-rerun policy freezes and hash-locks PCA-64 and lambda 300. The public
+release now includes a post-hoc PCA sweep at lambda 100 and a supplemental
+validation lambda grid at PCA-16 under `results/baseline_validation/`; their
+protocol fields explicitly state that they are not the original joint selection
+run. The released result is therefore reproducible at the frozen operating
+point; the release is not evidence that PCA-64/lambda 300 is an independently
+auditable optimum.
+
 ## 2. Supplementary: PCA-128 RB-SR versus frozen LAMM
 
 - Notebook: `notebooks/Rhinoform_RBSR_LAMM_dominance_search_colab.ipynb`
@@ -20,18 +28,27 @@ This experiment supplies the main method row, all seven baseline rows and the de
 - Split, ROI, strict scorer and ordered test pairs: identical to the primary final rerun.
 - LAMM: reused frozen checkpoint and pair-level result; no LAMM retraining.
 - Selected RB-SR configuration: source PCA dimension 128, Ridge lambda 1, validation-selected logit offset beta 6.
-- Unlike the primary CVAE proposer with a budget-constrained gate, this point uses a deterministic neural-field residual proposer trained for 500 epochs with semantic subunit features, followed by unconstrained accuracy-first gate training.
+- Unlike the primary CVAE proposer with a budget-constrained gate, this point uses a deterministic neural-field residual proposer trained for 500 epochs, followed by unconstrained accuracy-first gate training.
+- No hard projection certificate was run: `projection_certificate`, `projection_freeze` and `projection_selected` are all null in the released test record.
 - Evidence type: supplementary post-hoc matched comparison.
 - Outcome on 9,900 test pairs: RB-SR is lower on ROI RMSE, target-relative new flip and edge-strain p95; the three matched-pair tests remain significant after the stored correction/robustness procedure.
 
-This experiment supports the narrower statement that additional representation capacity can move RB-SR to a point that dominates LAMM on these three metrics under the matched protocol. The proposer and gate-training changes do not alter the attribution: the calibrated gate is almost closed (mean admission 0.0021; no vertex above 0.5), and the margin is carried almost entirely by the PCA-128 Ridge anchor. It does not establish that increasing PCA dimension always improves every split or that PCA-128 is the primary deployed model.
+This experiment supports the narrower statement that a changed, calibrated
+anchored configuration can move to a point that dominates the stored LAMM
+outputs on these three observed metrics under the matched protocol. The
+calibrated gate is almost closed (mean admission 0.0021; no vertex above 0.5),
+so the result is anchor-dominated. Because PCA dimension, Ridge penalty,
+proposer, gate objective and calibration all change, the experiment does not
+isolate representation capacity, demonstrate certified capacity, establish
+that increasing PCA dimension always improves every split, or make PCA-128 the
+primary deployed model.
 
 ## Why the two experiments must not be numerically merged
 
 They share evaluation data and scorer but use different RB-SR model configurations and different evidential roles. Present them as:
 
 - the PCA-64 certified model in the main table; and
-- the PCA-128 calibrated model in a separately labelled supplementary table or trade-off figure.
+- the PCA-128 calibrated, non-certified model in a separately labelled supplementary table or trade-off figure.
 
 Do not select the best metric from each configuration to create a synthetic row.
 
@@ -58,7 +75,7 @@ methods and must remain labelled secondary post-hoc; they do not change either
 headline model or reopen test-time selection.
 
 The subunit notebook cell 23 applies a runtime-only zero-noise replay repair:
-it authenticates the frozen zero-mm rows by artifact hash and exact pair identity,
+it authenticates the frozen zero-noise rows by artifact hash and exact pair identity,
 then treats finite cross-GPU order-statistic differences as diagnostics. It does
 not change model weights, noise draws, metric definitions, the operating point,
 split or pair order, or test-data access.
@@ -70,6 +87,10 @@ split or pair order, or test-data access.
 - robustness outside the retained frozen noise protocol;
 - subunit claims beyond the retained five-subunit analysis;
 - external-dataset generalisation; or
-- measured deployment latency/memory for the full learned path.
+- a same-hardware batch-one LAMM/CUDA deployment comparison or a stable browser GPU peak-memory figure.
 
-None of these is required to support the current main and supplementary conclusions, provided the report does not make those extra claims.
+The repository does now include a 100-warmup/1,000-run Apple M3 benchmark of the
+exact browser bundle and a separate Chrome presentation benchmark under
+`benchmarks/runtime/`. Those records support Ridge as the interactive fallback
+and certified RB-SR as an asynchronous enhanced preview. They do not fill the
+same-hardware LAMM/CUDA or GPU-memory gaps above.
