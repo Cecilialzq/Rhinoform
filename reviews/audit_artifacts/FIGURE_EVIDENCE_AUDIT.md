@@ -114,3 +114,11 @@ region”.  `demo/src/engine/certifiedLocal.js` stores and applies one gate weig
 per vertex, and the method equation defines `g(v)`.  The wording was therefore
 minimally corrected to “spatially, through per-vertex weights”; no method claim,
 number or figure geometry changed.
+
+The abstract previously called the nine controls “FaceScape-calibrated”
+landmarks.  `data/manifest.json`, `roi/landmarks.json` and the upload contract
+support registered topology and fixed landmark indices, while
+`demo/src/engine/uploadSource.js` explicitly defines the coordinates as
+uncalibrated model units.  The phrase was minimally changed to “registered
+FaceScape semantic nasal landmarks” to remove the unsupported calibration
+implication.
