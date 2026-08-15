@@ -524,7 +524,7 @@ export default function Studio() {
           {uploadError && <p className="hint hint-error">Upload rejected: {uploadError}</p>}
           <p className="hint">
             Accepts OBJ (or PLY) meshes registered to the frozen correspondence: nasal ROI
-            (3,934 vertices) or full head (26,317 vertices), in calibrated model units — the
+            (3,934 vertices) or full head (26,317 vertices), in uncalibrated model units — the
             FaceScape registered meshes ship as OBJ. Certified inference then
             runs on the uploaded identity; presets and the local service stay bound to the mean example.
           </p>
