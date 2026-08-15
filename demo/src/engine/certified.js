@@ -70,12 +70,25 @@ function fromService(payload) {
   };
 }
 
+// Every backend must fail closed at the common adapter boundary. This prevents
+// an available-but-uncertified payload from ever replacing the Ridge anchor.
+export function requireCertificate(result) {
+  if (!result.available) return result;
+  if (result.certified === true && result.newVsRidgeFoldCount === 0) return result;
+  return {
+    available: false,
+    backend: result.backend,
+    certified: false,
+    fallbackReason: "certificate_failed",
+  };
+}
+
 // Resolve a certified enhancement. `sliderValues` identify presets; `controls`
 // are the effective (post-admission) raw controls sent to the live service.
 export async function resolveCertified({ sliderValues, controls, ctx, timeoutMs = 4000 }) {
   if (ctx.service) {
     const payload = await requestCertified(controls, timeoutMs);
-    if (payload.ok) return fromService(payload);
+    if (payload.ok) return requireCertificate(fromService(payload));
     // Service failure falls through to the in-browser pipeline (if present)
     // before resolving to the anchor.
     if (!ctx.certifiedBrowser) {
@@ -91,12 +104,12 @@ export async function resolveCertified({ sliderValues, controls, ctx, timeoutMs 
     // Yield once so the "computing" state paints before the dense compute.
     await new Promise((r) => setTimeout(r, 0));
     try {
-      return certifiedLocal(controls, ctx, ctx.certifiedBrowser);
+      return requireCertificate(certifiedLocal(controls, ctx, ctx.certifiedBrowser));
     } catch (err) {
       return { available: false, backend: "browser", fallbackReason: "browser_error", error: String(err) };
     }
   }
   const preset = findPreset(sliderValues, ctx.presets);
-  if (preset) return fromPreset(preset);
+  if (preset) return requireCertificate(fromPreset(preset));
   return { available: false, backend: "precomputed", fallbackReason: "no_precomputed_match" };
 }

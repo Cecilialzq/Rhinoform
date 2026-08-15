@@ -204,7 +204,7 @@ function foldMask(source, delta, faces, out) {
 // (source, faces, landmarks, wCtrl); `cb` the parsed certified bundle.
 // Returns the same result contract as the live service / preset library,
 // with certifiedDelta in the edit-relative display frame.
-export function certifiedLocal(controls, ctx, cb) {
+export function certifiedLocal(controls, ctx, cb, options = {}) {
   const t0 = performance.now();
   const V = cb.nVertices;
   const D = V * 3;
@@ -247,6 +247,7 @@ export function certifiedLocal(controls, ctx, cb) {
     residual[lv * 3 + 1] = 0;
     residual[lv * 3 + 2] = 0;
   }
+  const tProposal = options.collectTimings ? performance.now() : 0;
 
   // Ridge-relative fold-subset projection (local attenuation, then uniform)
   const { attenuation, max_iterations, uniform_steps } = cb.projection;
@@ -310,6 +311,7 @@ export function certifiedLocal(controls, ctx, cb) {
       }
     }
   }
+  const tProjection = options.collectTimings ? performance.now() : 0;
 
   // Retention and fold bookkeeping (same definitions as safe_fusion)
   let residNorm = 0;
@@ -325,9 +327,11 @@ export function certifiedLocal(controls, ctx, cb) {
     : Math.min(Math.max(Math.sqrt(diffNorm) / residNorm, 0), 1);
   let ridgeFoldCount = 0;
   let projectedFoldCount = 0;
+  let newVsRidgeFoldCount = 0;
   for (let f = 0; f < nFaces; f++) {
     if (ridgeFold[f]) ridgeFoldCount++;
     if (fold[f]) projectedFoldCount++;
+    if (fold[f] && !ridgeFold[f]) newVsRidgeFoldCount++;
   }
 
   // Display frame (matches the Python runtime, display convention v4):
@@ -402,6 +406,7 @@ export function certifiedLocal(controls, ctx, cb) {
   const sortedGate = Float64Array.from(gate).sort();
   const gateMean = gate.reduce((a, b) => a + b, 0) / V;
 
+  const tEnd = performance.now();
   return {
     available: true,
     backend: "browser",
@@ -411,14 +416,21 @@ export function certifiedLocal(controls, ctx, cb) {
     iterations,
     ridgeFoldCount,
     projectedFoldCount,
-    newVsRidgeFoldCount: 0,
+    newVsRidgeFoldCount,
     gateP50: sortedGate[Math.floor(V * 0.5)],
     gateP95: sortedGate[Math.floor(V * 0.95)],
     gateMean,
     residualRms: residNorm / Math.sqrt(V),
     realisationAnchor,
     realisationCertified,
-    computeMs: performance.now() - t0,
+    computeMs: tEnd - t0,
+    stageTimingsMs: options.collectTimings
+      ? {
+          rawProposal: tProposal - t0,
+          certificateProjection: tProjection - tProposal,
+          displayPreparation: tEnd - tProjection,
+        }
+      : undefined,
     certifiedDelta,
   };
 }

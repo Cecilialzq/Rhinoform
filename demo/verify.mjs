@@ -30,6 +30,7 @@ import {
   deformHead,
 } from "./src/engine/geometry.js";
 import { admitControls } from "./src/engine/admission.js";
+import { requireCertificate } from "./src/engine/certified.js";
 
 const J = (p) => JSON.parse(fs.readFileSync(new URL(p, import.meta.url)));
 const manifest = J("./public/bundle/manifest.json");
@@ -94,6 +95,14 @@ check(
   sha("./public/bundle/certified_presets.json") === manifest.artifacts["certified_presets.json"]
 );
 check(
+  "manifest hash: golden_cases.json",
+  sha("./public/bundle/golden_cases.json") === manifest.artifacts["golden_cases.json"]
+);
+check(
+  "manifest hash: golden_certified.json",
+  sha("./public/bundle/golden_certified.json") === manifest.artifacts["golden_certified.json"]
+);
+check(
   "preset identity lock",
   JSON.stringify(presets.locked_identities) === JSON.stringify(manifest.locked_identities)
 );
@@ -101,6 +110,15 @@ check(
   "all presets carry a fold-subset certificate",
   presets.presets.every((p) => p.certified && p.new_vs_ridge_fold_count === 0),
   `${presets.presets.length} presets`
+);
+check(
+  "certificate adapter fails closed on an uncertified payload",
+  requireCertificate({
+    available: true,
+    backend: "test",
+    certified: false,
+    newVsRidgeFoldCount: 1,
+  }).available === false
 );
 check(
   "frozen projection parameters in manifest",
@@ -348,6 +366,9 @@ check(
       `certified browser conformance: ${gc.name}`,
       res.certified === gc.certified &&
         res.status === gc.status &&
+        res.ridgeFoldCount === gc.ridge_fold_count &&
+        res.projectedFoldCount === gc.projected_fold_count &&
+        res.newVsRidgeFoldCount === 0 &&
         rmseErr <= tol.certified_rmse_abs &&
         vertErr <= tol.vertex_abs &&
         retErr <= tol.retention_abs &&

@@ -68,6 +68,19 @@ Expected terminal statuses are `PASS` and
 judgements, pair ordering, row counts, hashes and schema fields must match
 exactly.
 
+## Runtime and deployment benchmark
+
+The release includes batch-size-one, 100-warmup/1,000-run compute and
+browser-presentation benchmarks for the exact certified browser bundle. See
+[`benchmarks/runtime/README.md`](benchmarks/runtime/README.md) for the scripts,
+committed JSON results, environment, memory scope, and the explicit separation
+between compute-only and rendering measurements.
+
+The measured product contract is Ridge as the interactive anchor/fallback and
+certified RB-SR as an asynchronous enhanced preview. A recovered A100
+batch-size-one LAMM forward distribution is also preserved, but it is not
+ranked against the Apple-M3 paths; no browser GPU peak-memory ranking is claimed.
+
 ## Installation
 
 The frozen environment uses Python 3.10+ and the versions in
@@ -79,6 +92,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -e .
+python -m pip install -r requirements-ci.txt
 python -m pytest -q
 ```
 

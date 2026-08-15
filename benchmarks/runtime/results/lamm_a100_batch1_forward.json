@@ -1,0 +1,10 @@
+{
+  "device": "cuda",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "median_ms": 37.08466249918274,
+  "p95_ms": 39.09294819823117,
+  "p99_ms": 41.93055552917939,
+  "repeats": 1000,
+  "scope": "LAMM forward only; batch=1; inputs pre-staged on GPU; excludes normalisation, transfer, strict scoring and rendering",
+  "warmup": 100
+}

@@ -1,0 +1,84 @@
+{
+  "note": "SUPPLEMENTAL diagnostic; main line keeps fixed lambda=100.0",
+  "protocol": "strict identity-disjoint; val=4830 pairs, test=9900 pairs; source_pca_dim=16 train-only",
+  "repo": "/content/fyp_data",
+  "lambda_grid": [
+    1.0,
+    3.0,
+    10.0,
+    30.0,
+    100.0,
+    300.0,
+    1000.0,
+    3000.0
+  ],
+  "validation_curve": [
+    {
+      "lambda": 1.0,
+      "val_free_rmse": 0.999847,
+      "val_new_flip_pct": 0.6065
+    },
+    {
+      "lambda": 3.0,
+      "val_free_rmse": 0.999488,
+      "val_new_flip_pct": 0.5741
+    },
+    {
+      "lambda": 10.0,
+      "val_free_rmse": 1.002474,
+      "val_new_flip_pct": 0.5079
+    },
+    {
+      "lambda": 30.0,
+      "val_free_rmse": 1.017447,
+      "val_new_flip_pct": 0.4333
+    },
+    {
+      "lambda": 100.0,
+      "val_free_rmse": 1.060456,
+      "val_new_flip_pct": 0.3469
+    },
+    {
+      "lambda": 300.0,
+      "val_free_rmse": 1.138652,
+      "val_new_flip_pct": 0.266
+    },
+    {
+      "lambda": 1000.0,
+      "val_free_rmse": 1.335204,
+      "val_new_flip_pct": 0.1957
+    },
+    {
+      "lambda": 3000.0,
+      "val_free_rmse": 1.711432,
+      "val_new_flip_pct": 0.1671
+    }
+  ],
+  "selected_lambda_on_validation": 3.0,
+  "selected_val_free_rmse": 0.999488,
+  "test_free_rmse_at_selected": 1.00288,
+  "test_free_rmse_at_lambda100": 1.056387,
+  "test_new_flip_at_selected": 0.6049,
+  "test_new_flip_at_lambda100": 0.368,
+  "frozen_ridge_flip": 0.3680096986527604,
+  "flip_self_check_abs_diff": 1.3877787807814457e-15,
+  "flip_self_check_tolerance": 1.315893270113265e-06,
+  "one_face_pair_quantum_pct": 1.3148932701132649e-06,
+  "flip_self_check_ok": true,
+  "reference_ridge_roi": 1.0563870961932256,
+  "self_check_abs_diff": 5.275335723808894e-12,
+  "self_check_tolerance": 1e-06,
+  "self_check_lambda100_reproduces_reference": true,
+  "interpretation": "lambda is reported as an accuracy<->flip sensitivity/frontier knob. The main line keeps lambda=100 as the frozen protocol setting; changing it would require rerunning downstream hybrid, RBSR, and Safe Fusion evidence.",
+  "verdict": "validation free-RMSE prefers lambda=3.0; but it trades flip; main line keeps 100",
+  "metadata": {
+    "seed": 20260609,
+    "split": "splits/facescape_847/split_manifest.json",
+    "n_train_ids": 676,
+    "n_val_ids": 70,
+    "n_test_ids": 100,
+    "n_pairs": 9900
+  },
+  "method": "ridge_sourcepca",
+  "config": "source_pca_dim=16;use_subunit_features=false;supplemental_lambda_grid"
+}

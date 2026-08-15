@@ -1,0 +1,96 @@
+{
+  "schema": "rhinoform_browser_compute_benchmark_v1",
+  "generated_utc": "2026-08-15T05:27:36.981Z",
+  "scope": "Node/V8 execution of the exact certified browser compute pipeline; rendering excluded",
+  "locked_identities": {
+    "base_model_sha256": "932db0a879a15ee51d8d6d52fb76d380609ed6ee02f85f8ae78afe9e11e8cfd3",
+    "gate_model_sha256": "9185d1baac0934b5fdb437ce451296132eba68a83d8f62d1bafe95a1aaa4f972",
+    "projection_signature": "4a54c0535cff7d6e14fe8d944510e5831a803244892f770ac0d67f8706688e84"
+  },
+  "artifact_sha256": {
+    "manifest_json": "6baeb50ad95e6a170c08bb8fb7d45f326bef6cef4822008be54bb4d3450504ec",
+    "ridge_browser_json": "66b23d74360715ad1fcfc3967f8629e01f730f94a5cc0be09c84798ae98f00b5",
+    "certified_browser_json": "45ac140c48df0c8f7a123862ba7bebcb1afcec02bfc564cb10221672a9d17a96",
+    "certified_presets_json": "c74a72a7a50a89247db0ced3e944dc1dabcdb85fa0ed1b3f543c146f35dd11b6"
+  },
+  "environment": {
+    "platform": "darwin",
+    "release": "24.5.0",
+    "arch": "arm64",
+    "cpu_model": "Apple M3",
+    "logical_cpu_count": 8,
+    "total_memory_mb": 8192,
+    "node": "v24.14.0",
+    "v8": "13.6.233.17-node.41",
+    "batch_size": 1
+  },
+  "protocol": {
+    "warmup_runs": 100,
+    "measured_runs": 1000,
+    "request_panel": "11 frozen presets x {1.0, 0.5, 1.5} slider amplitude, round-robin",
+    "panel_size": 33
+  },
+  "cold_start": {
+    "bundle_load_and_parse_ms": 20.376
+  },
+  "steady_state_compute": {
+    "ridge_anchor": {
+      "median_ms": 0.67,
+      "p95_ms": 0.855,
+      "p99_ms": 2.144,
+      "mean_ms": 0.727,
+      "max_ms": 7.344
+    },
+    "raw_rbsr_proposal": {
+      "median_ms": 76.837,
+      "p95_ms": 88.788,
+      "p99_ms": 98.574,
+      "mean_ms": 78.763,
+      "max_ms": 157.878
+    },
+    "certificate_projection": {
+      "median_ms": 1.693,
+      "p95_ms": 2.589,
+      "p99_ms": 3.051,
+      "mean_ms": 1.773,
+      "max_ms": 8.643
+    },
+    "display_preparation": {
+      "median_ms": 2.803,
+      "p95_ms": 4.298,
+      "p99_ms": 6.348,
+      "mean_ms": 3.027,
+      "max_ms": 31.64
+    },
+    "certified_rbsr_end_to_end": {
+      "median_ms": 81.487,
+      "p95_ms": 94.661,
+      "p99_ms": 108.881,
+      "mean_ms": 83.563,
+      "max_ms": 163.338
+    }
+  },
+  "certificate": {
+    "success_rate": 1,
+    "status_counts": {
+      "local_fold_subset_certified": 1000
+    },
+    "iterations": {
+      "mean": 14.53,
+      "p95": 23,
+      "max": 25
+    },
+    "retention": {
+      "mean": 0.9936,
+      "min": 0.9832
+    },
+    "max_new_vs_ridge_fold_count": 0
+  },
+  "memory": {
+    "scope": "Node process memory sampled after each measured request; not browser-tab, renderer-process, or GPU peak memory",
+    "baseline_rss_mb": 102.3,
+    "max_observed_rss_mb": 156,
+    "baseline_heap_used_mb": 22.7,
+    "max_observed_heap_used_mb": 26.3
+  }
+}
