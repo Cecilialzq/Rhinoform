@@ -14,7 +14,7 @@ This public repository contains the implementation, frozen pair-level evidence,
 exact split and ROI contracts, source snapshots, tests, and portable verification
 commands. FaceScape meshes are licensed separately and are not redistributed.
 
-## Results and claim boundary
+## Results
 
 The primary experiment is a clean identity-disjoint internal final rerun on
 9,900 matched ordered test pairs. The deployed PCA-64 certified model improves
@@ -38,10 +38,9 @@ LAMM values; all three matched comparisons pass the stored cluster-aware,
 Holm-corrected procedure. This supplementary model is capacity/trade-off
 evidence, not the primary confirmatory model.
 
-The authoritative wording and evidence files are mapped in
-[`docs/FINAL_EXPERIMENT_MAP.md`](docs/FINAL_EXPERIMENT_MAP.md) and
-[`docs/EVIDENCE_STATUS.md`](docs/EVIDENCE_STATUS.md). Do not merge the PCA-64
-and PCA-128 rows into a synthetic result.
+The primary Certified RB-SR result and the supplementary PCA-128 capacity
+study are reported separately. Frozen report-level tables are available under
+[`docs/final_tables/`](docs/final_tables/).
 
 ## Reproduce in under one minute
 
@@ -127,13 +126,8 @@ work starts. CLI arguments and the environment variables
 `RHINOFORM_DATA_ROOT`, `RHINOFORM_ARTIFACT_ROOT`, `RHINOFORM_OUTPUT_ROOT`, and
 `RHINOFORM_LAMM_ROOT` can replace the TOML file; no source edit is required.
 
-`materialize` constructs a non-overwriting historical runtime from the
-annotated `final-holdout-v1` tag, overlays the exact 14-file source snapshot and
-executes an isolated import-origin check for the four RB-SR files that later
-changed. Historical stages must then be launched with `runtime-exec`; this
-prevents the current root implementation from entering a v1 reproduction. See
-[`reproducibility/README.md`](reproducibility/README.md) for the exact contract
-and example command.
+Historical runtimes and full reruns are documented in
+[`reproducibility/README.md`](reproducibility/README.md).
 
 The exact private frozen-checkpoint inventory is
 [`reproducibility/RELEASE_ASSET_MANIFEST.json`](reproducibility/RELEASE_ASSET_MANIFEST.json).
@@ -145,22 +139,6 @@ verification and statistical replay need neither checkpoints nor FaceScape.
 The original executed Colab notebooks are retained as protocol/provenance
 records; portable verification starts from the commands above, not from their
 author-specific Drive mount cells.
-
-## Reproducibility levels
-
-| Level | Inputs | Typical purpose | Command |
-|---|---|---|---|
-| Evidence verification | Git checkout | Check frozen statuses and source snapshots | `python -m tools.reproduce verify` |
-| Statistical replay | Git checkout | Recompute the paper-level paired inference | `python -m tools.reproduce replay` |
-| Private artifact preflight | Checkout + authorised frozen checkpoints + processed FaceScape | Prove the author's retained end-to-end inputs match | `python -m tools.reproduce preflight --config reproduction.local.toml --full-data-hash` |
-| Historical source runtime | Checkout with annotated tags | Build and verify a tag-bound, non-hybrid final-holdout v1 execution tree | `python -m tools.reproduce materialize --experiment final-holdout --config reproduction.local.toml` |
-| Full GPU rerun | Checkout + licensed FaceScape + separately obtained pinned LAMM + CUDA | Re-run training/evaluation from scratch | See [`reproducibility/README.md`](reproducibility/README.md) |
-
-GPU training can differ at the last floating-point bits across CUDA, driver and
-hardware versions. The release therefore guarantees exact inputs, code lineage,
-pair ordering and artifact hashes, and uses frozen metric tolerances where
-bitwise GPU equality is not technically portable. It does not claim universal
-bit-for-bit retraining on arbitrary hardware.
 
 ## Repository layout
 

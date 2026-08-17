@@ -1,12 +1,32 @@
 from __future__ import annotations
 
 import unittest
+from pathlib import Path
 from unittest import mock
 
-from tools.audit_public_release import audit_public_release
+from tools.audit_public_release import audit_public_release, process_artifact_hits
 
 
 class PublicReleaseAuditTests(unittest.TestCase):
+    def test_internal_process_artifacts_are_rejected(self) -> None:
+        root = Path("/repo")
+        files = [
+            root / "reviews/audit_artifacts/report.csv",
+            root / "tmp/render/page-01.png",
+            root / "package/__pycache__/module.cpython-312.pyc",
+            root / "demo/dist/index.html",
+            root / "docs/final_tables/main_results.csv",
+        ]
+        self.assertEqual(
+            process_artifact_hits(root, files),
+            [
+                "reviews/audit_artifacts/report.csv",
+                "tmp/render/page-01.png",
+                "package/__pycache__/module.cpython-312.pyc",
+                "demo/dist/index.html",
+            ],
+        )
+
     def test_current_checkout_passes_public_release_audit(self) -> None:
         report = audit_public_release()
         self.assertEqual(report["status"], "PASS_PUBLIC_RELEASE_AUDIT")

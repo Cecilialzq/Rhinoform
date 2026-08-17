@@ -25,6 +25,13 @@ REQUIRED = (
     ".github/workflows/ci.yml",
 )
 FORBIDDEN_SUFFIXES = {".pt", ".npy", ".npz"}
+FORBIDDEN_TRACKED_PREFIXES = (
+    "reviews/",
+    "tmp/",
+    ".pytest_cache/",
+    "demo/node_modules/",
+    "demo/dist/",
+)
 
 
 def tracked_files(root: Path) -> list[Path]:
@@ -33,6 +40,19 @@ def tracked_files(root: Path) -> list[Path]:
         stderr=subprocess.STDOUT,
     )
     return [root / item.decode("utf-8") for item in output.split(b"\0") if item]
+
+
+def process_artifact_hits(root: Path, files: list[Path]) -> list[str]:
+    hits = []
+    for path in files:
+        relative = path.relative_to(root).as_posix()
+        if (
+            relative.startswith(FORBIDDEN_TRACKED_PREFIXES)
+            or "__pycache__" in path.relative_to(root).parts
+            or path.suffix.lower() == ".pyc"
+        ):
+            hits.append(relative)
+    return hits
 
 
 def privacy_hits_in_public_surface(root: Path) -> list[str]:
@@ -77,6 +97,13 @@ def audit_public_release(root: Path = ROOT) -> dict[str, object]:
         raise RuntimeError(f"Missing public-release files: {missing}")
 
     files = tracked_files(root)
+    process_artifacts = process_artifact_hits(root, files)
+    if process_artifacts:
+        raise RuntimeError(
+            "Review, temporary, or generated process artifacts remain tracked: "
+            f"{process_artifacts}"
+        )
+
     sizes = {
         str(path.relative_to(root)): path.stat().st_size
         for path in files
@@ -105,6 +132,7 @@ def audit_public_release(root: Path = ROOT) -> dict[str, object]:
         "largest_tracked_blob_bytes": max(sizes.values(), default=0),
         "required_files": len(REQUIRED),
         "ordinary_git_model_payloads": 0,
+        "process_artifacts": 0,
         "privacy_hits": 0,
     }
 
