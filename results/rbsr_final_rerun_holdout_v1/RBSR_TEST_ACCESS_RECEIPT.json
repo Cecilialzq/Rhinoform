@@ -1,0 +1,13 @@
+{
+  "all_models_freeze_sha256": "5787b767ee5138a0dfefe644afc266ff47acb0427b8ec00b792a4ab8355a429b",
+  "base_model_package_sha256": "932db0a879a15ee51d8d6d52fb76d380609ed6ee02f85f8ae78afe9e11e8cfd3",
+  "completed_at_utc": "2026-08-09T12:15:01.390573+00:00",
+  "confirmation_policy_sha256": "56df2fc825df572b2896b86022298367ecc37dd79c15638104b4e41331dbb9f3",
+  "projection_freeze_sha256": "dbefa7d3529d0c04ae94c42c31f68338ab259d28a38ef7e862f5a07475cab092",
+  "rbsr_package_sha256": "9185d1baac0934b5fdb437ce451296132eba68a83d8f62d1bafe95a1aaa4f972",
+  "started_at_utc": "2026-08-09T11:47:48.332010+00:00",
+  "status": "COMPLETE",
+  "test_access_count": 1,
+  "test_report": "rbsr_evaluation_test.json",
+  "test_report_sha256": "599c4549fbfa9ca203a6d58ce7a0233a3ce4bae001518dfd3f2c63da399ade44"
+}

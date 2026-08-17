@@ -1,0 +1,22 @@
+{
+  "claim_boundary": "secondary post-hoc frozen-validation robustness; not blind confirmation",
+  "correction": "Validate the zero-mm baseline by its artifact hash and exact pair identity; record finite live replay differences diagnostically and copy the immutable frozen metrics.",
+  "known_trigger": {
+    "absolute_difference": 0.00014974518418231497,
+    "metric": "edge_strain_p95",
+    "validation_pair_index": 4573
+  },
+  "metric_definition_changed": false,
+  "model_weights_changed": false,
+  "noise_draws_changed": false,
+  "nonfinite_replay_values_fail_closed": true,
+  "nonzero_noise_inference_bypassed": false,
+  "numeric_replay_differences_are_diagnostic_only": true,
+  "operating_point_changed": false,
+  "reason": "The frozen zero-mm validation rows are authoritative. Live edge-strain P95 is an order statistic and target-relative flip is discontinuous, so their small cross-GPU replay differences are not valid acceptance gates.",
+  "split_or_pair_order_changed": false,
+  "status": "PRE_COMPLETION_RUNTIME_REPLAY_POLICY_CORRECTION",
+  "supersedes_zero_baseline_replay_erratum_sha256": "0cba31ab704072e2ff4dc1bd35a7188ba8e2cd5ee3c1efcc156351aaaf198357",
+  "test_data_used": false,
+  "zero_mm_baseline_reestimated": false
+}

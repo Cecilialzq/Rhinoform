@@ -1,0 +1,31 @@
+{
+  "canonical_batch_size": 32,
+  "canonical_clean_baseline_sha256": {
+    "certified_rbsr": "ea9e43012a0a4b11633e9fc658a8da0185914866f044b40a8913640cb7ce24b7",
+    "ridge": "b0f5995bf159d8d424283399def91018b73587f4601b912989b796086eb0942d"
+  },
+  "corrected_erratum_sha256": "0cba31ab704072e2ff4dc1bd35a7188ba8e2cd5ee3c1efcc156351aaaf198357",
+  "interpretation": "Live replay is diagnostic only. Frozen clean rows are the authoritative zero-mm baseline; all nonzero-noise rows are newly inferred.",
+  "methods": {
+    "certified_rbsr": {
+      "max_abs_edge_strain_p95_difference": 0.00014974518418231497,
+      "max_abs_normal_flip_pct_difference": 0.0,
+      "max_abs_roi_rmse_difference": 5.02216661590893e-07,
+      "normal_flip_mismatch_count": 0,
+      "normal_flip_mismatch_examples": [],
+      "rows_checked_live_or_cached": 4830
+    },
+    "ridge": {
+      "max_abs_edge_strain_p95_difference": 3.3106613758771e-07,
+      "max_abs_normal_flip_pct_difference": 0.0,
+      "max_abs_roi_rmse_difference": 1.6852440776204958e-08,
+      "normal_flip_mismatch_count": 0,
+      "normal_flip_mismatch_examples": [],
+      "rows_checked_live_or_cached": 5030
+    }
+  },
+  "nonfinite_replay_values_fail_closed": true,
+  "numeric_replay_differences_are_diagnostic_only": true,
+  "runtime_cell_policy_sha256": "beb3d76782d857b86754d4f3bbe060ecef0e38a606310ec57d7c1772f7228b33",
+  "status": "COMPLETE_ZERO_BASELINE_REPLAY_AUDIT"
+}

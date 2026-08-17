@@ -216,8 +216,14 @@ def numeric_id(value: str) -> tuple[int, str]:
     return (int(value), value) if value.isdigit() else (10**9, value)
 
 
-def load_dataset(fyp_root: Path, *, split_manifest: Path | None = None, load_test: bool = True):
-    data_root = fyp_root / "data"
+def load_dataset(
+    fyp_root: Path,
+    *,
+    data_root: Path | None = None,
+    split_manifest: Path | None = None,
+    load_test: bool = True,
+):
+    data_root = data_root or (fyp_root / "data")
     manifest_path = data_root / "manifest.json"
     split_path = split_manifest or (fyp_root / "splits/facescape_847/split_manifest.json")
     roi_path = fyp_root / "roi/vertices.json"

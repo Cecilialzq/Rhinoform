@@ -1,0 +1,148 @@
+{
+  "schema": "rhinoform_paper_experiment_manifest_v1",
+  "status": "COMPLETE_PAPER_EXPERIMENT_COVERAGE",
+  "paper": {
+    "title": "Rhinoform: Safe and Personalised 3D Nasal Deformation from Sparse Controls",
+    "version": "final dissertation PDF, 2026-08-17"
+  },
+  "scope": "Every empirical table, result figure, ablation, robustness study and runtime claim in Chapters 4-5 and Appendix A has a public code, protocol and result-evidence path. Licensed meshes and restricted checkpoints are represented by manifests and hashes, not redistributed.",
+  "experiments": [
+    {
+      "id": "component_and_certificate_diagnostics",
+      "paper_references": ["Figure 4.3", "Figure 4.4", "Figure 4.5", "Figure 4.6", "Figure 4.7"],
+      "notebook": "notebooks/Rhinoform_RBSR_internal_final_rerun_holdout_colab.ipynb",
+      "code": [
+        "rhinoform/rbsr_calibration.py",
+        "rhinoform/safe_fusion.py",
+        "rhinoform/train_rbsr_gate.py",
+        "scripts/evaluation/rbsr_gate.py",
+        "scripts/evaluation/rbsr_ridge_fold_projection.py",
+        "scripts/evaluation/posthoc_personalization_ablation.py"
+      ],
+      "protocol_and_results": [
+        "docs/final_tables/component_ablation_validation_4830_pairs.csv",
+        "results/rbsr_final_rerun_holdout_v1/rbsr/seed20260609/certified_projection_validation/RBSR_CERTIFIED_PROJECTION_FREEZE.json",
+        "results/rbsr_final_rerun_holdout_v1/rbsr/seed20260609/certified_projection_validation/rbsr_ridge_fold_projection_validation.json",
+        "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/personalization/PERSONALIZATION_ABLATION_PROTOCOL_FREEZE.json",
+        "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/personalization/personalization_ablation_summary.csv"
+      ]
+    },
+    {
+      "id": "primary_identity_disjoint_holdout",
+      "paper_references": ["Table 5.4", "Figure 5.1", "Section 5.3", "Section 5.6"],
+      "notebook": "notebooks/Rhinoform_RBSR_internal_final_rerun_holdout_colab.ipynb",
+      "code": [
+        "rhinoform/train.py",
+        "rhinoform/train_rbsr_gate.py",
+        "scripts/evaluation/direct_paired_statistics.py",
+        "experiments/lamm/run_lamm_facescape.py"
+      ],
+      "protocol_and_results": [
+        "results/rbsr_final_rerun_holdout_v1/protocol/FINAL_RERUN_HOLDOUT_POLICY_FREEZE.json",
+        "results/rbsr_final_rerun_holdout_v1/protocol/final_rerun_holdout_split_manifest.json",
+        "results/rbsr_final_rerun_holdout_v1/FINAL_CONFIRMATION_EVIDENCE.json",
+        "results/rbsr_final_rerun_holdout_v1/RESULT_TREE_MANIFEST.json",
+        "results/rbsr_final_rerun_holdout_v1/direct_paired_statistics/paired_all_vs_ridge.json",
+        "results/rbsr_final_rerun_holdout_v1/rbsr/seed20260609/one_shot_test/rbsr_evaluation_test.json",
+        "results/rbsr_final_rerun_holdout_v1/lamm/seed20260609/protocol_audit.json",
+        "docs/final_tables/main_results_9900_pairs.csv",
+        "docs/final_tables/primary_rbsr_vs_ridge_statistics.csv"
+      ]
+    },
+    {
+      "id": "regional_spatial_and_qualitative_posthoc",
+      "paper_references": ["Figure 5.2", "Figure 5.3", "Table 5.7", "Table 5.8", "Figure 5.4", "Figure 5.5", "Appendix Figure A.1", "Appendix Figure A.2"],
+      "notebook": "notebooks/Rhinoform_final_rerun_posthoc_subunits_colab.ipynb",
+      "code": [
+        "rhinoform/regional_analysis.py",
+        "scripts/evaluation/posthoc_preflight.py",
+        "scripts/evaluation/posthoc_subunit_analysis.py",
+        "scripts/evaluation/posthoc_qualitative_cases.py"
+      ],
+      "protocol_and_results": [
+        "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/POSTHOC_SUBUNIT_ANALYSIS_PROTOCOL_FREEZE.json",
+        "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/POSTHOC_SUBUNIT_ANALYSIS_EVIDENCE.json",
+        "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/region_topology_audit.json",
+        "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/subunit_means_all_methods.csv",
+        "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/spatial_tail_diagnostics_all_methods.csv",
+        "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/qualitative/QUALITATIVE_CASE_SELECTION_FREEZE.json",
+        "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/qualitative/QUALITATIVE_CASES_EVIDENCE.json",
+        "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/figures/FIGURE_EVIDENCE.json"
+      ]
+    },
+    {
+      "id": "source_conditioning_personalisation",
+      "paper_references": ["Figure 4.3(c)", "Figure 5.6"],
+      "notebook": "notebooks/Rhinoform_final_rerun_posthoc_subunits_colab.ipynb",
+      "code": [
+        "scripts/evaluation/posthoc_personalization_ablation.py",
+        "scripts/evaluation/posthoc_personalization_resume_erratum.py"
+      ],
+      "protocol_and_results": [
+        "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/personalization/PERSONALIZATION_ABLATION_PROTOCOL_FREEZE.json",
+        "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/personalization/PERSONALIZATION_ABLATION_EVIDENCE.json",
+        "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/personalization/PERSONALIZATION_CANONICAL_REPLAY_AUDIT.json",
+        "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/personalization/personalization_ablation_summary.csv",
+        "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/figures/fixed_control_personalization_demo.pdf"
+      ]
+    },
+    {
+      "id": "control_noise_robustness",
+      "paper_references": ["Figure 5.8", "Table 5.9"],
+      "notebook": "notebooks/Rhinoform_final_rerun_posthoc_subunits_colab.ipynb",
+      "code": [
+        "scripts/evaluation/posthoc_strict_noise_robustness.py",
+        "scripts/evaluation/posthoc_strict_noise_resume_erratum.py"
+      ],
+      "protocol_and_results": [
+        "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/noise/STRICT_NOISE_ROBUSTNESS_PROTOCOL_FREEZE.json",
+        "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/noise/SHARED_CONTROL_NOISE_DRAW_MANIFEST.json",
+        "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/noise/STRICT_NOISE_ROBUSTNESS_EVIDENCE.json",
+        "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/noise/STRICT_NOISE_ZERO_BASELINE_REPLAY_AUDIT.json",
+        "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/noise/noise_robustness_summary.csv"
+      ]
+    },
+    {
+      "id": "high_capacity_rbsr_lamm_study",
+      "paper_references": ["Table 5.5", "Table 5.6", "Figure 5.7"],
+      "notebook": "notebooks/Rhinoform_RBSR_LAMM_dominance_search_colab.ipynb",
+      "code": [
+        "rhinoform/rbsr_calibration.py",
+        "scripts/evaluation/rbsr_lamm_paired_statistics.py",
+        "experiments/lamm/run_lamm_facescape.py"
+      ],
+      "protocol_and_results": [
+        "results/supplemental_rbsr_lamm_dominance_search_v1/release_evidence/RELEASE_MANIFEST.json",
+        "results/supplemental_rbsr_lamm_dominance_search_v1/release_evidence/protocol/RBSR_LAMM_DOMINANCE_SEARCH_PROTOCOL_FREEZE.json",
+        "results/supplemental_rbsr_lamm_dominance_search_v1/release_evidence/validation/RBSR_ANCHOR_SELECTION_FREEZE.json",
+        "results/supplemental_rbsr_lamm_dominance_search_v1/release_evidence/rbsr/rbsr_evaluation_test.json",
+        "results/supplemental_rbsr_lamm_dominance_search_v1/release_evidence/analysis/rbsr_vs_lamm_core_paired_statistics.json",
+        "docs/final_tables/supplementary_rbsr_vs_lamm_9900_pairs.csv"
+      ]
+    },
+    {
+      "id": "runtime_and_browser_conformance",
+      "paper_references": ["Table 5.12", "Section 5.8"],
+      "code": [
+        "benchmarks/runtime/browser_certified_benchmark.mjs",
+        "benchmarks/runtime/browser_render_benchmark.mjs",
+        "benchmarks/runtime/lamm_batch1_forward_benchmark.py",
+        "demo/verify.mjs",
+        "experiments/lamm/run_lamm_facescape.py"
+      ],
+      "protocol_and_results": [
+        "benchmarks/runtime/README.md",
+        "benchmarks/runtime/SHA256SUMS",
+        "benchmarks/runtime/results/browser_node_certified.json",
+        "benchmarks/runtime/results/browser_chrome_render.json",
+        "benchmarks/runtime/results/lamm_a100_batch1_forward.json"
+      ]
+    }
+  ],
+  "historical_source_snapshots": [
+    "reproducibility/source_snapshots/final_holdout_v1/SOURCE_MANIFEST.json",
+    "reproducibility/source_snapshots/supplemental_dominance_v1/SOURCE_MANIFEST.json",
+    "reproducibility/source_snapshots/posthoc_subunits_v1/SOURCE_MANIFEST.json"
+  ],
+  "restricted_inputs": "reproducibility/RELEASE_ASSET_MANIFEST.json"
+}

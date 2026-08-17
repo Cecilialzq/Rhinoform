@@ -1,0 +1,118 @@
+{
+  "coordinate_order": "pair, landmark in frozen order, xyz",
+  "generator": "numpy.random.default_rng(seed).normal(0, sigma_mm)",
+  "pair_order_sha256": "6289f494a615f40db73ff80a8101ba3ea676cf1cd0474c16cc70f947094dfbd6",
+  "records": [
+    {
+      "array_sha256": "6f5a14b0e218be505a16193b6eafb8ebfb4394b2842dbc7a717a03c3e9ec550b",
+      "dtype": "float64",
+      "noise_mm": 0.0,
+      "noise_seed": 20260609,
+      "shape": [
+        4830,
+        9,
+        3
+      ]
+    },
+    {
+      "array_sha256": "12b2de5492919b9c2755df7b8e9b5f4c2a93ddae5ba68703caa49a9e804cc0fb",
+      "dtype": "float64",
+      "noise_mm": 0.25,
+      "noise_seed": 20260609,
+      "shape": [
+        4830,
+        9,
+        3
+      ]
+    },
+    {
+      "array_sha256": "6f707fae2f8c7b05ba0ce49c47c636c07de2c9b36cd56c931bcffe5f274fc2c3",
+      "dtype": "float64",
+      "noise_mm": 0.25,
+      "noise_seed": 20260610,
+      "shape": [
+        4830,
+        9,
+        3
+      ]
+    },
+    {
+      "array_sha256": "75c4a2ff979e23a1d1a5319e6ea2973b546a6a752681c500af6282074fc00d7b",
+      "dtype": "float64",
+      "noise_mm": 0.25,
+      "noise_seed": 20260611,
+      "shape": [
+        4830,
+        9,
+        3
+      ]
+    },
+    {
+      "array_sha256": "53679190d5dd769b9b7886126974389113d1511696280866089484a6a8cf9f2e",
+      "dtype": "float64",
+      "noise_mm": 0.5,
+      "noise_seed": 20260609,
+      "shape": [
+        4830,
+        9,
+        3
+      ]
+    },
+    {
+      "array_sha256": "c6b8b913da2a14c67c6c0711f0b7fbd4537ca7e802e75e05e66b2c42c54764f9",
+      "dtype": "float64",
+      "noise_mm": 0.5,
+      "noise_seed": 20260610,
+      "shape": [
+        4830,
+        9,
+        3
+      ]
+    },
+    {
+      "array_sha256": "5b9c1e9b72b9c1aac742e63495e4fd3ad54423eeb8cd9f05a1b713857329ac5c",
+      "dtype": "float64",
+      "noise_mm": 0.5,
+      "noise_seed": 20260611,
+      "shape": [
+        4830,
+        9,
+        3
+      ]
+    },
+    {
+      "array_sha256": "ba48e07b5f4a69f2d4464cf456ec91b15790a1272dd5c038045abfb99599c7ab",
+      "dtype": "float64",
+      "noise_mm": 1.0,
+      "noise_seed": 20260609,
+      "shape": [
+        4830,
+        9,
+        3
+      ]
+    },
+    {
+      "array_sha256": "be890387bb1633d70e64978f8d4e86156648ac2366344afac554b454ba4e3161",
+      "dtype": "float64",
+      "noise_mm": 1.0,
+      "noise_seed": 20260610,
+      "shape": [
+        4830,
+        9,
+        3
+      ]
+    },
+    {
+      "array_sha256": "310b482a099cf48d2dc1143b528ca6d03e02b7e671c9896b1a3fc68a834d3de8",
+      "dtype": "float64",
+      "noise_mm": 1.0,
+      "noise_seed": 20260611,
+      "shape": [
+        4830,
+        9,
+        3
+      ]
+    }
+  ],
+  "status": "FROZEN_SHARED_CONTROL_NOISE_DRAWS"
+}

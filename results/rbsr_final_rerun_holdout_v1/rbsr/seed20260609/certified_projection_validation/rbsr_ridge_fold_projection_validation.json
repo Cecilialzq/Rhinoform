@@ -1,0 +1,101 @@
+{
+  "artifact_paths_relative_to": "this_report_directory",
+  "base_model_package_sha256": "932db0a879a15ee51d8d6d52fb76d380609ed6ee02f85f8ae78afe9e11e8cfd3",
+  "candidates": [
+    {
+      "abs_flip_pct": 0.7554186792496562,
+      "attenuation": 0.0,
+      "certificate_rate": 1.0,
+      "dorsum_rmse": 1.1159840458412158,
+      "edge_strain_p95": 0.21782216436645785,
+      "label": "attenuation_0",
+      "landmark_rmse": 0.0,
+      "max_iterations": 64,
+      "mean_iterations": 0.0,
+      "mean_retention": 0.0,
+      "missed_flip_pct": 1.6287139466678309,
+      "normal_flip_pct": 0.3540690695303964,
+      "pair_metrics": "pair_metrics/pair_metrics_attenuation_0_validation.csv",
+      "pair_metrics_sha256": "b0f5995bf159d8d424283399def91018b73587f4601b912989b796086eb0942d",
+      "projection_diagnostics": "pair_metrics/projection_diagnostics_attenuation_0_validation.csv",
+      "projection_diagnostics_sha256": "ce46e0b4523114be615aa385b95d3f1746244aa8351fd7ee7c2d5c5f35253332",
+      "roi_rmse": 1.1249247458629748,
+      "smoothing_steps": 0,
+      "status_counts": {
+        "exact_zero_residual_ridge_identity": 4830
+      },
+      "target_flip_pct": 2.030063556387091,
+      "tip_rmse": 0.8547636359172243,
+      "uniform_steps": 1001
+    },
+    {
+      "abs_flip_pct": 0.5556777344581697,
+      "attenuation": 0.75,
+      "certificate_rate": 1.0,
+      "dorsum_rmse": 1.0987452373846536,
+      "edge_strain_p95": 0.21644458864234653,
+      "label": "attenuation_0p75",
+      "landmark_rmse": 0.0,
+      "max_iterations": 64,
+      "mean_iterations": 13.379710144927536,
+      "mean_retention": 0.9917427679998795,
+      "missed_flip_pct": 1.7257087229807195,
+      "normal_flip_pct": 0.2513229010517986,
+      "pair_metrics": "pair_metrics/pair_metrics_attenuation_0p75_validation.csv",
+      "pair_metrics_sha256": "ea9e43012a0a4b11633e9fc658a8da0185914866f044b40a8913640cb7ce24b7",
+      "projection_diagnostics": "pair_metrics/projection_diagnostics_attenuation_0p75_validation.csv",
+      "projection_diagnostics_sha256": "7602961a9b0dca264999a9095114d8d2107940ac8958c5eea215ac6f077f09cb",
+      "roi_rmse": 1.1123204171016405,
+      "smoothing_steps": 0,
+      "status_counts": {
+        "local_fold_subset_certified": 4830
+      },
+      "target_flip_pct": 2.030063556387091,
+      "tip_rmse": 0.8282806996647705,
+      "uniform_steps": 1001
+    }
+  ],
+  "certificate": "For every pair, projected_fold_set is a subset of matched_ridge_fold_set after exact handles.",
+  "chunk_root": "projection_chunks/4a54c0535cff7d6e",
+  "gate_training_contract": {
+    "checkpoint_epoch": 80,
+    "checkpoint_sha256": "5ede240f50e2112782425c031aef672e6ba73d2392b16e1dbfa154ba2652f572",
+    "status": "VERIFIED_PRE_METADATA_STRICT_IMPLEMENTATION_SIGNATURE",
+    "training_implementation_sha256": "bfa0dbe88835b9982a570d32f8a95daa51a38888cf12439f5e5d22a322c695a2"
+  },
+  "implementation_hashes": {
+    "evaluation_wrapper": "2096d833fd55860d816873e77ba177d77379fea120dddf77e441e122ae34f3c1",
+    "projection_kernel": "4be72c59c26b4e202a3015a412f12cbb4d685e91a22e2df28e3ae24632f0ed52",
+    "strict_scorer": "f793e5958c8319c5aa605c899b3d8f3b446907844ab960c0dde25ba5f5c816bb"
+  },
+  "n_pairs": 4830,
+  "projection_signature": "4a54c0535cff7d6e14fe8d944510e5831a803244892f770ac0d67f8706688e84",
+  "rbsr_package_sha256": "9185d1baac0934b5fdb437ce451296132eba68a83d8f62d1bafe95a1aaa4f972",
+  "ridge_reference": {
+    "abs_flip_pct": 0.7554186792496562,
+    "dorsum_rmse": 1.1159840458412158,
+    "edge_strain_p95": 0.21782216436645785,
+    "label": "ridge_anchor",
+    "landmark_rmse": 0.0,
+    "missed_flip_pct": 1.6287139466678309,
+    "normal_flip_pct": 0.3540690695303964,
+    "pair_metrics": "pair_metrics/pair_metrics_ridge_validation.csv",
+    "pair_metrics_sha256": "b0f5995bf159d8d424283399def91018b73587f4601b912989b796086eb0942d",
+    "roi_rmse": 1.1249247458629748,
+    "target_flip_pct": 2.030063556387091,
+    "tip_rmse": 0.8547636359172243
+  },
+  "source_validation_report_sha256": "42aa76b8c746e89b3e23c33eadd736f2a7f08bb0fe3436e7c8b297853a80eb31",
+  "split": "validation",
+  "status": "VALIDATION_HARD_RIDGE_FOLD_PROJECTION_COMPLETE_NO_TEST_ACCESS",
+  "summary_csv": "rbsr_ridge_fold_projection_validation.csv",
+  "summary_csv_sha256": "528877c83360aaa3bdb413d256dfdf0a3a5ad6f23ba7788f6aedd81f69681a67",
+  "test_access": false,
+  "zero_gate_ridge_identity": {
+    "attenuation": 0.0,
+    "identity_tolerance": 1e-12,
+    "label": "attenuation_0",
+    "pair_metrics_sha256": "b0f5995bf159d8d424283399def91018b73587f4601b912989b796086eb0942d",
+    "passed": true
+  }
+}

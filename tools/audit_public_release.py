@@ -19,6 +19,12 @@ REQUIRED = (
     "requirements-replay.txt",
     "configs/reproduction.example.toml",
     "data/manifest.json",
+    "reproducibility/PAPER_EXPERIMENT_MANIFEST.json",
+    "reproducibility/RELEASE_ASSET_MANIFEST.json",
+    "notebooks/Rhinoform_final_rerun_posthoc_subunits_colab.ipynb",
+    "benchmarks/runtime/SHA256SUMS",
+    "results/rbsr_final_rerun_holdout_v1/RESULT_TREE_MANIFEST.json",
+    "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/figures/FIGURE_EVIDENCE.json",
     ".github/workflows/ci.yml",
 )
 FORBIDDEN_SUFFIXES = {".pt", ".npy", ".npz"}
@@ -28,10 +34,6 @@ FORBIDDEN_TRACKED_PREFIXES = (
     ".pytest_cache/",
     "demo/node_modules/",
     "demo/dist/",
-    "benchmarks/",
-    "notebooks/",
-    "reproducibility/source_snapshots/",
-    "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/",
 )
 
 

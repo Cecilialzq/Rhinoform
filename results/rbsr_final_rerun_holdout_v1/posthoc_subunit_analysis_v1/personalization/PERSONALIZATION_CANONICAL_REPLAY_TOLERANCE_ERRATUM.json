@@ -1,0 +1,23 @@
+{
+  "claim_boundary": "secondary mechanistic validation analysis; not blind test confirmation",
+  "completed_chunks_retained": true,
+  "correction": "Retain the frozen implementation and all completed chunks; allow a 1e-5 streaming guard, then require a complete metric-specific replay audit of all 4,830 source-PCA rows before aggregation.",
+  "frozen_generic_atol": 2e-06,
+  "frozen_personalization_implementation_sha256": "02519255bbdcd1c709490995ffc905e50e3eddc2c7c9ca751904973c580c6b77",
+  "metric_specific_atol": {
+    "edge_strain_p95": 1e-05,
+    "normal_flip_pct": 1e-12,
+    "roi_rmse": 1e-07
+  },
+  "metrics_changed": false,
+  "model_weights_changed": false,
+  "operating_point_changed": false,
+  "parent_posthoc_protocol_sha256": "8d533c1a9cccc091fd263359a6625f41a287f60c42f684b950733e362c2e468a",
+  "predictions_changed": false,
+  "reason": "The frozen streaming replay guard used one 2e-6 absolute tolerance for ROI RMSE, flip percentage and relative edge-strain P95. Identical Ridge recomputation can differ by a few 1e-6 in the strain percentile because float32 edge lengths and very short-edge division amplify rounding.",
+  "resume_wrapper_sha256": "f40d6a20c015151adaf92c11f0866aa5670c83090839ecd6fa1b47adc22de4da",
+  "rtol": 0.0,
+  "split_or_pair_order_changed": false,
+  "status": "PRE_AGGREGATION_CANONICAL_REPLAY_TOLERANCE_ERRATUM",
+  "test_data_used": false
+}

@@ -3,6 +3,7 @@
   "main_test_pairs": 9900,
   "outputs": [
     "main_results_9900_pairs.csv",
+    "component_ablation_validation_4830_pairs.csv",
     "primary_rbsr_vs_ridge_statistics.csv",
     "supplementary_rbsr_vs_lamm_9900_pairs.csv"
   ],
@@ -29,5 +30,6 @@
     "results/supplemental_rbsr_lamm_dominance_search_v1/release_evidence/analysis/rbsr_vs_lamm_core_paired_statistics.json": "61c7cef5eaa79409e605537b9e70932a1b3600e6e40e1e6f037ae9b0dab592aa"
   },
   "status": "FINAL_PAPER_TABLES_GENERATED_FROM_FROZEN_EVIDENCE",
-  "supplementary_test_pairs": 9900
+  "supplementary_test_pairs": 9900,
+  "validation_ablation_pairs": 4830
 }
