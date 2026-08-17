@@ -29,10 +29,8 @@ jobs:
           python -m pip install -e . --no-deps
       - name: Audit public boundary
         run: python -m tools.audit_public_release
-      - name: Verify frozen evidence and tagged source snapshots
-        run: |
-          python -m tools.reproduce verify
-          python -m tools.audit_source_snapshots --require-tags
+      - name: Verify frozen replay inputs
+        run: python -m tools.reproduce verify
       - name: Recompute report-level statistics
         run: python -m tools.reproduce replay
       - name: Run release-layer tests

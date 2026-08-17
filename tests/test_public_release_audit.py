@@ -15,6 +15,10 @@ class PublicReleaseAuditTests(unittest.TestCase):
             root / "tmp/render/page-01.png",
             root / "package/__pycache__/module.cpython-312.pyc",
             root / "demo/dist/index.html",
+            root / "notebooks/internal.ipynb",
+            root / "benchmarks/runtime.json",
+            root / "reproducibility/source_snapshots/run/source.py",
+            root / "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/plot.png",
             root / "docs/final_tables/main_results.csv",
         ]
         self.assertEqual(
@@ -24,6 +28,10 @@ class PublicReleaseAuditTests(unittest.TestCase):
                 "tmp/render/page-01.png",
                 "package/__pycache__/module.cpython-312.pyc",
                 "demo/dist/index.html",
+                "notebooks/internal.ipynb",
+                "benchmarks/runtime.json",
+                "reproducibility/source_snapshots/run/source.py",
+                "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/plot.png",
             ],
         )
 

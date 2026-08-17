@@ -46,7 +46,6 @@ function Hero() {
   return (
     <header className="hero" id="top">
       <div className="hero__bg">
-        <img className="hero__poster" src="/hero_poster.png" alt="" aria-hidden="true" />
         <HeroCanvas />
         <div className="hero__mask" />
       </div>

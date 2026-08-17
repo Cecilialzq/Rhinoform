@@ -1,6 +1,0 @@
-method,component_state,roi_rmse,normal_flip_pct,edge_strain_p95,certificate_rate,selection_split
-Ridge anchor,anchor_only_zero_residual,1.1249247458629748,0.3540690695303964,0.21782216436645785,1.0,validation
-CVAE proposer,neural_proposer_without_rbsr_safety,1.3966380283591426,1.3667965176856656,0.23879541585306394,,validation
-Fixed Hybrid,validation_selected_fixed_blend,1.1182881626591528,0.474225731631525,0.20808161091282804,,validation
-Raw RB-SR gate,learned_gate_before_hard_certificate,1.112194083746789,0.5579254669165584,0.2146041687911013,,validation
-Certified RB-SR,learned_gate_plus_ridge_fold_projection_attenuation_0p75,1.1123204171016405,0.2513229010517986,0.21644458864234653,1.0,validation

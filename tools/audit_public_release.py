@@ -14,14 +14,11 @@ REQUIRED = (
     "LICENSE",
     "CITATION.cff",
     "THIRD_PARTY.md",
-    "SECURITY.md",
-    "CONTRIBUTING.md",
     "requirements.txt",
     "requirements-ci.txt",
     "requirements-replay.txt",
     "configs/reproduction.example.toml",
     "data/manifest.json",
-    "reproducibility/RELEASE_ASSET_MANIFEST.json",
     ".github/workflows/ci.yml",
 )
 FORBIDDEN_SUFFIXES = {".pt", ".npy", ".npz"}
@@ -31,6 +28,10 @@ FORBIDDEN_TRACKED_PREFIXES = (
     ".pytest_cache/",
     "demo/node_modules/",
     "demo/dist/",
+    "benchmarks/",
+    "notebooks/",
+    "reproducibility/source_snapshots/",
+    "results/rbsr_final_rerun_holdout_v1/posthoc_subunit_analysis_v1/",
 )
 
 
@@ -60,14 +61,11 @@ def privacy_hits_in_public_surface(root: Path) -> list[str]:
     targets = [
         "README.md",
         "CITATION.cff",
-        "CONTRIBUTING.md",
-        "SECURITY.md",
         "THIRD_PARTY.md",
         ".github",
         "configs",
         "data/README.md",
         "docs",
-        "notebooks",
         "reproducibility/README.md",
     ]
     ripgrep = shutil.which("rg")
