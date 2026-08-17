@@ -25,12 +25,16 @@ The RB-SR-versus-Ridge ROI RMSE and new-flip comparisons pass the stored
 cluster-aware, Holm-corrected procedure; edge strain is not claimed as
 improved. A separate supplementary PCA-128 comparison against LAMM is retained
 as a capacity study. Compact report tables are in
-[`docs/final_tables/`](docs/final_tables/).
+[`docs/final_tables/`](docs/final_tables/), and the code, protocol and result
+paths for every empirical item in the dissertation are indexed by
+[`reproducibility/PAPER_EXPERIMENT_MANIFEST.json`](reproducibility/PAPER_EXPERIMENT_MANIFEST.json).
 
 ## Verify and replay
 
-The data-free path verifies SHA-256 sidecars and recomputes both stored
-pair-level statistical analyses:
+The data-free path checks all seven paper experiment families: frozen result
+and protocol files, executed experiment notebooks, tagged source snapshots,
+publication-figure hashes, and runtime-benchmark hashes. It then recomputes the
+two report-level pairwise statistical analyses:
 
 ```bash
 git clone https://github.com/Cecilialzq/Rhinoform.git
@@ -44,7 +48,9 @@ python -m tools.reproduce verify
 python -m tools.reproduce replay
 ```
 
-Expected statuses are `PASS` and `PASS_RELEASE_STATISTICS_REPLAY`.
+Expected top-level statuses are `PASS`; the verification report also contains
+`PASS_PAPER_EXPERIMENT_COVERAGE` and `PASS_PUBLICATION_FIGURES`, while the replay
+contains `PASS_RELEASE_STATISTICS_REPLAY`.
 
 For development and tests:
 
@@ -68,9 +74,13 @@ python -m tools.reproduce preflight \
   --full-data-hash
 ```
 
-The preflight binds the local dataset to `data/manifest.json`. Training and
-evaluation entry points are under `scripts/` and `experiments/lamm/`; run them
-as Python modules so imports do not depend on the checkout path.
+The preflight binds the local dataset to `data/manifest.json` and verifies the
+separately supplied checkpoint overlay against
+[`reproducibility/RELEASE_ASSET_MANIFEST.json`](reproducibility/RELEASE_ASSET_MANIFEST.json).
+Training and evaluation entry points are under `scripts/` and
+`experiments/lamm/`. Historical runs can be materialized from their tagged base
+plus archived source snapshot; see
+[`reproducibility/README.md`](reproducibility/README.md).
 
 ## Browser demo
 
@@ -95,8 +105,11 @@ scripts/            data, training, evaluation, and analysis entry points
 experiments/lamm/   LAMM evaluation adapter
 roi/                ROI and control definitions
 splits/             deterministic split contracts
-results/            minimal inputs required for statistical replay
-docs/final_tables/  compact result tables
+notebooks/          executed records for the three experiment families
+results/            paper protocols, numerical results, and frozen figures
+benchmarks/runtime/ runtime scripts and results for Table 5.12
+reproducibility/    paper map, source snapshots, and restricted-asset manifest
+docs/final_tables/  compact report-level tables
 demo/               browser implementation and frozen runtime bundle
 tests/              implementation and reproduction tests
 ```

@@ -1,0 +1,102 @@
+{
+  "created_at_utc": "2026-08-11T08:00:49.358396+00:00",
+  "expected_git_tag": "final-holdout-v1",
+  "experiment": "primary_internal_final_holdout_v1",
+  "files": [
+    {
+      "bytes": 56559,
+      "path": "experiments/lamm/run_lamm_facescape.py",
+      "provenance": "current_repository_exact_match",
+      "sha256": "546796843e8f7bdc1387714747abc043afad00877b362cf6d5135cfe86932539"
+    },
+    {
+      "bytes": 10031,
+      "path": "rhinoform/baselines.py",
+      "provenance": "current_repository_exact_match",
+      "sha256": "5cea2850161dc80c3a1c5bded09eabdf96cf284130bd42bf75d4d3c226b54136"
+    },
+    {
+      "bytes": 5726,
+      "path": "rhinoform/confirmation.py",
+      "provenance": "current_repository_exact_match",
+      "sha256": "677d8df8001d44cb745ad1f1097c4e53f42d09dd2b158a984d7fbe6126affd08"
+    },
+    {
+      "bytes": 10844,
+      "path": "rhinoform/geometry.py",
+      "provenance": "current_repository_exact_match",
+      "sha256": "47c5f47b4de7428a9491bcb044ad348c87a0f8a9c535bd4d69dd5804fdf82a31"
+    },
+    {
+      "bytes": 7131,
+      "path": "rhinoform/rbsr_calibration.py",
+      "provenance": "hash_verified_historical_reconstruction",
+      "sha256": "e91feefe9dbb6eb0ce973d0f4245ba5bab31704f94f5b4990012f387f1518166"
+    },
+    {
+      "bytes": 24879,
+      "path": "rhinoform/safe_fusion.py",
+      "provenance": "current_repository_exact_match",
+      "sha256": "4be72c59c26b4e202a3015a412f12cbb4d685e91a22e2df28e3ae24632f0ed52"
+    },
+    {
+      "bytes": 6125,
+      "path": "rhinoform/strict_protocol_patch.py",
+      "provenance": "current_repository_exact_match",
+      "sha256": "f793e5958c8319c5aa605c899b3d8f3b446907844ab960c0dde25ba5f5c816bb"
+    },
+    {
+      "bytes": 45726,
+      "path": "rhinoform/train.py",
+      "provenance": "current_repository_exact_match",
+      "sha256": "892fc9dd141cb1163a681eeef91901723be9ae27ab4636515786dafa3ae79c9e"
+    },
+    {
+      "bytes": 42042,
+      "path": "rhinoform/train_rbsr_gate.py",
+      "provenance": "hash_verified_historical_reconstruction",
+      "sha256": "dddfe45927714777cd672d12e7ba4a9c65624ad46f85799fe4156ffc70f8ca45"
+    },
+    {
+      "bytes": 5298,
+      "path": "scripts/analysis/select_rbsr_certified_projection.py",
+      "provenance": "current_repository_exact_match",
+      "sha256": "12e4c8b3729ebb7f3bbcc4ea217229689155be616a4909e552e8b9438660d2c7"
+    },
+    {
+      "bytes": 13822,
+      "path": "scripts/evaluation/classical_confirmation.py",
+      "provenance": "current_repository_exact_match",
+      "sha256": "0f898878081d8c3ca3e7ee51e6a96bd807a95f6cd6f6361f588e3a640c7823e7"
+    },
+    {
+      "bytes": 7947,
+      "path": "scripts/evaluation/direct_paired_statistics.py",
+      "provenance": "current_repository_exact_match",
+      "sha256": "38c593b5f1f63e6b42009ede4812557f5efec4aa12f9323e741b547009e1e544"
+    },
+    {
+      "bytes": 34870,
+      "path": "scripts/evaluation/rbsr_gate.py",
+      "provenance": "hash_verified_historical_reconstruction",
+      "sha256": "e9ab821dade09f0bbaad523802907b3e3c919a7f0366b767904b19efd0bb8efd"
+    },
+    {
+      "bytes": 18338,
+      "path": "scripts/evaluation/rbsr_ridge_fold_projection.py",
+      "provenance": "hash_verified_historical_reconstruction",
+      "sha256": "2096d833fd55860d816873e77ba177d77379fea120dddf77e441e122ae34f3c1"
+    }
+  ],
+  "historical_drive_revision_candidates": {
+    "rhinoform/rbsr_calibration.py": "0B0Oq5UkiKLZhdWY3b3dxSCt0VlU0RnZldW9YaHVpS0E3SUpvPQ",
+    "rhinoform/train_rbsr_gate.py": "0B0Oq5UkiKLZhWDB1SWIvdUErS1d4VVBsdnBiSVV5Um9HdE5jPQ",
+    "scripts/evaluation/rbsr_gate.py": "0B0Oq5UkiKLZhV2dJMFhkeXBzc1lSckZvN1ZGdFowU0NrTmFNPQ",
+    "scripts/evaluation/rbsr_ridge_fold_projection.py": "0B0Oq5UkiKLZhNzk4RVNsbjZmTmJaUzF5N3VBakU0YzRaTGlVPQ"
+  },
+  "recovery_statement": "Historical bytes were reconstructed by reversing the recorded patch lineage and accepted only when their SHA-256 exactly matched the immutable pre-test freeze.",
+  "schema": "rhinoform_source_snapshot_v1",
+  "source_freeze": "results/rbsr_final_rerun_holdout_v1/ALL_MODELS_FROZEN_BEFORE_TEST.json",
+  "source_freeze_sha256": "5787b767ee5138a0dfefe644afc266ff47acb0427b8ec00b792a4ab8355a429b",
+  "status": "COMPLETE_HASH_VERIFIED_SOURCE_SNAPSHOT"
+}

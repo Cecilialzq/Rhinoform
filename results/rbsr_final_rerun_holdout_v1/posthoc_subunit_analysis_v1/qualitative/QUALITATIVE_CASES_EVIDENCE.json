@@ -1,0 +1,26 @@
+{
+  "canonical_metric_self_check": "PASS",
+  "claim_boundary": "descriptive post-hoc; selection uses frozen test outcomes",
+  "dense_predictions_recomputed": true,
+  "flip_definition": "prediction fold AND NOT target fold",
+  "hard_fixed_true_controls": true,
+  "interpretation_boundary": "geometrically natural/regular only; must not be called clinically preferred",
+  "methods": [
+    "ridge",
+    "certified_rbsr",
+    "lamm"
+  ],
+  "n_cases": 6,
+  "outputs": {
+    "case_01_median_case.npz": "750a0b46a6f706443ab0d969967810191ec2c086fbe0f35b23a71ad440d2b37f",
+    "case_02_small_control.npz": "fb3298d7a8e2064f02a387d8d4cf48792dcab27064c0c50170f83c7031fbdc27",
+    "case_03_large_control.npz": "0cf5772ecdb934285acf6ff2c74ec74d9ca8fb97067c13a9f8f39a743e7c5861",
+    "case_04_high_certificate_iterations.npz": "a8edb07bc3084d5cd899b83b74cbc970c86b9530dd46df1351324bb10285258e",
+    "case_05_largest_rbsr_gain_over_ridge.npz": "a31fc7abd7839c1e403f15fe28fd457a42ca816aa7be25bd7f599919b272d98d",
+    "case_06_worst_rbsr_failure_vs_best_comparator.npz": "d68679913bbd8f84c63078a4ec909fcf0ade5c73cbb68dd070588287f05fc2c6"
+  },
+  "selection_freeze_sha256": "6ab6b0474df32be166c95f116f93bc9146c7ce9197c6aad7858215b23be9044c",
+  "selection_sha256": "3a81b5717c568902782087ae515249da2290980e405d97efb42616b01494b6cd",
+  "status": "COMPLETE_DETERMINISTIC_QUALITATIVE_COMPARISON",
+  "visualisation_contract": "shared per-case vertex-error scale across methods; explicit new-flip overlay; edge-strain overlay; landmark-edit panel; failure case mandatory"
+}

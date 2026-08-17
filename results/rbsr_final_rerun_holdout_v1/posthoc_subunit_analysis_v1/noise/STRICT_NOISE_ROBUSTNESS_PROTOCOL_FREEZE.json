@@ -1,0 +1,52 @@
+{
+  "claim_boundary": "secondary post-hoc frozen-validation robustness; not blind confirmation",
+  "frozen_artifact_hashes": {
+    "base": "932db0a879a15ee51d8d6d52fb76d380609ed6ee02f85f8ae78afe9e11e8cfd3",
+    "gate": "9185d1baac0934b5fdb437ce451296132eba68a83d8f62d1bafe95a1aaa4f972",
+    "lamm_manipulation": "dfa432e510dbb7232cfc396102aa286e78441a6c25cb363688b8040faaf0116b",
+    "projection": "dbefa7d3529d0c04ae94c42c31f68338ab259d28a38ef7e862f5a07475cab092"
+  },
+  "holm_family": "4 methods x 3 nonzero levels x 3 metrics = 36 tests",
+  "inference_unit": "source identity primary; target-identity bootstrap CI sensitivity gate",
+  "levels_mm": [
+    0.0,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "methods": [
+    "ridge",
+    "certified_rbsr",
+    "lamm",
+    "arap"
+  ],
+  "metrics": [
+    "roi_rmse",
+    "normal_flip_pct",
+    "edge_strain_p95"
+  ],
+  "noise_seeds": [
+    20260609,
+    20260610,
+    20260611
+  ],
+  "operating_point_reselected": false,
+  "parent_posthoc_protocol_sha256": "8d533c1a9cccc091fd263359a6625f41a287f60c42f684b950733e362c2e468a",
+  "posthoc_inference_implementation_hashes": {
+    "rhinoform/rbsr_calibration.py": "74ca40f3b17ccdb7a671c0699060dd96d20703d010b6dfb4530557fdfba3bd0d",
+    "rhinoform/safe_fusion.py": "4be72c59c26b4e202a3015a412f12cbb4d685e91a22e2df28e3ae24632f0ed52",
+    "rhinoform/train.py": "892fc9dd141cb1163a681eeef91901723be9ae27ab4636515786dafa3ae79c9e",
+    "rhinoform/train_rbsr_gate.py": "de0c08676d31d9a70416b32f5fe0e762d5b162b5db847c14528b979ece15111a",
+    "scripts/evaluation/posthoc_strict_noise_robustness.py": "7b38010dd80d7420f907a61b2a2c3311f9803c6d68c8fe745edc4549344a2541"
+  },
+  "scoring": "unnoised true controls hard-fixed; free-vertex ROI RMSE; target-relative new flip; edge-strain P95",
+  "seed_aggregation": "average three seeds within each pair before inferential analysis",
+  "shared_noise_draw_manifest_sha256": "e2ecf70d176ae5a9da7c9e54c1dcf2026e03aa908aeeed2e013037104942442f",
+  "shared_noise_rule": "each validation pair/level/seed uses identical noise for all four methods",
+  "sigma_rule": "isotropic independent Gaussian landmark-coordinate noise in millimetres",
+  "status": "FROZEN_STRICT_POSTHOC_NOISE_ROBUSTNESS",
+  "validation_pairs": 4830,
+  "validation_pairs_sha256": "6289f494a615f40db73ff80a8101ba3ea676cf1cd0474c16cc70f947094dfbd6",
+  "zero_level_seed_policy": "one deterministic clean execution; nonzero levels use all three seeds",
+  "zero_noise_requirement": "Ridge and certified RB-SR reproduce repository-frozen validation metrics; LAMM and ARAP use their frozen implementation/configuration without reselection"
+}

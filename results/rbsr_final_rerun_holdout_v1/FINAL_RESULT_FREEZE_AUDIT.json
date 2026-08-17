@@ -1,0 +1,103 @@
+{
+  "canonical_exclusions": [
+    "regenerable test/validation/projection chunk directories",
+    "dense gate-map caches",
+    "progress ledgers",
+    "*_last.pt resume checkpoints"
+  ],
+  "claim_boundary": "internal identity-disjoint held-out-from-final-retrain evidence; not historically untouched and not external",
+  "copy_verification": {
+    "source_archive_preserved": true,
+    "source_artifacts_compared": 121,
+    "status": "PASS",
+    "target_sidecars_validated": 59
+  },
+  "created_at_utc": "2026-08-09T13:40:19.619021+00:00",
+  "github_release_gate": {
+    "drive_snapshot_complete": true,
+    "large_files_require_git_lfs_or_release_assets": [
+      {
+        "bytes": 451083331,
+        "path": "lamm/seed20260609/ae_best.pt",
+        "sha256": "66b99ce3dcd30ffa44a60f6fdc1e5771a0bcf58f5de9acb0dbcca8da98d85416"
+      },
+      {
+        "bytes": 459970251,
+        "path": "lamm/seed20260609/manipulation_best.pt",
+        "sha256": "dfa432e510dbb7232cfc396102aa286e78441a6c25cb363688b8040faaf0116b"
+      }
+    ],
+    "real_git_commit_frozen": false,
+    "reason": "The curated folder is not currently a Git worktree."
+  },
+  "headline_pass": true,
+  "lamm_tradeoff": {
+    "erratum_included": true,
+    "erratum_sha256": "ff1c599aee0ed547793fd40185f82c6e75ce5a2643f9db28ef61e4ad22d424a0",
+    "lamm_new_flip_pct": 0.8787234490176433,
+    "lamm_roi_rmse": 0.9715437016189514,
+    "permitted_interpretation": "LAMM has lower ROI RMSE; certified RB-SR has lower target-relative new-flip incidence."
+  },
+  "pair_contract": {
+    "all_pair_orders_identical": true,
+    "methods": [
+      "ridge",
+      "certified_rbsr",
+      "lamm",
+      "cvae",
+      "hybrid",
+      "laplacian",
+      "bilaplacian",
+      "arap"
+    ],
+    "ordered_pairs_per_method": 9900
+  },
+  "post_test_tuning_permitted": false,
+  "primary_result": {
+    "certificate_rate": 1.0,
+    "certified_rbsr_new_flip_pct": 0.22689403801093466,
+    "certified_rbsr_roi_rmse": 1.05993127878513,
+    "new_flip_holm_p": 2.3379359070575454e-17,
+    "ridge_new_flip_pct": 0.33166341888028944,
+    "ridge_roi_rmse": 1.0739138908867893,
+    "roi_rmse_holm_p": 5.477198187516316e-13
+  },
+  "regression_tests": {
+    "command": "python3 -m pytest -q",
+    "status": "PASS",
+    "tests_passed": 48
+  },
+  "result_tree_manifest": "RESULT_TREE_MANIFEST.json",
+  "source_archive_location": "MyDrive/FYP final/results/rbsr_final_rerun_holdout_v1",
+  "split_contract": {
+    "manifest_sha256": "f976832beae1a5218e2e9567b1bb7032fbf2a63de0416f97bd4ea1cb004b8356",
+    "ordered_test_pairs": 9900,
+    "previously_observed_test_identities_excluded": 100,
+    "schema": "rhinoform_internal_blind_confirmation_v1",
+    "selection_algorithm": "ascending SHA256(schema|seed|subject_id); test then validation then train",
+    "split_seed": 20260809,
+    "status": "FROZEN_BEFORE_CONFIRMATION_TRAINING",
+    "test_identities": 100,
+    "train_identities": 576,
+    "validation_identities": 70
+  },
+  "status": "PASS_CANONICAL_INTERNAL_FINAL_RERUN_HOLDOUT_FROZEN",
+  "target_snapshot_location": "MyDrive/Rhinoform_GitHub_Ready_20260808/results/rbsr_final_rerun_holdout_v1",
+  "test_access_receipts": {
+    "CLASSICAL": {
+      "sha256": "cd5614de67d3995c8e9a4ba967003c0f484bd2debe1c6a27c0397622b844ae2f",
+      "status": "COMPLETE",
+      "test_access_count": 1
+    },
+    "LAMM": {
+      "sha256": "da160f8c05e44b8d092d127b606f0056405e3c0ea2c75c82d64e0e34f83cf9ef",
+      "status": "COMPLETE",
+      "test_access_count": 1
+    },
+    "RBSR": {
+      "sha256": "bb7b8bde80f5ded28b268d611f08df324e8db39585cd704e74b04340ed9b8a2f",
+      "status": "COMPLETE",
+      "test_access_count": 1
+    }
+  }
+}

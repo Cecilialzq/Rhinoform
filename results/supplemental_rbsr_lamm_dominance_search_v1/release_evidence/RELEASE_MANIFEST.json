@@ -1,0 +1,73 @@
+{
+  "artifact_count": 13,
+  "artifacts": [
+    {
+      "bytes": 1694,
+      "path": "analysis/RBSR_VS_LAMM_CORE_DOMINANCE_VERDICT.json",
+      "sha256": "8ca647df540efd8d30816771d25d32eb5b0b8ffdaf7bd5fdac9d32c801b54d6c"
+    },
+    {
+      "bytes": 1803,
+      "path": "analysis/rbsr_vs_lamm_core_paired_statistics.csv",
+      "sha256": "be1d2a662fd2079eb4fd440616e6984bc34ce37fdaebceec63d7c66813769900"
+    },
+    {
+      "bytes": 4335,
+      "path": "analysis/rbsr_vs_lamm_core_paired_statistics.json",
+      "sha256": "61c7cef5eaa79409e605537b9e70932a1b3600e6e40e1e6f037ae9b0dab592aa"
+    },
+    {
+      "bytes": 551,
+      "path": "frozen_lamm/lamm_test_summary.json",
+      "sha256": "f75a2d9cacbdc6542be53034070143056bf4661bcd3c45f306f143a55634c7c4"
+    },
+    {
+      "bytes": 1813008,
+      "path": "pair_metrics/identity_bootstrap_pair_metrics_lamm.csv",
+      "sha256": "29a072bcbf3b021dbdb95d34f60afeab9be38774b0d6ee472ec8610f1837c13a"
+    },
+    {
+      "bytes": 1814407,
+      "path": "pair_metrics/pair_metrics_rbsr_optimized_test.csv",
+      "sha256": "31b192c0443b4389056c7e83fbe45da98680287012e154c9e9078c5e4c05eec9"
+    },
+    {
+      "bytes": 2364,
+      "path": "protocol/RBSR_CALIBRATION_EXACT_CONTROL_ERRATUM.json",
+      "sha256": "53ab048feff1792ba0879fe253063d4c5ae244ce6bf48a198938060c6979265d"
+    },
+    {
+      "bytes": 2334,
+      "path": "protocol/RBSR_LAMM_DOMINANCE_SEARCH_PROTOCOL_FREEZE.json",
+      "sha256": "f92ceb36002d561eb68cdb96e20a5a05b215e81b15117a1b56cd20aaa497b334"
+    },
+    {
+      "bytes": 62239,
+      "path": "protocol/final_rerun_holdout_train_pairs.json",
+      "sha256": "d0fca1ee5521a3d9d2ba2f69062769e6ea2ebd5fc4527d8138080b537562e790"
+    },
+    {
+      "bytes": 6292,
+      "path": "rbsr/rbsr_evaluation_test.json",
+      "sha256": "151ef95e58c34aec5f5f1d85a68a04ff57a3d9491870d1b1784364be6191f11c"
+    },
+    {
+      "bytes": 1793,
+      "path": "validation/RBSR_ANCHOR_SELECTION_FREEZE.json",
+      "sha256": "49ded0e21a863d87845f82708c66b94bd7405978f07d44338768507829a1abfc"
+    },
+    {
+      "bytes": 31154,
+      "path": "validation/RBSR_LAMM_REFERENCE_CALIBRATION_FREEZE.json",
+      "sha256": "be5eb0a5111a58592251c416a5f685e639528eaa9e4675ec497f91ff95c1f26c"
+    },
+    {
+      "bytes": 1416,
+      "path": "validation/lamm_validation_summary.json",
+      "sha256": "f3da7fcad5fe8dd0468e055f3a0a0d691b32017226b2c931ce6936f716cdd645"
+    }
+  ],
+  "claim_boundary": "not blind confirmatory evidence",
+  "role": "supplementary_posthoc_rbsr_lamm_core_dominance",
+  "status": "PASS"
+}
