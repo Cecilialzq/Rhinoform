@@ -2,7 +2,7 @@ PYTHON ?= python3
 REPRO_CONFIG ?=
 REPRO_CONFIG_ARG = $(if $(REPRO_CONFIG),--config $(REPRO_CONFIG),)
 
-.PHONY: test verify replay verify-assets preflight
+.PHONY: test verify replay preflight
 
 test:
 	$(PYTHON) -m pytest -q
@@ -12,9 +12,6 @@ verify:
 
 replay:
 	$(PYTHON) -m tools.reproduce replay
-
-verify-assets:
-	$(PYTHON) -m tools.reproduce verify-assets $(REPRO_CONFIG_ARG)
 
 preflight:
 	$(PYTHON) -m tools.reproduce preflight $(REPRO_CONFIG_ARG) --full-data-hash

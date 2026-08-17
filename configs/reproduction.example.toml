@@ -5,16 +5,3 @@
 # Separately licensed processed FaceScape directory containing manifest.json
 # and meshes/<subject>_neutral.npz. It is intentionally outside Git.
 data_root = "/absolute/path/to/processed_facescape"
-
-# Root of an authorised local checkpoint overlay. Public redistribution is
-# currently withheld pending third-party permission. The overlay preserves
-# repository-relative paths such as results/rbsr_final_rerun_holdout_v1/....
-# Leave as "." only when the artifacts are already present in the checkout.
-artifact_root = "."
-
-# All reproduction outputs are written here; source and frozen results remain read-only.
-output_root = "reproduction_output"
-
-# Optional clean checkout of official LAMM at commit
-# 87354c05dec341c6d8dd319665dd52553fb03084.
-lamm_root = "/absolute/path/to/LAMM"

@@ -20,6 +20,14 @@ SUPPLEMENTARY_ROOT = (
 )
 RTOL = 1e-12
 ATOL = 1e-15
+PAIR_INPUTS = (
+    PRIMARY_ROOT
+    / "direct_paired_statistics/pair_metrics/identity_bootstrap_pair_metrics_certified_rbsr.csv",
+    PRIMARY_ROOT
+    / "direct_paired_statistics/pair_metrics/identity_bootstrap_pair_metrics_ridge.csv",
+    SUPPLEMENTARY_ROOT / "pair_metrics/identity_bootstrap_pair_metrics_lamm.csv",
+    SUPPLEMENTARY_ROOT / "pair_metrics/pair_metrics_rbsr_optimized_test.csv",
+)
 
 
 def compare_payloads(expected: Any, actual: Any, path: str = "$") -> None:
@@ -82,9 +90,19 @@ def _verify_final_table_sources() -> dict[str, str]:
     return verified
 
 
+def _verify_pair_inputs() -> list[str]:
+    verified = []
+    for path in PAIR_INPUTS:
+        if not valid_sha256_sidecar(path):
+            raise RuntimeError(f"Frozen pair table or SHA-256 sidecar is invalid: {path}")
+        verified.append(path.relative_to(REPO_ROOT).as_posix())
+    return verified
+
+
 def replay_release() -> dict[str, Any]:
     """Run both frozen analyses into a temporary directory and compare every field."""
     started = time.monotonic()
+    pair_inputs = _verify_pair_inputs()
     with tempfile.TemporaryDirectory(prefix="rhinoform-release-replay-") as temp:
         output_root = Path(temp)
         primary_output = output_root / "primary_rbsr_vs_ridge.csv"
@@ -162,6 +180,7 @@ def replay_release() -> dict[str, Any]:
             "status": supplemental_actual["status"],
         },
         "paper_table_sources_verified": len(sources),
+        "pair_inputs_verified": len(pair_inputs),
         "elapsed_seconds": round(time.monotonic() - started, 3),
     }
 
